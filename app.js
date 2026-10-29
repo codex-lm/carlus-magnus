@@ -1,4 +1,5 @@
-(() => {
+'use strict';
+{
   'use strict';
   const $ = id => document.getElementById(id);
   const SAVE_KEY = 'carlus-magnus:aurore:v1';
@@ -216,4 +217,4 @@
   requestAnimationFrame(frame);
   // Read-only instrumentation for reproducible QA; game state is not exposed.
   window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name}),version:'1.2.0'});
-})();
+}
