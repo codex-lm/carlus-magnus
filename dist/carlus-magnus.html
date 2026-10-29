@@ -541,10 +541,30 @@ const global=typeof window!=='undefined'?window:globalThis;
   const clamp = (n,a,b) => Math.max(a,Math.min(b,n));
 
   class Renderer {
+    static backingSize(cssWidth,cssHeight,dpr=1,fit='contain') {
+      if(!Number.isFinite(cssWidth)||!Number.isFinite(cssHeight)||cssWidth<=0||cssHeight<=0)return null;
+      const density=Number.isFinite(dpr)&&dpr>0?dpr:1;
+      const fitScale=fit==='cover'?Math.max(cssWidth/1280,cssHeight/720):Math.min(cssWidth/1280,cssHeight/720);
+      // Whole 16×9 units keep the intrinsic aspect ratio exact at every density.
+      // The cap applies to physical pixels, including on displays above DPR 2.
+      const units=Math.max(1,Math.min(240,Math.ceil(fitScale*density*80-1e-9)));
+      return {width:units*16,height:units*9};
+    }
     constructor(canvas) {
       this.canvas=canvas; this.ctx=canvas.getContext('2d'); this.t=0;
       this.width=1280; this.height=720; this.shake=0; this.lastHP=null;
       this.palette=palettes.forest;
+    }
+    resizeToDisplaySize() {
+      const canvas=this.canvas;
+      if(typeof canvas.getBoundingClientRect!=='function')return false;
+      const rect=canvas.getBoundingClientRect();
+      if(!(rect.width>0&&rect.height>0))return false;
+      const fit=typeof global.getComputedStyle==='function'?global.getComputedStyle(canvas).objectFit:canvas.style?.objectFit;
+      const size=Renderer.backingSize(rect.width,rect.height,Number(global.devicePixelRatio)||1,fit);
+      if(!size||(canvas.width===size.width&&canvas.height===size.height))return false;
+      canvas.width=size.width;canvas.height=size.height;
+      return true;
     }
     path(points,fill,stroke,width=1) {
       const c=this.ctx;c.beginPath();points.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]));c.closePath();
@@ -558,6 +578,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       const c=this.ctx;c.save();c.globalAlpha=alpha;const g=c.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,color);g.addColorStop(1,'transparent');c.fillStyle=g;c.fillRect(x-r,y-r,r*2,r*2);c.restore();
     }
     begin() {
+      this.resizeToDisplaySize();
       const c=this.ctx;c.setTransform(this.canvas.width/1280,0,0,this.canvas.height/720,0,0);c.clearRect(0,0,1280,720);c.lineCap='round';c.lineJoin='round';
     }
     background(room,camera) {
@@ -1771,7 +1792,7 @@ const global=typeof window!=='undefined'?window:globalThis;
   }
   requestAnimationFrame(frame);
   // Read-only instrumentation for reproducible QA; game state is not exposed.
-  window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name}),version:'1.2.0'});
+  window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name}),version:'1.2.1'});
 }
 
 </script>

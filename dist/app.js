@@ -216,5 +216,5 @@
   }
   requestAnimationFrame(frame);
   // Read-only instrumentation for reproducible QA; game state is not exposed.
-  window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name}),version:'1.2.0'});
+  window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name}),version:'1.2.1'});
 }
