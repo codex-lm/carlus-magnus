@@ -1,8 +1,10 @@
 # Carlus Magnus — Les éclats d’Aurore
 
-Version 1.2.0, Les Royaumes oubliés. An original, small browser platformer made for Charles, with French in-game text.
+Version 1.2.1, Les Royaumes oubliés. An original, small browser platformer made for Charles, with French in-game text.
 
-[Play on LOB7](https://lob7.com/games/bg_s_c676ba69-d9fe-474a-8ea4-512af4c7095e). The published 1.2.0 edition uses commit `9f5a3dba3528250ef34f7c339f092566932293c5`.
+[Play on LOB7](https://lob7.com/games/bg_s_c676ba69-d9fe-474a-8ea4-512af4c7095e). Each edition links its exact source commit.
+
+Version 1.2.1 draws at the displayed size and screen pixel density, up to native 3840×2160 pixels. Window resizing and density changes update automatically; the logical 1280×720 world, camera, gameplay and saves are unchanged. Boss previews also use an appropriate pixel density when opened.
 
 Twelve connected areas, five three-phase bosses, sword/axe/spear combat, parry, guard, dodge, double jump and downward attacks. Choose three archetypes or distribute twelve points. Find twelve talents and six talismans; equip two talismans and refill healing flasks at sanctuaries.
 
