@@ -1,5 +1,7 @@
 # Acceptance — v1.2, Les Royaumes oubliés
 
+LOB7 publication check, 29 October 2026: release `br_s_d3bbbd57-8fc4-4195-a5d5-39cb2f030cfe`, public commit `9f5a3dba3528250ef34f7c339f092566932293c5`. After replacing IIFEs with strict lexical blocks and spacing 31 decimal ternaries, the full suite below passed again. The engine, renderer and app bodies otherwise remained unchanged. LOB7 passed policy, Semgrep, Chromium startup and malware checks. A keyboard-driven test in the public LOB7 player entered the Master moth trial, moved, jumped and attacked; HP fell from 130 to 100, then F restored 130 and consumed the single flask. The moth landed and exposed its heart, Master attack zones were unchecked, and the trial was left paused. Browser console inspection returned no warnings or errors. This was a short hosted smoke test, not a complete boss victory or campaign.
+
 Run from the project directory:
 
 ```powershell
