@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#081b24"><meta name="description" content="Carlus Magnus — Les éclats d’Aurore. Une aventure de plateforme et de mêlée, créée pour Charles. Explorez les ruines, maîtrisez la parade et réveillez la lumière.">
+  <title>Carlus Magnus — Les éclats d’Aurore</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game-shell">
+  <canvas id="world" width="1280" height="720" aria-label="Monde de Carlus Magnus, jeu de plateforme en 2D"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <header id="topbar">
+    <a class="brand" href="#" id="brand" aria-label="Carlus Magnus, menu"><span class="crest">✧</span><span>CARLUS <b>MAGNUS</b></span></a>
+    <div class="top-actions"><span class="made-for">POUR CHARLES, L’AVENTURIER.</span><button class="icon-button" id="sound-button" aria-label="Couper le son" title="Son">♫</button><button class="icon-button" id="fullscreen-button" aria-label="Plein écran" title="Plein écran">⛶</button><button class="icon-button" id="help-button" aria-label="Commandes et aide" title="Commandes">?</button></div>
+  </header>
+
+  <section id="title-screen" class="screen">
+    <div class="title-content">
+      <div class="eyebrow"><span class="line"></span> LES ROYAUMES OUBLIÉS · CHAPITRE II</div>
+      <h1>CARLUS<br><span>MAGNUS</span></h1>
+      <div class="subtitle"><span></span> LES ÉCLATS D’AURORE <span></span></div>
+      <p class="intro">Sous les racines d’un royaume oublié,<br>quelque chose brille encore.<br><strong>À toi de le réveiller.</strong></p>
+      <div class="title-buttons"><button class="button primary" id="new-game">Commencer l’aventure <span>→</span></button><button class="button secondary hidden" id="continue-game">Continuer <span>↗</span></button></div>
+      <button class="trial-entry" id="trial-button"><span class="trial-rune">♜</span><span><b>Défis des gardiens</b><small>5 BOSS · TROUVE LEUR POINT FAIBLE</small></span><span>↗</span></button>
+      <div class="title-notes"><span>⌨ CLAVIER</span><i></i><span>◈ MANETTE</span><i></i><span>12 ZONES · 5 BOSS</span></div>
+    </div>
+    <div class="world-caption"><span class="small-star">✧</span><div>LES TERRES ASSOUPIES<small>Une aventure en deux chapitres</small></div></div>
+    <footer class="title-footer"><span>EXPLORER · COMBATTRE · S’ÉLEVER</span><button id="title-help">Découvrir les commandes <span>↗</span></button><a class="edition" href="carlus-magnus.html" download="carlus-magnus.html" title="Télécharger le jeu complet, jouable hors connexion">JOUER HORS CONNEXION ↧</a></footer>
+  </section>
+
+  <section id="hero-screen" class="screen hidden" aria-label="Choix du personnage">
+    <div class="selection-heading"><div class="eyebrow">01 / CHOISIS TA VOIE</div><h2>Chaque héros a sa lumière.</h2><p>Trois façons de partir. Ou une qui n’appartient qu’à toi.</p></div>
+    <div id="hero-cards" class="hero-cards"></div>
+    <div class="creation-bottom"><div id="hero-description"></div><div id="custom-controls" class="hidden"></div><div class="loadout"><label for="weapon-select">ARME DE DÉPART</label><select id="weapon-select"><option value="sword">Épée · vive et équilibrée</option><option value="axe">Hache · lente et puissante</option><option value="spear">Lance · allonge généreuse</option></select><label for="difficulty-select">TON AVENTURE</label><select id="difficulty-select"><option value="adventurer">Aventurier · le défi original</option><option value="explorer">Explorateur · dégâts ennemis réduits</option><option value="master">Maître · précision et danger</option></select></div></div>
+    <div class="selection-footer"><button class="button ghost" id="hero-back">← Retour</button><span id="allocation-note">Les trois armes restent disponibles pendant l’aventure.</span><button class="button primary" id="begin-game">Entrer dans les ruines <span>→</span></button></div>
+  </section>
+
+  <div id="hud" class="hidden">
+    <div class="vitals"><div class="vitals-title"><span id="hero-name">L’Errant</span><span id="hp-text"></span></div><div class="health-track"><div id="health-fill"></div></div><div class="stamina-track"><div id="stamina-fill"></div></div><div class="weapon-slots" id="weapon-slots"><button data-weapon="sword" title="1 · Épée"><kbd>1</kbd> ÉPÉE</button><button data-weapon="axe" title="2 · Hache"><kbd>2</kbd> HACHE</button><button data-weapon="spear" title="3 · Lance"><kbd>3</kbd> LANCE</button></div><button id="heal-button" class="flask-button"><span>♧</span> Fiole <b id="flask-count">1 / 1</b><kbd>F</kbd></button></div>
+    <div class="location"><span id="room-number"></span><strong id="room-name"></strong><small id="room-subtitle"></small></div>
+    <div class="game-actions"><span class="shards">✦ <b id="shard-count">0</b></span><button id="skills-button">Talents <kbd>Tab</kbd><em id="skill-badge" class="hidden">!</em></button><button id="charms-button">Talismans <small id="charm-count">0/2</small><kbd>I</kbd></button><button id="map-button">Carte <kbd>M</kbd></button><button id="pause-button" aria-label="Pause">Ⅱ</button></div>
+    <div id="boss-hud" class="hidden"><div class="boss-heading"><span id="boss-phase">PHASE I / III</span><strong id="boss-name"></strong></div><div class="boss-track"><div id="boss-fill"></div><i></i><i></i></div><div class="boss-status"><span id="boss-state"></span><span id="boss-window"></span></div><p id="boss-hint"></p></div>
+    <div id="toast" class="hidden" role="status"><span>✧</span><div><strong id="toast-title"></strong><p id="toast-sub"></p></div></div>
+    <div class="bottom-controls"><span><kbd>← →</kbd> Bouger</span><span><kbd>Espace</kbd> Sauter</span><span><kbd>J</kbd> Frapper</span><span><kbd>K</kbd> Garde / parade</span><span><kbd>⇧</kbd> Esquive</span><span><kbd>E</kbd> Interagir</span></div>
+    <div id="save-indicator">✧ Progression enregistrée</div>
+  </div>
+
+  <div id="touch-controls" class="hidden" aria-label="Commandes tactiles"><div class="touch-move"><button data-input="left" aria-label="Aller à gauche">←</button><button data-input="right" aria-label="Aller à droite">→</button></div><div class="touch-fight"><button data-input="interact">E</button><button data-input="heal">Soin</button><button data-input="block">Garde</button><button data-input="dash">Dash</button><button data-input="pogo" aria-label="Attaque plongeante">↓ Frappe</button><button data-input="attack">Frappe</button><button data-input="jump">Saut</button></div></div>
+
+  <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-panel"><button id="modal-close" class="icon-button modal-close" aria-label="Fermer">×</button><div id="modal-content"></div></div></div>
+  <div id="fatal-error" class="hidden" role="alert"></div>
+</main>
+<script src="engine.js"></script><script src="render.js"></script><script src="app.js"></script>
+</body></html>

@@ -1,0 +1,31 @@
+{
+  "title": "Carlus Magnus — Les éclats d’Aurore",
+  "description": "A fast-paced 2D melee platformer made for Charles. Explore twelve connected areas, climb giant guardians and duel five bosses through three phases. Choose an archetype or build your own hero, wield sword, axe or spear, and discover twelve talents and six talismans. Three difficulties include Master, with hidden attack zones by default. French in-game text.",
+  "entrypoint": "index.html",
+  "license": "MIT",
+  "genre": [
+    "Platformer",
+    "Action",
+    "Adventure"
+  ],
+  "themes": [
+    "Fantasy",
+    "Exploration",
+    "Boss battles"
+  ],
+  "controls": [
+    "Move: arrows, A/D or Q/D",
+    "Jump / double jump: Space or Up",
+    "Attack: J or X; downward attack: Down + attack in the air",
+    "Guard / parry: K or C; dodge: Shift or L",
+    "Heal: F; sanctuary: E; weapons: 1/2/3",
+    "Talents: Tab; talismans: I; map: M; pause: Escape or P",
+    "Gamepad supported; optional touch controls"
+  ],
+  "credits": [
+    "Cédric Bernadac — creative direction and playtesting feedback.",
+    "Nilo (Codex) — game design, programming, original Canvas artwork, synthesized audio and testing.",
+    "Created for Charles. No third-party game assets or code copied."
+  ],
+  "assetsLicense": "Original visual artwork and synthesized audio: CC BY-SA 4.0, attributed to Cédric Bernadac and Nilo. Game code: MIT. No third-party media assets."
+}

@@ -1,0 +1,4 @@
+Original artwork and synthesized audio in Carlus Magnus are licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+Attribution: Cédric Bernadac and Nilo.
+License: https://creativecommons.org/licenses/by-sa/4.0/
+The software implementation is separately available under the MIT License in LICENSE. No third-party game assets are included.
