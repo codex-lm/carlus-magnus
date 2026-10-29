@@ -2,6 +2,8 @@
 
 Version 1.2.0, Les Royaumes oubliés. An original, small browser platformer made for Charles, with French in-game text.
 
+[Play on LOB7](https://lob7.com/games/bg_s_c676ba69-d9fe-474a-8ea4-512af4c7095e). The published 1.2.0 edition uses commit `9f5a3dba3528250ef34f7c339f092566932293c5`.
+
 Twelve connected areas, five three-phase bosses, sword/axe/spear combat, parry, guard, dodge, double jump and downward attacks. Choose three archetypes or distribute twelve points. Find twelve talents and six talismans; equip two talismans and refill healing flasks at sanctuaries.
 
 Explorer, Adventurer and Master difficulties. Master hides advance attack zones by default; the pause menu can toggle them in every mode. Boss trials are independent of the saved adventure. Saves stay in the current browser and origin; they do not transfer automatically from another website.
