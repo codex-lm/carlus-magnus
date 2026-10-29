@@ -1,4 +1,6 @@
-(function (global) {
+'use strict';
+{
+const global=typeof window!=='undefined'?window:globalThis;
   'use strict';
   const CM = global.CM = global.CM || {};
   const TAU = Math.PI * 2;
@@ -51,8 +53,8 @@
       c.save();c.globalAlpha=.15;c.strokeStyle=p.glow;c.lineWidth=1;c.beginPath();c.arc(mx,my,62,-2,1.25);c.stroke();c.restore();
       // Distant mountains, spires, and old cities.
       for(let layer=0;layer<2;layer++){
-        c.save();c.globalAlpha=layer?.75:.38;
-        const scroll=cam*(layer?.13:.06),step=190;
+        c.save();c.globalAlpha=layer? .75:.38;
+        const scroll=cam*(layer? .13:.06),step=190;
         for(let i=-2;i<11;i++){
           const k=i+Math.floor(scroll/step),x=i*step-scroll%step,y=345+noise(k+20)*145;
           const h=120+noise(k+80)*190;
@@ -107,11 +109,11 @@
       if(theme==='crystal'){
         // Glass gardens grow at three depths, catching cold lavender light.
         for(let layer=0;layer<2;layer++){
-          const stride=layer?360:240,scroll=cam*(layer?.35:.17);
+          const stride=layer?360:240,scroll=cam*(layer? .35:.17);
           for(let i=-1;i<7;i++){
             const key=i+Math.floor(scroll/stride),x=i*stride-scroll%stride;
-            this.crystal(x,layer?660:595,120+noise(key+70)*270,55+noise(key+9)*75,layer?.6:.25);
-            this.crystal(x+45,layer?668:609,90+noise(key+81)*120,45,layer?.4:.15);
+            this.crystal(x,layer?660:595,120+noise(key+70)*270,55+noise(key+9)*75,layer? .6:.25);
+            this.crystal(x+45,layer?668:609,90+noise(key+81)*120,45,layer? .4:.15);
             if(layer){
               this.line([[x+110,-10],[x+103,65],[x+113,117],[x+100,171]],'#598598',2);
               this.ellipse(x+112,106,15,4,'#76a4b3');this.ellipse(x+104,145,13,3,'#7497aa');
@@ -128,7 +130,7 @@
       }else if(theme==='depths'){
         // A continuous cavern ceiling, amber pockets and ancient rib fossils.
         for(let layer=0;layer<2;layer++){
-          const stride=layer?225:350,scroll=cam*(layer?.31:.13);
+          const stride=layer?225:350,scroll=cam*(layer? .31:.13);
           for(let i=-1;i<8;i++){
             const key=i+Math.floor(scroll/stride),x=i*stride-scroll%stride,h=65+noise(key+10)*210;
             this.path([[x-20,-20],[x+stride+30,-20],[x+stride,35],[x+stride*.7,47],[x+stride*.55,h*.58],[x+stride*.42,h],[x+stride*.29,h*.47],[x+20,69]],layer?'#1f202a':'#323235');
@@ -235,7 +237,7 @@
     checkpoint(point,active) {
       const c=this.ctx,p=this.palette,x=point.x+(point.w||0)/2,y=point.y;
       c.save();c.translate(x,y);
-      this.glow(0,-30,100,p.glow,active?.26:.12);
+      this.glow(0,-30,100,p.glow,active? .26:.12);
       this.ellipse(0,8,32,7,'#050d1690');
       this.path([[-23,4],[-17,-2],[17,-2],[23,4],[23,10],[-23,10]],p.stone,p.edge,1);
       this.path([[-11,0],[-13,-48],[0,-64],[13,-48],[11,0]],'#27464d',p.edge,1.5);
@@ -247,7 +249,7 @@
     }
     doorway(x,left,locked) {
       const c=this.ctx,p=this.palette;c.save();c.translate(x,650);c.scale(left?-1:1,1);
-      this.glow(0,-75,105,locked?'#bc806d':p.glow,locked?.08:.14);
+      this.glow(0,-75,105,locked?'#bc806d':p.glow,locked? .08:.14);
       c.save();c.globalAlpha=.65;
       this.path([[-31,0],[-32,-127],[-20,-158],[-8,-174],[11,-177],[25,-164],[33,-141],[33,0],[22,0],[22,-134],[12,-153],[1,-158],[-12,-145],[-20,-125],[-20,0]],p.stone,p.edge,1);
       this.line([[-22,-18],[-23,-119],[-11,-147]],p.edge,1);
@@ -340,7 +342,7 @@
         const ag=c.createRadialGradient(0,0,35,0,0,80);ag.addColorStop(0,'#e3c57a00');ag.addColorStop(1,'#fff6bd');c.fillStyle=ag;c.fill();c.restore();
       } else {
         this.line([[8,-34],[15,-26],[16,-22]],'#a8b4a5',5);
-        this.weapon(pl.weapon||'sword',16,-23,showcase?.42:.6+(moving?gait*.1:0),showcase?1.1:.88);
+        this.weapon(pl.weapon||'sword',16,-23,showcase? .42:.6+(moving?gait*.1:0),showcase?1.1:.88);
       }
       c.restore();
     }
@@ -439,7 +441,7 @@
     }
     moth(e) {
       const c=this.ctx,t=this.t,phase=e.phase||1,x=e.x+e.w/2,y=e.y+e.h/2;
-      const open=!!e.weakpoint?.active,flap=open?.92:.63+Math.abs(Math.sin(t*(phase===3?9:7)))*.37;
+      const open=!!e.weakpoint?.active,flap=open? .92:.63+Math.abs(Math.sin(t*(phase===3?9:7)))*.37;
       const wing=phase===3?'#7279aa':phase===2?'#6f8eaa':'#6996a6',edge='#b5e5e2';
       this.ellipse(x,648,150,8,'#05142645');
       this.glow(x,y,170,'#b3d3ef',.09);
@@ -560,7 +562,7 @@
       this.path([[-14,-94],[-25,-113],[-22,-85],[-12,-76]],'#68708c',edge,1);
       this.path([[13,-97],[19,-119],[26,-100],[18,-80]],'#a3a5b7',edge,1);
       this.line([[18,-67],[27,-58],[22,-43]],armor,7);
-      const attack=e.state==='attack',angle=attack?1.7:e.state==='windup'?-.8:open?.45:.8;
+      const attack=e.state==='attack',angle=attack?1.7:e.state==='windup'?-.8:open? .45:.8;
       this.weapon('sword',22,-42,angle,.85,attack);
       if(attack){
         c.save();c.globalAlpha*=.6;c.translate(12,-49);c.strokeStyle='#e5d9ff';c.lineWidth=4;c.beginPath();c.arc(0,0,59,-1.1,1.15);c.stroke();c.restore();
@@ -813,7 +815,7 @@
       const c=this.ctx,p=this.palette,x=it.x+(it.w||20)/2,y=it.y+(it.h||20)/2+Math.sin(this.t*3+it.x*.04)*4;
       const charm=(CM.CHARMS||[]).find(ch=>ch.id===it.charm);
       const col=it.type==='health'?'#e9a2b2':it.type==='shard'?'#e4c98d':charm?.color||p.glow;
-      this.glow(x,y,it.type==='shard'?26:57,col,it.type==='shard'?.16:.22);
+      this.glow(x,y,it.type==='shard'?26:57,col,it.type==='shard'? .16:.22);
       c.save();c.translate(x,y);
       if(it.type==='shard'){
         this.path([[0,-11],[6,-2],[3,7],[-4,10],[-7,0]],'#e6c77e','#ffe8b2',1);
@@ -1023,4 +1025,4 @@
     }
   }
   CM.Renderer=Renderer;
-})(typeof window!=='undefined'?window:globalThis);
+}
