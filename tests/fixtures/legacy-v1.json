@@ -1,0 +1,203 @@
+{
+  "ongoing": {
+    "version": 1,
+    "config": {
+      "name": "Charles ancien",
+      "weapon": "axe",
+      "assist": true,
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      }
+    },
+    "player": {
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      },
+      "skills": {
+        "edge": true,
+        "riposte": true,
+        "vigor": true
+      },
+      "weapon": "axe",
+      "doubleJump": true,
+      "bonusPower": 1,
+      "bonusVitality": 2,
+      "hp": 83,
+      "stamina": 100,
+      "x": 350,
+      "y": 598
+    },
+    "roomIndex": 3,
+    "shards": 27,
+    "skillPoints": 2,
+    "kills": 18,
+    "deaths": 2,
+    "time": 831.25,
+    "won": false,
+    "dead": false,
+    "checkpoint": {
+      "roomIndex": 3,
+      "x": 140,
+      "y": 598
+    },
+    "roomsVisited": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "bossesDefeated": [
+      "boss-warden"
+    ],
+    "collected": [
+      "wings",
+      "g-secret",
+      "a-secret",
+      "r-sh1"
+    ],
+    "defeated": [
+      "g1",
+      "g2",
+      "r1"
+    ]
+  },
+  "dead": {
+    "version": 1,
+    "config": {
+      "name": "Charles ancien",
+      "weapon": "axe",
+      "assist": true,
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      }
+    },
+    "player": {
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      },
+      "skills": {
+        "edge": true,
+        "riposte": true,
+        "vigor": true
+      },
+      "weapon": "axe",
+      "doubleJump": true,
+      "bonusPower": 1,
+      "bonusVitality": 2,
+      "hp": 0,
+      "stamina": 100,
+      "x": 350,
+      "y": 598
+    },
+    "roomIndex": 3,
+    "shards": 27,
+    "skillPoints": 2,
+    "kills": 18,
+    "deaths": 3,
+    "time": 831.25,
+    "won": false,
+    "dead": true,
+    "checkpoint": {
+      "roomIndex": 3,
+      "x": 140,
+      "y": 598
+    },
+    "roomsVisited": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "bossesDefeated": [
+      "boss-warden"
+    ],
+    "collected": [
+      "wings",
+      "g-secret",
+      "a-secret",
+      "r-sh1"
+    ],
+    "defeated": [
+      "g1",
+      "g2",
+      "r1"
+    ]
+  },
+  "completed": {
+    "version": 1,
+    "config": {
+      "name": "Charles ancien",
+      "weapon": "axe",
+      "assist": true,
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      }
+    },
+    "player": {
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      },
+      "skills": {
+        "edge": true,
+        "riposte": true,
+        "vigor": true
+      },
+      "weapon": "axe",
+      "doubleJump": true,
+      "bonusPower": 1,
+      "bonusVitality": 2,
+      "hp": 225,
+      "stamina": 100,
+      "x": 1000,
+      "y": 598
+    },
+    "roomIndex": 5,
+    "shards": 27,
+    "skillPoints": 2,
+    "kills": 18,
+    "deaths": 3,
+    "time": 831.25,
+    "won": true,
+    "dead": false,
+    "checkpoint": {
+      "roomIndex": 3,
+      "x": 140,
+      "y": 598
+    },
+    "roomsVisited": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bossesDefeated": [
+      "boss-warden",
+      "boss-king"
+    ],
+    "collected": [
+      "wings",
+      "g-secret",
+      "a-secret",
+      "r-sh1"
+    ],
+    "defeated": [
+      "g1",
+      "g2",
+      "r1"
+    ]
+  }
+}

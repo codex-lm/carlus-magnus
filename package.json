@@ -1,0 +1,11 @@
+{
+  "name": "carlus-magnus-aurore",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Une aventure de plateforme et de mêlée pour Charles.",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs && node tests/routes.cjs",
+    "build": "node scripts/build-standalone.mjs",
+    "start": "python -m http.server 4173 --directory dist"
+  }
+}

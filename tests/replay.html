@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carlus Magnus — Laboratoire de combat</title>
+<style>
+body{margin:0;background:#07131d;color:#dcebe7;font:14px system-ui}header,footer{padding:14px 22px;background:#10212c}h1{font-size:20px;margin:0 0 8px}p{margin:5px 0;color:#a9c2c8}nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}select,button{background:#203846;color:#ecf7ee;border:1px solid #48616d;border-radius:5px;padding:8px}label{display:flex;gap:5px;align-items:center}canvas{display:block;width:min(100%,1280px);height:auto;margin:auto;background:#07131d}#status{font-variant-numeric:tabular-nums;color:#efce8a;line-height:1.7}#log{white-space:pre-wrap;font:12px ui-monospace;max-height:130px;overflow:auto;color:#bdd6cf}.frame{position:relative;max-width:1280px;margin:auto}.note{color:#77d2b0}
+</style>
+<header><h1>Laboratoire de combat · relecture visuelle des tests</h1>
+<p>Le bot utilise uniquement les commandes normales. Moteur et dessins réels, aucune modification de vie, dégâts ou position pendant le combat.</p>
+<p class="note">Outil de développement sans sauvegarde. Vitesse 1, force 4, vitalité 7, aucun talent ni talisman. Ce n’est pas une partie manuelle.</p>
+<nav><label>Gardien <select id="boss"></select></label><label>Difficulté <select id="difficulty"><option value="adventurer">Aventurier</option><option value="master">Maître</option><option value="explorer">Explorateur</option></select></label><button id="restart">Recommencer</button><button id="pause">Pause</button><button id="step">Un pas</button><label>Lecture <select id="speed"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="4">4×</option></select></label><label><input type="checkbox" id="zones" checked> Zones annoncées</label><label><input type="checkbox" id="boxes"> Collisions actives</label></nav>
+</header><div class="frame"><canvas id="world" width="1280" height="720"></canvas></div><footer><div id="status"></div><div id="log"></div></footer>
+<script src="../dist/engine.js"></script><script src="../dist/render.js"></script><script src="bot-controls.js"></script>
+<script>
+const $=id=>document.getElementById(id),canvas=$('world'),ctx=canvas.getContext('2d'),renderer=new CM.Renderer(canvas);
+$('boss').innerHTML=CM.BOSSES.map(b=>`<option value="${b.id}">${b.name}</option>`).join('');
+let game,boss,bot,paused=false,last=0,accumulator=0,log=[],hits=0;
+function start(){game=new CM.Engine({difficulty:$('difficulty').value,stats:{speed:1,power:4,vitality:7}});game.startTrial($('boss').value);boss=game.enemies.find(e=>e.type==='boss');bot=createCombatBrain();paused=false;$('pause').textContent='Pause';$('zones').checked=game.showAttackZones;accumulator=0;hits=0;log=[];}
+function advance(){
+ game.update(1/120,bot.input(game));
+ for(const e of game.events.splice(0)){if(['hurt','parry','phase','expose','win','death','heal'].includes(e.type)){if(e.type==='hurt')hits++;log.unshift(`${game.time.toFixed(2)} s · ${e.type}${e.damage?' −'+e.damage+' PV':''}`);log=log.slice(0,8);}}
+}
+function tick(now){
+ const dt=Math.min(.05,(now-last)/1000||0);last=now;
+ if(!paused&&!game.dead&&!game.won){accumulator+=dt*Number($('speed').value);while(accumulator>=1/120){advance();accumulator-=1/120;if(game.dead||game.won)break;}}
+ renderer.draw(game,paused?0:dt*Number($('speed').value));
+ if($('boxes').checked){ctx.save();ctx.translate(-game.camera.x,-(game.camera.y||0));ctx.lineWidth=2;const rect=(b,color)=>{ctx.strokeStyle=color;ctx.strokeRect(b.x,b.y,b.w,b.h);};rect(game.player,'#fff');if(!boss.buried)rect(boss,'#ffa76c');if(boss.weakpoint.active)rect(boss.weakpoint,'#77ffcd');for(const a of game.projectiles)rect(a,'#f66');if(boss.state==='attack')for(const a of boss.attackVolumes||[])if(!(a.delay>0)&&!(a.life<=0))rect(a,'#f66');ctx.restore();}
+ $('status').textContent=`${game.time.toFixed(2)} s · ${game.won?'VICTOIRE':game.dead?'DÉFAITE':paused?'PAUSE':'EN COURS'} · Héros ${Math.ceil(game.player.hp)}/${game.player.maxHp} PV · Gardien ${Math.ceil(boss.hp)}/${boss.maxHp} PV · Phase ${boss.phase} · ${boss.state}/${boss.attackKind} · ${boss.cycles} ouvertures · ${hits} impacts subis`;
+ $('log').textContent=log.join('\n');requestAnimationFrame(tick);
+}
+$('restart').onclick=start;$('step').onclick=()=>{paused=true;$('pause').textContent='Reprendre';if(!game.dead&&!game.won)advance();};$('pause').onclick=()=>{paused=!paused;$('pause').textContent=paused?'Reprendre':'Pause';};$('boss').onchange=start;$('difficulty').onchange=start;$('zones').onchange=()=>game.showAttackZones=$('zones').checked;
+start();requestAnimationFrame(tick);
+</script></html>

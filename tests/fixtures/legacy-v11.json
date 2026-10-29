@@ -1,0 +1,232 @@
+{
+  "ongoing": {
+    "version": 1,
+    "revision": 2,
+    "config": {
+      "name": "Charles des colosses",
+      "weapon": "axe",
+      "assist": true,
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      }
+    },
+    "player": {
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      },
+      "skills": {
+        "vigor": true,
+        "edge": true,
+        "flow": true,
+        "riposte": true,
+        "aegis": true,
+        "longdash": true
+      },
+      "weapon": "axe",
+      "doubleJump": true,
+      "bonusPower": 2,
+      "bonusVitality": 3,
+      "hp": 76,
+      "stamina": 100,
+      "x": 600,
+      "y": 598
+    },
+    "roomIndex": 4,
+    "shards": 43,
+    "skillPoints": 4,
+    "kills": 25,
+    "deaths": 5,
+    "time": 1345.75,
+    "won": false,
+    "dead": false,
+    "checkpoint": {
+      "roomIndex": 4,
+      "x": 140,
+      "y": 598
+    },
+    "roomsVisited": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "bossesDefeated": [
+      "boss-warden"
+    ],
+    "collected": [
+      "wings",
+      "g-secret",
+      "a-secret",
+      "r-sh1",
+      "f-sh1"
+    ],
+    "defeated": [
+      "g1",
+      "g2",
+      "r1"
+    ],
+    "destroyedWalls": [
+      "seal-glade",
+      "seal-aqueduct"
+    ]
+  },
+  "dead": {
+    "version": 1,
+    "revision": 2,
+    "config": {
+      "name": "Charles des colosses",
+      "weapon": "axe",
+      "assist": true,
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      }
+    },
+    "player": {
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      },
+      "skills": {
+        "vigor": true,
+        "edge": true,
+        "flow": true,
+        "riposte": true,
+        "aegis": true,
+        "longdash": true
+      },
+      "weapon": "axe",
+      "doubleJump": true,
+      "bonusPower": 2,
+      "bonusVitality": 3,
+      "hp": 0,
+      "stamina": 100,
+      "x": 600,
+      "y": 598
+    },
+    "roomIndex": 4,
+    "shards": 43,
+    "skillPoints": 4,
+    "kills": 25,
+    "deaths": 5,
+    "time": 1345.75,
+    "won": false,
+    "dead": true,
+    "checkpoint": {
+      "roomIndex": 4,
+      "x": 140,
+      "y": 598
+    },
+    "roomsVisited": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "bossesDefeated": [
+      "boss-warden"
+    ],
+    "collected": [
+      "wings",
+      "g-secret",
+      "a-secret",
+      "r-sh1",
+      "f-sh1"
+    ],
+    "defeated": [
+      "g1",
+      "g2",
+      "r1"
+    ],
+    "destroyedWalls": [
+      "seal-glade",
+      "seal-aqueduct"
+    ]
+  },
+  "completed": {
+    "version": 1,
+    "revision": 2,
+    "config": {
+      "name": "Charles des colosses",
+      "weapon": "axe",
+      "assist": true,
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      }
+    },
+    "player": {
+      "stats": {
+        "speed": 3,
+        "power": 6,
+        "vitality": 3
+      },
+      "skills": {
+        "vigor": true,
+        "edge": true,
+        "flow": true,
+        "riposte": true,
+        "aegis": true,
+        "longdash": true
+      },
+      "weapon": "axe",
+      "doubleJump": true,
+      "bonusPower": 2,
+      "bonusVitality": 3,
+      "hp": 245,
+      "stamina": 100,
+      "x": 1000,
+      "y": 598
+    },
+    "roomIndex": 5,
+    "shards": 43,
+    "skillPoints": 4,
+    "kills": 25,
+    "deaths": 5,
+    "time": 1345.75,
+    "won": true,
+    "dead": false,
+    "checkpoint": {
+      "roomIndex": 4,
+      "x": 140,
+      "y": 598
+    },
+    "roomsVisited": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bossesDefeated": [
+      "boss-warden",
+      "boss-king"
+    ],
+    "collected": [
+      "wings",
+      "g-secret",
+      "a-secret",
+      "r-sh1",
+      "f-sh1"
+    ],
+    "defeated": [
+      "g1",
+      "g2",
+      "r1"
+    ],
+    "destroyedWalls": [
+      "seal-glade",
+      "seal-aqueduct"
+    ]
+  }
+}
