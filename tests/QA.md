@@ -53,3 +53,9 @@ In the rendered automated replay, the main agent observed a moth victory at 39.2
 ## Concrete attack inconsistencies corrected
 
 The phase-three duelist dash could extend beyond its warning; the warning now derives from movement distance plus blade reach. The moth formerly warned only its landing area; its warning now covers the full damaging flight path. A fully buried worm formerly still accepted armor hits and pogo contact at its invisible body; buried bodies now ignore those hits. The visual replay also exposed a flying boss nearing the screen edge; the arena camera now frames both fighters when they fit and keeps the player safely visible when they do not. Matching regressions pass.
+
+## Version 1.3.0 — French and English
+
+The final local build passes 98 tests and all 56 physics routes. Fourteen localization tests cover stored language and URL selection, unavailable storage, complete engine metadata, dynamic boss messages, actual app menu callbacks, custom names and allocation, campaign preservation, trial difficulty and record isolation, canvas labels, and exact standalone/source parity. French remains the default; language is stored separately from campaign progress.
+
+The main agent checked English title, character creation, all five trial cards, moth HUD, pause, help and skills in the browser. Switching French → English preserved a custom name, 5/3/4 attributes, spear selection and Master difficulty; switching in the trial menu preserved Master. A short fight accepted normal movement, jump and attack inputs without reported console errors. Final title and help screenshots confirmed the corrected subtitle layout and both styled language selectors. These checks supplement the automated suite; they are not a complete manual campaign or a physical controller test. Publication results are recorded separately.
