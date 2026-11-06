@@ -4,7 +4,7 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#081b24"><meta name="description" data-i18n-content="Carlus Magnus — Les éclats d’Aurore. Une aventure de plateforme et de mêlée, créée pour Charles. Explorez les ruines, maîtrisez la parade et réveillez la lumière." content="Carlus Magnus — Les éclats d’Aurore. Une aventure de plateforme et de mêlée, créée pour Charles. Explorez les ruines, maîtrisez la parade et réveillez la lumière.">
   <title data-i18n="Carlus Magnus — Les éclats d’Aurore">Carlus Magnus — Les éclats d’Aurore</title>
-  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=1.4.0">
 </head>
 <body>
 <main id="game-shell">
@@ -17,15 +17,15 @@
 
   <section id="title-screen" class="screen">
     <div class="title-content">
-      <div class="eyebrow"><span class="line"></span> <span class="i18n-text" data-i18n="LES ROYAUMES OUBLIÉS · CHAPITRE II">LES ROYAUMES OUBLIÉS · CHAPITRE II</span></div>
+      <div class="eyebrow"><span class="line"></span> <span class="i18n-text" data-i18n="LES MARÉES CÉLESTES · CHAPITRE III">LES MARÉES CÉLESTES · CHAPITRE III</span></div>
       <h1>CARLUS<br><span data-i18n="MAGNUS">MAGNUS</span></h1>
       <div class="subtitle"><span></span> <span class="i18n-text" data-i18n="LES ÉCLATS D’AURORE">LES ÉCLATS D’AURORE</span> <span></span></div>
       <p class="intro"><span class="i18n-text" data-i18n="Sous les racines d’un royaume oublié,">Sous les racines d’un royaume oublié,</span><br><span class="i18n-text" data-i18n="quelque chose brille encore.">quelque chose brille encore.</span><br><strong data-i18n="À toi de le réveiller.">À toi de le réveiller.</strong></p>
       <div class="title-buttons"><button class="button primary" id="new-game"><span class="i18n-text" data-i18n="Commencer l’aventure">Commencer l’aventure</span> <span>→</span></button><button class="button secondary hidden" id="continue-game"><span class="i18n-text" data-i18n="Continuer">Continuer</span> <span>↗</span></button></div>
-      <button class="trial-entry" id="trial-button"><span class="trial-rune">♜</span><span><b data-i18n="Défis des gardiens">Défis des gardiens</b><small data-i18n="5 BOSS · TROUVE LEUR POINT FAIBLE">5 BOSS · TROUVE LEUR POINT FAIBLE</small></span><span>↗</span></button>
-      <div class="title-notes"><span data-i18n="⌨ CLAVIER">⌨ CLAVIER</span><i></i><span data-i18n="◈ MANETTE">◈ MANETTE</span><i></i><span data-i18n="12 ZONES · 5 BOSS">12 ZONES · 5 BOSS</span></div>
+      <button class="trial-entry" id="trial-button"><span class="trial-rune">♜</span><span><b data-i18n="Défis des gardiens">Défis des gardiens</b><small data-i18n="6 BOSS · TROUVE LEUR POINT FAIBLE">6 BOSS · TROUVE LEUR POINT FAIBLE</small></span><span>↗</span></button>
+      <div class="title-notes"><span data-i18n="⌨ CLAVIER">⌨ CLAVIER</span><i></i><span data-i18n="◈ MANETTE">◈ MANETTE</span><i></i><span data-i18n="15 ZONES · 6 BOSS">15 ZONES · 6 BOSS</span></div>
     </div>
-    <div class="world-caption"><span class="small-star">✧</span><div><span class="i18n-text" data-i18n="LES TERRES ASSOUPIES">LES TERRES ASSOUPIES</span><small data-i18n="Une aventure en deux chapitres">Une aventure en deux chapitres</small></div></div>
+    <div class="world-caption"><span class="small-star">✧</span><div><span class="i18n-text" data-i18n="LES TERRES ASSOUPIES">LES TERRES ASSOUPIES</span><small data-i18n="Une aventure en trois chapitres">Une aventure en trois chapitres</small></div></div>
     <footer class="title-footer"><span data-i18n="EXPLORER · COMBATTRE · S’ÉLEVER">EXPLORER · COMBATTRE · S’ÉLEVER</span><button id="title-help"><span class="i18n-text" data-i18n="Découvrir les commandes">Découvrir les commandes</span> <span>↗</span></button><a class="edition" href="carlus-magnus.html" download="carlus-magnus.html" title="Télécharger le jeu complet, jouable hors connexion" data-i18n-title="Télécharger le jeu complet, jouable hors connexion" data-i18n="JOUER HORS CONNEXION ↧">JOUER HORS CONNEXION ↧</a></footer>
   </section>
 
@@ -46,10 +46,10 @@
     <div id="save-indicator" data-i18n="✧ Progression enregistrée">✧ Progression enregistrée</div>
   </div>
 
-  <div id="touch-controls" class="hidden" aria-label="Commandes tactiles" data-i18n-aria="Commandes tactiles"><div class="touch-move"><button data-input="left" aria-label="Aller à gauche" data-i18n-aria="Aller à gauche">←</button><button data-input="right" aria-label="Aller à droite" data-i18n-aria="Aller à droite">→</button></div><div class="touch-fight"><button data-input="interact" data-i18n="E">E</button><button data-input="heal" data-i18n="Soin">Soin</button><button data-input="block" data-i18n="Garde">Garde</button><button data-input="dash" data-i18n="Dash">Dash</button><button data-input="pogo" aria-label="Attaque plongeante" data-i18n-aria="Attaque plongeante" data-i18n="↓ Frappe">↓ Frappe</button><button data-input="attack" data-i18n="Frappe">Frappe</button><button data-input="jump" data-i18n="Saut">Saut</button></div></div>
+  <div id="touch-controls" class="hidden" aria-label="Commandes tactiles" data-i18n-aria="Commandes tactiles"><div class="touch-move"><button data-input="down" aria-label="Descendre dans un courant" data-i18n-aria="Descendre dans un courant">↓</button><button data-input="left" aria-label="Aller à gauche" data-i18n-aria="Aller à gauche">←</button><button data-input="right" aria-label="Aller à droite" data-i18n-aria="Aller à droite">→</button></div><div class="touch-fight"><button data-input="interact" data-i18n="E">E</button><button data-input="heal" data-i18n="Soin">Soin</button><button data-input="block" data-i18n="Garde">Garde</button><button data-input="dash" data-i18n="Dash">Dash</button><button data-input="pogo" aria-label="Attaque plongeante" data-i18n-aria="Attaque plongeante" data-i18n="↓ Frappe">↓ Frappe</button><button data-input="attack" data-i18n="Frappe">Frappe</button><button data-input="jump" data-i18n="Saut">Saut</button></div></div>
 
   <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-panel"><button id="modal-close" class="icon-button modal-close" aria-label="Fermer" data-i18n-aria="Fermer" data-i18n="×">×</button><label class="language-switch modal-language"><span class="sr-only" data-i18n="Langue du jeu">Langue du jeu</span><select id="modal-language-select" aria-label="Langue du jeu" data-i18n-aria="Langue du jeu"><option value="fr">Français</option><option value="en">English</option></select></label><div id="modal-content"></div></div></div>
   <div id="fatal-error" class="hidden" role="alert"></div>
 </main>
-<script src="i18n.js"></script><script src="i18n-engine.js"></script><script src="i18n-ui.js"></script><script src="engine.js"></script><script src="render.js"></script><script src="app.js"></script>
+<script src="i18n.js?v=1.4.0"></script><script src="i18n-engine.js?v=1.4.0"></script><script src="i18n-ui.js?v=1.4.0"></script><script src="engine.js?v=1.4.0"></script><script src="render.js?v=1.4.0"></script><script src="app.js?v=1.4.0"></script>
 </body></html>

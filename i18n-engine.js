@@ -231,11 +231,58 @@
     'DEUX RUÉES': 'TWO CHARGES',
     'LAME D’ÉCLIPSE': 'ECLIPSE BLADE',
     'BALAYAGE · ESQUIVEZ': 'SWEEP · DODGE',
-    'E · Se reposer': 'E · Rest'
+    'E · Se reposer': 'E · Rest',
+
+    'Les Marées célestes': 'The Celestial Tides',
+    'Les Falaises d’écume': 'Foamcliff Coast',
+    'Les Archives englouties': 'The Sunken Archives',
+    'Le Trône des marées': 'The Tidal Throne',
+    'Au-delà de l’éclipse, la mer touche les étoiles.': 'Beyond the eclipse, the sea touches the stars.',
+    'Les histoires oubliées remontent avec la marée.': 'Forgotten stories rise with the tide.',
+    'Charles, l’océan attend son dernier gardien.': 'Charles, the ocean awaits its final guardian.',
+    'Les courants vous soulèvent. Déplacez-vous pour en sortir ; maintenez Bas pour redescendre.': 'Currents lift you up. Move sideways to leave them; hold Down to descend.',
+    'Quittez le courant près du sommet pour atteindre les terrasses. Les détours cachent de nouveaux talismans.': 'Leave the current near the top to reach the terraces. Side paths hide new talismans.',
+    'Gagnez les hauteurs dans les courants. Après deux enchaînements ou parades, frappez le cœur sur sa carapace ; trois en Maître.': 'Ride the currents up. After two attack sequences or parries, strike the heart on his shell; three in Master mode.',
+    'Perle de ressac': 'Pearl of the Tide',
+    'Chaque fiole soigne 15 points de vie supplémentaires.': 'Each flask restores 15 additional health.',
+    'Ancre d’écume': 'Foam Anchor',
+    '+20 % de récupération d’endurance lorsque vous êtes au sol.': '+20% stamina recovery while grounded.',
+    'Écume stellaire': 'Stellar Foam',
+    'Souvenir du large': 'Memory of the Open Sea',
+    'Sceau des embruns': 'Seal of the Spray',
+    'Sceau des archives': 'Seal of the Archives',
+    'Atlas, le Porte-marée': 'Atlas, the Tidebearer',
+    'ATLAS, LE PORTE-MARÉE': 'ATLAS, THE TIDEBEARER',
+    'Un océan sur ses épaules': 'An ocean on his shoulders',
+    'Deux enchaînements ou parades ouvrent son cœur, trois en Maître. Montez par les courants puis frappez sa carapace.': 'Two attack sequences or parries open his heart, three in Master mode. Ride the currents up, then strike his shell.',
+    'Cœur des marées': 'Heart of the Tides',
+    'Enchaînements ou parades': 'Attack sequences or parries',
+    'pince': 'claw',
+    'carapace': 'shell',
+    'crête': 'crest',
+    'Au-delà des royaumes, les courants ouvrent une nouvelle route.': 'Beyond the realms, the currents open a new path.',
+    'Les marées vous appellent': 'The tides are calling',
+    'Le cœur est ouvert ! Montez dans un courant puis frappez la carapace.': 'The heart is open! Ride a current up, then strike the shell.',
+    'Le cœur des marées s’éveille': 'The heart of the tides awakens',
+    'La marée monte : sautez ou prenez un courant.': 'The tide rises: jump or ride a current.',
+    'Des perles tombent : déplacez-vous ou parez au dernier instant.': 'Pearls are falling: move away or parry at the last moment.',
+    'Deux coups de pinces : changez de hauteur ou parez.': 'Two claw strikes: change height or parry.',
+    'Les pinces se referment : sautez ou parez.': 'The claws close in: jump or parry.',
+    'Phase II — Le ressac': 'Phase II — The Undertow',
+    'Phase III — La grande marée': 'Phase III — High Tide',
+    'Les perles se multiplient et les vagues se succèdent.': 'More pearls fall and waves follow one another.',
+    'Les pinces frappent à deux hauteurs. Gardez un courant à portée.': 'The claws strike at two heights. Keep a current within reach.',
+    'MARÉE · PRENEZ DE LA HAUTEUR': 'TIDE · TAKE THE HIGH GROUND',
+    'PERLES · BOUGEZ OU PAREZ': 'PEARLS · MOVE OR PARRY',
+    'PINCES · SAUTEZ OU PAREZ': 'CLAWS · JUMP OR PARRY',
+    'CŒUR DES MARÉES': 'HEART OF THE TIDES',
+    'COURANT ASCENDANT': 'UPDRAFT',
+    '↓ · DESCENDRE': '↓ · DESCEND'
   });
 
   // Complete, anchored messages only: never replace pieces of a name or sentence.
   I18N.addPattern(/^PRESSION (\d+)\/(\d+)$/, (current, total) => `PRESSURE ${current}/${total}`);
+  I18N.addPattern(/^Marées (\d+)\/(\d+) · Parades (\d+)\/(\d+)$/, (waves, total, parries, parryTotal) => `Tides ${waves}/${total} · Parries ${parries}/${parryTotal}`);
   I18N.addPattern(/^Parade réussie : (\d+)\/(\d+)\. Maintenez la pression !$/, (current, total) => `Successful parry: ${current}/${total}. Keep up the pressure!`);
   I18N.addPattern(/^Son souffle faiblit : (\d+)\/(\d+) échanges\. Esquivez encore ou parez !$/, (current, total) => `It is tiring: ${current}/${total} exchanges. Keep dodging or parry!`);
 }

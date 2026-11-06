@@ -51,15 +51,15 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
 
   <section id="title-screen" class="screen">
     <div class="title-content">
-      <div class="eyebrow"><span class="line"></span> <span class="i18n-text" data-i18n="LES ROYAUMES OUBLIÉS · CHAPITRE II">LES ROYAUMES OUBLIÉS · CHAPITRE II</span></div>
+      <div class="eyebrow"><span class="line"></span> <span class="i18n-text" data-i18n="LES MARÉES CÉLESTES · CHAPITRE III">LES MARÉES CÉLESTES · CHAPITRE III</span></div>
       <h1>CARLUS<br><span data-i18n="MAGNUS">MAGNUS</span></h1>
       <div class="subtitle"><span></span> <span class="i18n-text" data-i18n="LES ÉCLATS D’AURORE">LES ÉCLATS D’AURORE</span> <span></span></div>
       <p class="intro"><span class="i18n-text" data-i18n="Sous les racines d’un royaume oublié,">Sous les racines d’un royaume oublié,</span><br><span class="i18n-text" data-i18n="quelque chose brille encore.">quelque chose brille encore.</span><br><strong data-i18n="À toi de le réveiller.">À toi de le réveiller.</strong></p>
       <div class="title-buttons"><button class="button primary" id="new-game"><span class="i18n-text" data-i18n="Commencer l’aventure">Commencer l’aventure</span> <span>→</span></button><button class="button secondary hidden" id="continue-game"><span class="i18n-text" data-i18n="Continuer">Continuer</span> <span>↗</span></button></div>
-      <button class="trial-entry" id="trial-button"><span class="trial-rune">♜</span><span><b data-i18n="Défis des gardiens">Défis des gardiens</b><small data-i18n="5 BOSS · TROUVE LEUR POINT FAIBLE">5 BOSS · TROUVE LEUR POINT FAIBLE</small></span><span>↗</span></button>
-      <div class="title-notes"><span data-i18n="⌨ CLAVIER">⌨ CLAVIER</span><i></i><span data-i18n="◈ MANETTE">◈ MANETTE</span><i></i><span data-i18n="12 ZONES · 5 BOSS">12 ZONES · 5 BOSS</span></div>
+      <button class="trial-entry" id="trial-button"><span class="trial-rune">♜</span><span><b data-i18n="Défis des gardiens">Défis des gardiens</b><small data-i18n="6 BOSS · TROUVE LEUR POINT FAIBLE">6 BOSS · TROUVE LEUR POINT FAIBLE</small></span><span>↗</span></button>
+      <div class="title-notes"><span data-i18n="⌨ CLAVIER">⌨ CLAVIER</span><i></i><span data-i18n="◈ MANETTE">◈ MANETTE</span><i></i><span data-i18n="15 ZONES · 6 BOSS">15 ZONES · 6 BOSS</span></div>
     </div>
-    <div class="world-caption"><span class="small-star">✧</span><div><span class="i18n-text" data-i18n="LES TERRES ASSOUPIES">LES TERRES ASSOUPIES</span><small data-i18n="Une aventure en deux chapitres">Une aventure en deux chapitres</small></div></div>
+    <div class="world-caption"><span class="small-star">✧</span><div><span class="i18n-text" data-i18n="LES TERRES ASSOUPIES">LES TERRES ASSOUPIES</span><small data-i18n="Une aventure en trois chapitres">Une aventure en trois chapitres</small></div></div>
     <footer class="title-footer"><span data-i18n="EXPLORER · COMBATTRE · S’ÉLEVER">EXPLORER · COMBATTRE · S’ÉLEVER</span><button id="title-help"><span class="i18n-text" data-i18n="Découvrir les commandes">Découvrir les commandes</span> <span>↗</span></button><a class="edition" href="carlus-magnus.html" download="carlus-magnus.html" title="Télécharger le jeu complet, jouable hors connexion" data-i18n-title="Télécharger le jeu complet, jouable hors connexion" data-i18n="JOUER HORS CONNEXION ↧">JOUER HORS CONNEXION ↧</a></footer>
   </section>
 
@@ -80,7 +80,7 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
     <div id="save-indicator" data-i18n="✧ Progression enregistrée">✧ Progression enregistrée</div>
   </div>
 
-  <div id="touch-controls" class="hidden" aria-label="Commandes tactiles" data-i18n-aria="Commandes tactiles"><div class="touch-move"><button data-input="left" aria-label="Aller à gauche" data-i18n-aria="Aller à gauche">←</button><button data-input="right" aria-label="Aller à droite" data-i18n-aria="Aller à droite">→</button></div><div class="touch-fight"><button data-input="interact" data-i18n="E">E</button><button data-input="heal" data-i18n="Soin">Soin</button><button data-input="block" data-i18n="Garde">Garde</button><button data-input="dash" data-i18n="Dash">Dash</button><button data-input="pogo" aria-label="Attaque plongeante" data-i18n-aria="Attaque plongeante" data-i18n="↓ Frappe">↓ Frappe</button><button data-input="attack" data-i18n="Frappe">Frappe</button><button data-input="jump" data-i18n="Saut">Saut</button></div></div>
+  <div id="touch-controls" class="hidden" aria-label="Commandes tactiles" data-i18n-aria="Commandes tactiles"><div class="touch-move"><button data-input="down" aria-label="Descendre dans un courant" data-i18n-aria="Descendre dans un courant">↓</button><button data-input="left" aria-label="Aller à gauche" data-i18n-aria="Aller à gauche">←</button><button data-input="right" aria-label="Aller à droite" data-i18n-aria="Aller à droite">→</button></div><div class="touch-fight"><button data-input="interact" data-i18n="E">E</button><button data-input="heal" data-i18n="Soin">Soin</button><button data-input="block" data-i18n="Garde">Garde</button><button data-input="dash" data-i18n="Dash">Dash</button><button data-input="pogo" aria-label="Attaque plongeante" data-i18n-aria="Attaque plongeante" data-i18n="↓ Frappe">↓ Frappe</button><button data-input="attack" data-i18n="Frappe">Frappe</button><button data-input="jump" data-i18n="Saut">Saut</button></div></div>
 
   <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-panel"><button id="modal-close" class="icon-button modal-close" aria-label="Fermer" data-i18n-aria="Fermer" data-i18n="×">×</button><label class="language-switch modal-language"><span class="sr-only" data-i18n="Langue du jeu">Langue du jeu</span><select id="modal-language-select" aria-label="Langue du jeu" data-i18n-aria="Langue du jeu"><option value="fr">Français</option><option value="en">English</option></select></label><div id="modal-content"></div></div></div>
   <div id="fatal-error" class="hidden" role="alert"></div>
@@ -390,11 +390,58 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
     'DEUX RUÉES': 'TWO CHARGES',
     'LAME D’ÉCLIPSE': 'ECLIPSE BLADE',
     'BALAYAGE · ESQUIVEZ': 'SWEEP · DODGE',
-    'E · Se reposer': 'E · Rest'
+    'E · Se reposer': 'E · Rest',
+
+    'Les Marées célestes': 'The Celestial Tides',
+    'Les Falaises d’écume': 'Foamcliff Coast',
+    'Les Archives englouties': 'The Sunken Archives',
+    'Le Trône des marées': 'The Tidal Throne',
+    'Au-delà de l’éclipse, la mer touche les étoiles.': 'Beyond the eclipse, the sea touches the stars.',
+    'Les histoires oubliées remontent avec la marée.': 'Forgotten stories rise with the tide.',
+    'Charles, l’océan attend son dernier gardien.': 'Charles, the ocean awaits its final guardian.',
+    'Les courants vous soulèvent. Déplacez-vous pour en sortir ; maintenez Bas pour redescendre.': 'Currents lift you up. Move sideways to leave them; hold Down to descend.',
+    'Quittez le courant près du sommet pour atteindre les terrasses. Les détours cachent de nouveaux talismans.': 'Leave the current near the top to reach the terraces. Side paths hide new talismans.',
+    'Gagnez les hauteurs dans les courants. Après deux enchaînements ou parades, frappez le cœur sur sa carapace ; trois en Maître.': 'Ride the currents up. After two attack sequences or parries, strike the heart on his shell; three in Master mode.',
+    'Perle de ressac': 'Pearl of the Tide',
+    'Chaque fiole soigne 15 points de vie supplémentaires.': 'Each flask restores 15 additional health.',
+    'Ancre d’écume': 'Foam Anchor',
+    '+20 % de récupération d’endurance lorsque vous êtes au sol.': '+20% stamina recovery while grounded.',
+    'Écume stellaire': 'Stellar Foam',
+    'Souvenir du large': 'Memory of the Open Sea',
+    'Sceau des embruns': 'Seal of the Spray',
+    'Sceau des archives': 'Seal of the Archives',
+    'Atlas, le Porte-marée': 'Atlas, the Tidebearer',
+    'ATLAS, LE PORTE-MARÉE': 'ATLAS, THE TIDEBEARER',
+    'Un océan sur ses épaules': 'An ocean on his shoulders',
+    'Deux enchaînements ou parades ouvrent son cœur, trois en Maître. Montez par les courants puis frappez sa carapace.': 'Two attack sequences or parries open his heart, three in Master mode. Ride the currents up, then strike his shell.',
+    'Cœur des marées': 'Heart of the Tides',
+    'Enchaînements ou parades': 'Attack sequences or parries',
+    'pince': 'claw',
+    'carapace': 'shell',
+    'crête': 'crest',
+    'Au-delà des royaumes, les courants ouvrent une nouvelle route.': 'Beyond the realms, the currents open a new path.',
+    'Les marées vous appellent': 'The tides are calling',
+    'Le cœur est ouvert ! Montez dans un courant puis frappez la carapace.': 'The heart is open! Ride a current up, then strike the shell.',
+    'Le cœur des marées s’éveille': 'The heart of the tides awakens',
+    'La marée monte : sautez ou prenez un courant.': 'The tide rises: jump or ride a current.',
+    'Des perles tombent : déplacez-vous ou parez au dernier instant.': 'Pearls are falling: move away or parry at the last moment.',
+    'Deux coups de pinces : changez de hauteur ou parez.': 'Two claw strikes: change height or parry.',
+    'Les pinces se referment : sautez ou parez.': 'The claws close in: jump or parry.',
+    'Phase II — Le ressac': 'Phase II — The Undertow',
+    'Phase III — La grande marée': 'Phase III — High Tide',
+    'Les perles se multiplient et les vagues se succèdent.': 'More pearls fall and waves follow one another.',
+    'Les pinces frappent à deux hauteurs. Gardez un courant à portée.': 'The claws strike at two heights. Keep a current within reach.',
+    'MARÉE · PRENEZ DE LA HAUTEUR': 'TIDE · TAKE THE HIGH GROUND',
+    'PERLES · BOUGEZ OU PAREZ': 'PEARLS · MOVE OR PARRY',
+    'PINCES · SAUTEZ OU PAREZ': 'CLAWS · JUMP OR PARRY',
+    'CŒUR DES MARÉES': 'HEART OF THE TIDES',
+    'COURANT ASCENDANT': 'UPDRAFT',
+    '↓ · DESCENDRE': '↓ · DESCEND'
   });
 
   // Complete, anchored messages only: never replace pieces of a name or sentence.
   I18N.addPattern(/^PRESSION (\d+)\/(\d+)$/, (current, total) => `PRESSURE ${current}/${total}`);
+  I18N.addPattern(/^Marées (\d+)\/(\d+) · Parades (\d+)\/(\d+)$/, (waves, total, parries, parryTotal) => `Tides ${waves}/${total} · Parries ${parries}/${parryTotal}`);
   I18N.addPattern(/^Parade réussie : (\d+)\/(\d+)\. Maintenez la pression !$/, (current, total) => `Successful parry: ${current}/${total}. Keep up the pressure!`);
   I18N.addPattern(/^Son souffle faiblit : (\d+)\/(\d+) échanges\. Esquivez encore ou parez !$/, (current, total) => `It is tiring: ${current}/${total} exchanges. Keep dodging or parry!`);
 }
@@ -405,6 +452,11 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
   const root=typeof window!=='undefined'?window:globalThis;
   const I=root.CM.I18N;
   I.add({
+    'Descendre dans un courant':'Descend in an updraft',
+    'III · LES MARÉES CÉLESTES':'III · THE CELESTIAL TIDES',
+    'Secousses : réduites':'Camera shake: reduced',
+    'Secousses : normales':'Camera shake: normal',
+    'Dans les Marées célestes, les courants lumineux te portent vers le haut. Maintiens Bas pour redescendre, ou sors du courant sur le côté. Atlas ouvre sa carapace après plusieurs assauts ou parades : utilise les courants pour atteindre son cœur.':'In the Celestial Tides, glowing currents carry you upward. Hold Down to descend, or move sideways to leave the current. Atlas opens his shell after several attacks or parries: ride the currents to reach his heart.',
     "Carlus Magnus — Les éclats d’Aurore":"Carlus Magnus — Shards of Dawn",
     "Carlus Magnus — Les éclats d’Aurore. Une aventure de plateforme et de mêlée, créée pour Charles. Explorez les ruines, maîtrisez la parade et réveillez la lumière.":"Carlus Magnus — Shards of Dawn. A platforming and melee adventure made for Charles. Explore the ruins, master the parry and awaken the light.",
     "Monde de Carlus Magnus, jeu de plateforme en 2D":"Carlus Magnus world, a 2D platforming game",
@@ -419,7 +471,7 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
     "Plein écran":"Fullscreen",
     "Commandes et aide":"Controls and help",
     "Commandes":"Controls",
-    "LES ROYAUMES OUBLIÉS · CHAPITRE II":"THE FORGOTTEN REALMS · CHAPTER II",
+    "LES MARÉES CÉLESTES · CHAPITRE III":"THE CELESTIAL TIDES · CHAPTER III",
     "LES ÉCLATS D’AURORE":"SHARDS OF DAWN",
     "Sous les racines d’un royaume oublié,":"Beneath the roots of a forgotten kingdom,",
     "quelque chose brille encore.":"something still shines.",
@@ -427,12 +479,12 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
     "Commencer l’aventure":"Begin the adventure",
     "Continuer":"Continue",
     "Défis des gardiens":"Guardian trials",
-    "5 BOSS · TROUVE LEUR POINT FAIBLE":"5 BOSSES · FIND THEIR WEAK SPOT",
+    "6 BOSS · TROUVE LEUR POINT FAIBLE":"6 BOSSES · FIND THEIR WEAK SPOT",
     "⌨ CLAVIER":"⌨ KEYBOARD",
     "◈ MANETTE":"◈ CONTROLLER",
-    "12 ZONES · 5 BOSS":"12 AREAS · 5 BOSSES",
+    "15 ZONES · 6 BOSS":"15 AREAS · 6 BOSSES",
     "LES TERRES ASSOUPIES":"THE SLEEPING LANDS",
-    "Une aventure en deux chapitres":"An adventure in two chapters",
+    "Une aventure en trois chapitres":"An adventure in three chapters",
     "EXPLORER · COMBATTRE · S’ÉLEVER":"EXPLORE · FIGHT · RISE",
     "Découvrir les commandes":"Learn the controls",
     "Télécharger le jeu complet, jouable hors connexion":"Download the full game to play offline",
@@ -509,8 +561,8 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
     "L’aventure n’a pas pu démarrer. Recharge la page puis essaie une nouvelle aventure.":"The adventure could not start. Reload the page, then try a new adventure.",
     "Le monde n’a pas pu être chargé. Recharge la page pour réessayer.":"The world could not load. Reload the page to try again.",
     "Le plein écran n’est pas disponible dans ce navigateur":"Fullscreen is not available in this browser",
-    "LES ROYAUMES OUBLIÉS · ÉPREUVES LIBRES":"THE FORGOTTEN REALMS · FREE TRIALS",
-    "Cinq gardiens. Cinq façons de vaincre.":"Five guardians. Five ways to win.",
+    "LES ROYAUMES OUBLIÉS · ÉPREUVES LIBRES":"THE SIX GUARDIANS · FREE TRIALS",
+    "Six gardiens. Six façons de vaincre.":"Six guardians. Six ways to win.",
     "Grimpe sur les colosses, guette un atterrissage, esquive un assaut.":"Climb the colossi, wait for a landing, dodge an assault.",
     "Chaque combat est indépendant de ta sauvegarde d’aventure.":"Each fight is separate from your adventure save.",
     "LE NIVEAU DE DÉFI":"CHALLENGE LEVEL",
@@ -576,7 +628,7 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
     "C’est parti":"Let’s go",
     "LES TRÉSORS DES ROYAUMES":"TREASURES OF THE REALMS",
     "Deux talismans. Ta façon de jouer.":"Two talismans. Your way to play.",
-    "Explore les détours pour retrouver ces six objets. Combine librement leurs pouvoirs.":"Explore hidden paths to find all six items. Combine their powers freely.",
+    "Explore les détours pour retrouver ces huit objets. Combine librement leurs pouvoirs.":"Explore hidden paths to find all eight items. Combine their powers freely.",
     "Aucun talisman":"No talisman",
     "ÉQUIPÉ":"EQUIPPED",
     "DÉCOUVERT":"DISCOVERED",
@@ -609,7 +661,7 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
     "Rallumer la flamme":"Rekindle the flame",
     "POUR CHARLES, QUI N’A PAS RENONCÉ":"FOR CHARLES, WHO NEVER GAVE UP",
     "L’Aurore se lève à nouveau.":"Dawn rises again.",
-    "Les cinq gardiens sont tombés. Des racines jusqu’aux étoiles, les royaumes retrouvent leur lumière.":"The five guardians have fallen. From the roots to the stars, light returns to the realms.",
+    "Les six gardiens sont tombés. Des racines aux marées célestes, les royaumes retrouvent leur lumière.":"The six guardians have fallen. From the roots to the celestial tides, light returns to the realms.",
     "Et tout cela, c’est grâce à toi.":"And it is all thanks to you.",
     "TEMPS D’AVENTURE":"ADVENTURE TIME",
     "ENNEMIS VAINCUS":"ENEMIES DEFEATED",
@@ -726,8 +778,19 @@ const root=typeof window!=='undefined'?window:globalThis;
     king:{w:340,h:430,hp:600,weakpoint:{x:1290,y:238,w:60,h:60},platforms:[[1050,550,150,'main'],[1470,550,150,'main'],[1150,450,160,'avant-bras'],[1360,450,160,'avant-bras'],[1240,350,180,'épaule'],[1290,260,180,'couronne']],seals:[[1158,590],[1444,590]]},
     moth:{w:180,h:120,hp:360,weakpoint:{x:1215,y:310,w:70,h:80},platforms:[],seals:[]},
     worm:{w:190,h:170,hp:420,weakpoint:{x:1245,y:550,w:80,h:90},platforms:[],seals:[]},
-    duelist:{w:54,h:92,hp:330,weakpoint:{x:1320,y:558,w:54,h:92},platforms:[],seals:[]}
+    duelist:{w:54,h:92,hp:330,weakpoint:{x:1320,y:558,w:54,h:92},platforms:[],seals:[]},
+    titan:{w:430,h:350,hp:500,weakpoint:{x:1230,y:325,w:70,h:70},platforms:[[960,540,200,'pince'],[1450,540,190,'pince'],[1110,440,210,'carapace'],[1330,440,210,'carapace'],[1210,370,180,'crête']],seals:[]}
   };
+  CHARMS.push(
+    {id:'tide',name:'Perle de ressac',description:'Chaque fiole soigne 15 points de vie supplémentaires.',symbol:'◉',color:'#a4eee5'},
+    {id:'anchor',name:'Ancre d’écume',description:'+20 % de récupération d’endurance lorsque vous êtes au sol.',symbol:'⚓',color:'#e8d4a3'}
+  );
+  BOSSES.push({id:'titan',name:'Atlas, le Porte-marée',subtitle:'Un océan sur ses épaules',tip:'Deux enchaînements ou parades ouvrent son cœur, trois en Maître. Montez par les courants puis frappez sa carapace.',roomIndex:14,weakpointLabel:'Cœur des marées',openingLabel:'Enchaînements ou parades'});
+  ROOMS.push(
+    {id:'foamcliffs',name:'Les Falaises d’écume',subtitle:'Au-delà de l’éclipse, la mer touche les étoiles.',theme:'tides',width:2700,height:720,checkpoint:{x:140,y:650},platforms:[platform(0,650,900,80),platform(1120,650,780,80),platform(2120,650,580,80),platform(700,530,230),platform(900,465,250),platform(1700,520,240),platform(1910,450,240),{...platform(730,355,220),oneWay:true},{...platform(980,205,220),oneWay:true},platform(2280,470,210),platform(2450,335,180)],updrafts:[{x:540,y:300,w:190,h:350,force:330}],hazards:[{x:900,y:676,w:220,h:44},{x:1900,y:676,w:220,h:44}],enemies:[enemy('t1','crawler',390,614),enemy('t2','flyer',1510,430),enemy('t3','hopper',1750,616),enemy('t4','spitter',2360,602)],pickups:[pickup('t-sh1','shard',600,585,'Éclat d’aurore'),pickup('t-charm','charm',820,315,'Perle de ressac',{charm:'tide'}),pickup('t-relic','relic',1070,165,'Écume stellaire',{bonus:'power'}),pickup('t-sh2','shard',1000,425,'Éclat d’aurore'),pickup('t-sh3','shard',1790,480,'Éclat d’aurore'),pickup('t-sh4','shard',1990,410,'Éclat d’aurore'),pickup('t-sh5','shard',2500,295,'Éclat d’aurore')],secretWalls:[{id:'seal-foam',x:1053,y:145,w:58,h:60,rewardId:'t-relic',label:'Sceau des embruns'}],hint:'Les courants vous soulèvent. Déplacez-vous pour en sortir ; maintenez Bas pour redescendre.'},
+    {id:'tidearchives',name:'Les Archives englouties',subtitle:'Les histoires oubliées remontent avec la marée.',theme:'tides',width:2800,height:720,checkpoint:{x:140,y:650},platforms:[platform(0,650,780,80),platform(1020,650,730,80),platform(1990,650,810,80),platform(680,530,230),platform(890,435,240),platform(1640,520,230),platform(1840,425,250),{...platform(1370,340,230),oneWay:true},{...platform(1550,200,230),oneWay:true},{...platform(2250,520,190),oneWay:true},platform(2480,375,220)],updrafts:[{x:1180,y:265,w:190,h:385,force:350},{x:2260,y:350,w:150,h:300,force:320}],hazards:[{x:780,y:676,w:240,h:44},{x:1750,y:676,w:240,h:44}],enemies:[enemy('u1','knight',510,590),enemy('u2','spitter',1120,602),enemy('u3','flyer',1750,340),enemy('u4','hopper',2100,616),enemy('u5','knight',2530,590)],pickups:[pickup('u-sh1','shard',755,490,'Éclat d’aurore'),pickup('u-sh2','shard',970,395,'Éclat d’aurore'),pickup('u-sh3','shard',1430,300,'Éclat d’aurore'),pickup('u-charm','charm',1640,160,'Ancre d’écume',{charm:'anchor'}),pickup('u-sh4','shard',1920,385,'Éclat d’aurore'),pickup('u-relic','relic',2570,335,'Souvenir du large',{bonus:'vitality'})],secretWalls:[{id:'seal-archives',x:2553,y:315,w:58,h:60,rewardId:'u-relic',label:'Sceau des archives'}],hint:'Quittez le courant près du sommet pour atteindre les terrasses. Les détours cachent de nouveaux talismans.'},
+    {id:'tidalthrone',name:'Le Trône des marées',subtitle:'Charles, l’océan attend son dernier gardien.',theme:'tides',width:2100,height:720,checkpoint:{x:140,y:650},bossGate:{x:330},platforms:[platform(0,650,2100,80)],updrafts:[{x:920,y:290,w:200,h:360,force:330},{x:1490,y:290,w:200,h:360,force:330}],hazards:[],enemies:[enemy('boss-titan','boss',1050,300,{bossType:'titan',name:'ATLAS, LE PORTE-MARÉE'})],pickups:[],hint:'Gagnez les hauteurs dans les courants. Après deux enchaînements ou parades, frappez le cœur sur sa carapace ; trois en Maître.'}
+  );
   class Engine {
     constructor(config={}, saved=null) {
       const difficulty=['explorer','adventurer','master'].includes(config.difficulty)?config.difficulty:config.assist?'explorer':'adventurer';
@@ -751,7 +814,7 @@ const root=typeof window!=='undefined'?window:globalThis;
     }
     heal() {
       const p=this.player;if(this.dead||this.won||p.hp>=p.maxHp||p.flasks<=0||this.healCooldown>0)return false;
-      p.flasks--;const amount=p.skills.restoration?75:50;p.hp=Math.min(p.maxHp,p.hp+amount);this.healCooldown=.65;this.effect('ring',p.x+15,p.y+26,{color:'#9dffc9',life:.8,maxLife:.8});this.effect('text',p.x,p.y-15,{text:'+'+amount,color:'#9dffc9',life:.8,maxLife:.8});this.emit('heal');this.emit('save');return true;
+      p.flasks--;const amount=(p.skills.restoration?75:50)+(this.hasCharm('tide')?15:0);p.hp=Math.min(p.maxHp,p.hp+amount);this.healCooldown=.65;this.effect('ring',p.x+15,p.y+26,{color:'#9dffc9',life:.8,maxLife:.8});this.effect('text',p.x,p.y-15,{text:'+'+amount,color:'#9dffc9',life:.8,maxLife:.8});this.emit('heal');this.emit('save');return true;
     }
     say(text,subtext='',timer=4) {this.message={text,subtext,timer};}
     emit(type,extra={}) {this.events.push({type,...extra});}
@@ -761,7 +824,8 @@ const root=typeof window!=='undefined'?window:globalThis;
       const values=data.type==='boss'?{w:geometry.w,h:geometry.h,hp:geometry.hp,speed:0,damage:23}:data.type==='knight'?{w:42,h:60,hp:78,speed:68,damage:18}:data.type==='flyer'?{w:42,h:34,hp:39,speed:102,damage:12}:data.type==='spitter'?{w:42,h:48,hp:62,speed:0,damage:13}:data.type==='hopper'?{w:40,h:34,hp:54,speed:165,damage:14}:{w:42,h:36,hp:48,speed:90,damage:13};
       const result={...values,...copy(data),maxHp:values.hp,vx:0,vy:0,facing:-1,state:'idle',timer:1,attackProgress:0,attackKind:'sweep',sequence:0,stun:0,hitFlash:0,originX:data.x,originY:data.y,active:false,hitPlayer:false,windupDuration:.7,phase:1};
       if(data.type==='boss')Object.assign(result,{armored:true,vulnerabilityTimer:0,cycleDamage:0,cycles:0,armorFlash:0,weakpoint:{...geometry.weakpoint,active:false},platforms:geometry.platforms.map((a,i)=>({id:data.id+'-step-'+i,x:a[0],y:a[1],w:a[2],h:14,label:a[3],oneWay:true,active:false})),seals:geometry.seals.map((a,i)=>({id:data.id+'-seal-'+i,x:a[0],y:a[1],w:38,h:50,hp:2,maxHp:2,active:true})),actionHint:'Brisez les deux sceaux ou réussissez une parade parfaite.',telegraphs:[],pendingAttacks:[]});
-      if(data.type==='boss'&&!['warden','king'].includes(data.bossType))Object.assign(result,{mobile:true,buried:false,attackVolumes:[],poise:0,maxPoise:this.config.difficulty==='master'?3:2,attackCount:0,actionHint:BOSSES.find(b=>b.id===data.bossType).tip});
+      if(data.type==='boss'&&!['warden','king','titan'].includes(data.bossType))Object.assign(result,{mobile:true,buried:false,attackVolumes:[],poise:0,maxPoise:this.config.difficulty==='master'?3:2,attackCount:0,actionHint:BOSSES.find(b=>b.id===data.bossType).tip});
+      if(data.bossType==='titan')Object.assign(result,{tidal:true,attackVolumes:[],poise:0,maxPoise:this.config.difficulty==='master'?3:2,attackCount:0,actionHint:BOSSES.find(b=>b.id==='titan').tip});
       return result;
     }
     loadRoom(index,x,y) {
@@ -771,7 +835,7 @@ const root=typeof window!=='undefined'?window:globalThis;
       this.say(this.room.name,this.room.hint,5);this.emit('save');
     }
     snapshot() {
-      return {version:1,revision:3,config:copy(this.config),showAttackZones:this.showAttackZones,player:{stats:copy(this.player.stats),skills:copy(this.player.skills),weapon:this.player.weapon,doubleJump:this.player.doubleJump,bonusPower:this.player.bonusPower,bonusVitality:this.player.bonusVitality,hp:this.player.hp,stamina:this.player.stamina,flasks:this.player.flasks,x:this.player.x,y:this.player.y},roomIndex:this.roomIndex,shards:this.shards,skillPoints:this.skillPoints,kills:this.kills,deaths:this.deaths,time:this.time,won:this.won,dead:this.dead,checkpoint:copy(this.checkpoint),roomsVisited:[...this.roomsVisited],bossesDefeated:[...this.bossesDefeated],collected:[...this.collected],defeated:[...this.defeated],destroyedWalls:[...this.destroyedWalls],ownedCharms:[...this.ownedCharms],equippedCharms:[...this.equippedCharms]};
+      return {version:1,revision:4,config:copy(this.config),showAttackZones:this.showAttackZones,player:{stats:copy(this.player.stats),skills:copy(this.player.skills),weapon:this.player.weapon,doubleJump:this.player.doubleJump,bonusPower:this.player.bonusPower,bonusVitality:this.player.bonusVitality,hp:this.player.hp,stamina:this.player.stamina,flasks:this.player.flasks,x:this.player.x,y:this.player.y},roomIndex:this.roomIndex,shards:this.shards,skillPoints:this.skillPoints,kills:this.kills,deaths:this.deaths,time:this.time,won:this.won,dead:this.dead,checkpoint:copy(this.checkpoint),roomsVisited:[...this.roomsVisited],bossesDefeated:[...this.bossesDefeated],collected:[...this.collected],defeated:[...this.defeated],destroyedWalls:[...this.destroyedWalls],ownedCharms:[...this.ownedCharms],equippedCharms:[...this.equippedCharms]};
     }
     restore(s) {
       this.config=copy(s.config||this.config);if(!['explorer','adventurer','master'].includes(this.config.difficulty))this.config.difficulty=this.config.assist?'explorer':'adventurer';this.config.assist=this.config.difficulty==='explorer';const sp=s.player||{};this.player.stats=copy(sp.stats||this.config.stats);this.player.skills=copy(sp.skills||{});this.player.weapon=WEAPONS[sp.weapon]?sp.weapon:'sword';this.player.doubleJump=!!sp.doubleJump;this.player.bonusPower=Number(sp.bonusPower)||0;this.player.bonusVitality=Number(sp.bonusVitality)||0;
@@ -783,10 +847,12 @@ const root=typeof window!=='undefined'?window:globalThis;
       if(s.dead){this.loadRoom(this.checkpoint.roomIndex,this.checkpoint.x,this.checkpoint.y);this.player.hp=this.player.maxHp;}
       else {const i=clamp(Number(s.roomIndex)||0,0,ROOMS.length-1);this.loadRoom(i,clamp(Number(sp.x)||140,20,ROOMS[i].width-50),clamp(Number(sp.y)||598,0,640));}
       this.player.flasks=s.dead?this.player.maxFlasks:Number.isFinite(sp.flasks)?clamp(sp.flasks,0,this.player.maxFlasks):this.player.maxFlasks;
+      const newTides=(Number(s.revision)||0)<4&&s.won&&this.bossesDefeated.includes('boss-duelist')&&!this.bossesDefeated.includes('boss-titan');
       const newChapter=(Number(s.revision)||0)<3&&s.won&&!this.bossesDefeated.includes('boss-duelist');
-      if(newChapter){this.won=false;this.player.doubleJump=true;this.loadRoom(6,140,598);this.checkpoint={roomIndex:6,x:140,y:598};this.player.hp=this.player.maxHp;this.player.flasks=this.player.maxFlasks;}
+      if(newChapter||newTides){const nextRoom=newTides?12:6;this.won=false;this.player.doubleJump=true;this.loadRoom(nextRoom,140,598);this.checkpoint={roomIndex:nextRoom,x:140,y:598};this.player.hp=this.player.maxHp;this.player.flasks=this.player.maxFlasks;}
       this.player.invulnerable=1;this.say('L’aventure reprend',this.room.name,3);
       if(newChapter)this.say('Les Royaumes oubliés','Une nouvelle route s’ouvre après la Couronne d’Aurore.',6);
+      if(newTides)this.say('Les Marées célestes','Au-delà des royaumes, les courants ouvrent une nouvelle route.',6);
     }
     respawn() {
       this.dead=false;this.won=false;this.loadRoom(this.checkpoint.roomIndex,this.checkpoint.x,this.checkpoint.y);this.recalculate();this.player.hp=this.player.maxHp;this.player.stamina=this.player.maxStamina;this.player.flasks=this.player.maxFlasks;this.player.invulnerable=1.4;this.previousInput={};this.dashCooldown=0;this.attackCooldown=0;this.parryCooldown=0;this.riposteTime=0;this.afterdashTime=0;this.healCooldown=0;this.emit('save');this.say('La lumière vous relève','Vos éclats et vos talents sont conservés.',3);
@@ -821,10 +887,12 @@ const root=typeof window!=='undefined'?window:globalThis;
     }
     exposeBoss(e) {
       if(!e||e.hp<=0||e.type!=='boss'||e.vulnerabilityTimer>0)return false;
+      if(e.tidal)return this.openTidalBoss(e);
       if(e.mobile)return this.openMobileBoss(e);
       e.state='exposed';e.vulnerabilityTimer=this.config.assist?8:this.config.difficulty==='master'?5.2:6.5;e.timer=e.vulnerabilityTimer;e.cycleDamage=0;e.cycles++;e.armored=false;e.weakpoint.active=true;e.telegraphs=[];e.pendingAttacks=[];e.vx=0;for(const s of e.seals){s.hp=0;s.active=false;}for(const s of e.platforms)s.active=true;this.projectiles=this.projectiles.filter(p=>p.owner!==e.id);e.actionHint=e.bossType==='king'?'Grimpez sur les mains et les épaules. Frappez la couronne !':'Grimpez sur les bras. Frappez le cœur lumineux !';this.say('Le colosse est vulnérable !',e.actionHint,4);this.effect('ring',e.weakpoint.x+30,e.weakpoint.y+30,{life:1,maxLife:1,color:'#9bfff0'});this.emit('expose',{boss:e.id});return true;
     }
     parryBoss(e) {
+      if(e.tidal){if(e.weakpoint.active)return false;e.poise++;this.effect('text',e.x+e.w/2,e.y-25,{text:'PRESSION '+e.poise+'/'+e.maxPoise,color:'#b6fff0',life:.8,maxLife:.8});if(e.poise>=e.maxPoise)return this.openTidalBoss(e);e.state='recover';e.timer=.85;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];this.projectiles=this.projectiles.filter(a=>a.owner!==e.id);e.actionHint=this.tidalProgress(e);this.say('Sa garde se fissure',e.actionHint,2);return false;}
       if(!e.mobile)return this.exposeBoss(e);
       if(e.weakpoint.active)return false;
       e.poise++;this.effect('text',e.x,e.y-25,{text:'PRESSION '+e.poise+'/'+e.maxPoise,color:'#b6fff0',life:.8,maxLife:.8});
@@ -832,6 +900,7 @@ const root=typeof window!=='undefined'?window:globalThis;
       e.state='recover';e.timer=.85;e.vx=0;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];this.projectiles=this.projectiles.filter(a=>a.owner!==e.id);e.actionHint='Parade réussie : '+e.poise+'/'+e.maxPoise+'. Maintenez la pression !';this.say('Sa garde se fissure',e.actionHint,2);return false;
     }
     closeBoss(e) {
+      if(e.tidal){e.vulnerabilityTimer=0;e.weakpoint.active=false;e.armored=true;e.state='recover';e.timer=1.1;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];for(const s of e.platforms)s.active=false;e.actionHint=this.tidalProgress(e);return;}
       if(e.mobile){e.landing=null;e.vulnerabilityTimer=0;e.weakpoint.active=false;e.armored=true;e.state='recover';e.timer=.85;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];e.vx=0;e.buried=e.bossType==='worm';e.actionHint=BOSSES.find(b=>b.id===e.bossType).tip;return;}
       e.vulnerabilityTimer=0;e.armored=true;e.weakpoint.active=false;e.state='recover';e.timer=1.1;for(const s of e.platforms)s.active=false;for(const s of e.seals){s.hp=s.maxHp;s.active=true;}e.actionHint='Son armure se referme. Brisez les sceaux ou parez un coup.';e.telegraphs=[];e.pendingAttacks=[];
     }
@@ -841,7 +910,7 @@ const root=typeof window!=='undefined'?window:globalThis;
     hitBoss(e,box,damage) {
       if(e.buried)return;
       const p=this.player;
-      if(e.weakpoint.active&&overlap(box,e.weakpoint)&&!p.attackVictims.includes(e.id+'-weakpoint')){p.attackVictims.push(e.id+'-weakpoint');this.damageEnemy(e,damage*(e.mobile?1.5:2.8),0,{weakpoint:true});this.pogoBounce();return;}
+      if(e.weakpoint.active&&overlap(box,e.weakpoint)&&!p.attackVictims.includes(e.id+'-weakpoint')){p.attackVictims.push(e.id+'-weakpoint');this.damageEnemy(e,damage*(e.mobile?1.5:2.8),0,{weakpoint:true,weapon:true});this.pogoBounce();return;}
       let sealHit=false;
       for(const s of e.seals)if(s.active&&s.hp>0&&overlap(box,s)&&!p.attackVictims.includes(s.id)){p.attackVictims.push(s.id);s.hp--;sealHit=true;this.effect('spark',s.x+19,s.y+25,{color:'#a8fff0'});this.effect('text',s.x,s.y-10,{text:s.hp?'FISSURE':'SCEAU BRISÉ',color:'#a8fff0',life:.65,maxLife:.65});this.pogoBounce();this.emit('block');}
       if(sealHit&&e.seals.every(s=>s.hp===0)){this.exposeBoss(e);return;}
@@ -852,14 +921,15 @@ const root=typeof window!=='undefined'?window:globalThis;
     }
     damageEnemy(e,amount,stun=.12,hit={}) {
       if(e.hp<=0)return false;
-      if(e.type==='boss'){if(!e.weakpoint.active||!hit.weakpoint){e.armorFlash=.15;return false;}amount=Math.min(amount,e.maxHp*(e.mobile? .22:.34)-e.cycleDamage);if(amount<=0)return false;e.cycleDamage+=amount;}
+      if(e.type==='boss'){if(!e.weakpoint.active||!hit.weakpoint){e.armorFlash=.15;return false;}amount=Math.min(amount,e.maxHp*(e.mobile||e.tidal? .22:.34)-e.cycleDamage);if(amount<=0)return false;e.cycleDamage+=amount;}
       e.hp=Math.max(0,e.hp-amount);e.hitFlash=.15;e.vx=this.player.facing*(e.type==='boss'?0:120);if(e.type!=='boss'&&stun>0){e.state='stunned';e.timer=stun;}
+      if(hit.weapon)this.emit('hit',{weapon:this.player.weapon,boss:e.type==='boss',weakpoint:!!hit.weakpoint});
       const hitX=e.type==='boss'?e.weakpoint.x+e.weakpoint.w/2:e.x+e.w/2,hitY=e.type==='boss'?e.weakpoint.y:e.y;
       this.effect('spark',hitX,hitY+20,{color:e.type==='boss'?'#ffc083':'#8cffe0'});this.effect('text',hitX,hitY-8,{text:String(Math.round(amount)),life:.7,maxLife:.7,color:'#fff0b0'});
       if(e.hp<=0){this.kills++;this.effect('ring',e.x+e.w/2,e.y+e.h/2,{life:.7,maxLife:.7});
-        if(e.type==='boss'){this.bossesDefeated.push(e.id);this.arenaLocked=false;this.skillPoints+=3;this.player.hp=this.player.maxHp;this.player.stamina=this.player.maxStamina;this.projectiles=[];e.weakpoint.active=false;e.telegraphs=[];for(const s of e.platforms)s.active=false;this.emit('boss',{defeated:true});if(e.bossType==='duelist'||this.trial){this.won=true;this.say(this.trial?'Défi remporté !':'L’aurore se lève, Charles.',this.trial?'Le colosse s’incline.':'Le royaume a retrouvé sa lumière.',20);this.emit('win');}else this.say(e.bossType==='king'?'Les royaumes s’ouvrent':'Le gardien s’incline','3 points de talent · Poursuivez votre route vers la droite.',6);this.emit('save');}
+        if(e.type==='boss'){this.bossesDefeated.push(e.id);this.arenaLocked=false;this.skillPoints+=3;this.player.hp=this.player.maxHp;this.player.stamina=this.player.maxStamina;this.projectiles=[];e.weakpoint.active=false;e.telegraphs=[];for(const s of e.platforms)s.active=false;this.emit('boss',{defeated:true});if(e.bossType==='titan'||this.trial){this.won=true;this.say(this.trial?'Défi remporté !':'L’aurore se lève, Charles.',this.trial?'Le colosse s’incline.':'Le royaume a retrouvé sa lumière.',20);this.emit('win');}else this.say(e.bossType==='king'?'Les royaumes s’ouvrent':e.bossType==='duelist'?'Les marées vous appellent':'Le gardien s’incline','3 points de talent · Poursuivez votre route vers la droite.',6);this.emit('save');}
         else {this.defeated.push(e.id);this.shards++;if(this.shards%5===0){this.skillPoints++;this.say('Un nouveau talent vous attend','Tab : ouvrir les talents',3);}if(this.kills%3===0)this.player.hp=Math.min(this.player.maxHp,this.player.hp+9);if(this.hasCharm('moss'))this.player.hp=Math.min(this.player.maxHp,this.player.hp+5);this.emit('pickup');}
-      }else if(e.type==='boss'&&e.cycleDamage>=e.maxHp*(e.mobile? .22:.34)-.001)this.closeBoss(e);
+      }else if(e.type==='boss'&&e.cycleDamage>=e.maxHp*(e.mobile||e.tidal? .22:.34)-.001)this.closeBoss(e);
       return true;
     }
     hurt(amount,source,unblockable=false) {
@@ -888,16 +958,17 @@ const root=typeof window!=='undefined'?window:globalThis;
       const move=(input.right?1:0)-(input.left?1:0);if(move&&p.dashTime<=0)p.facing=move;
       if(p.dashTime>0){p.dashTime=Math.max(0,p.dashTime-dt);p.vx=p.facing*780;p.vy=0;}
       else {const speed=(210+p.stats.speed*22)*(this.hasCharm('wind')?1.1:1)*(p.block? .38:1)*(p.attackTime>0&&p.weapon==='axe'? .6:1);const target=move*speed;const accel=p.grounded?2400:1550;p.vx+=clamp(target-p.vx,-accel*dt,accel*dt);p.vy=Math.min(p.vy+1550*dt,880);}
+      p.inUpdraft=false;if(p.dashTime<=0)for(const current of this.room.updrafts||[])if(overlap(p,current)){p.inUpdraft=true;if(!input.down)p.vy=Math.min(p.vy,-(current.force||330));}
       this.moveBody(p,dt);if(p.grounded){p.jumps=0;if(!this.room.hazards.some(h=>p.x+p.w>h.x&&p.x<h.x+h.w))this.lastSafe={x:p.x,y:p.y};}
       if(p.y>790){this.hurt(22,null,true);if(!this.dead){p.x=this.lastSafe.x;p.y=this.lastSafe.y;p.vx=0;p.vy=0;p.invulnerable=1;}}
       for(const hazard of this.room.hazards)if(overlap(p,hazard)){this.hurt(22,null,true);if(!this.dead){p.x=this.lastSafe.x;p.y=this.lastSafe.y;p.vx=0;p.vy=0;p.invulnerable=1;}break;}
       if(p.attackTime>0){const w=WEAPONS[p.weapon],elapsed=p.attackDuration-p.attackTime;p.attackTime=Math.max(0,p.attackTime-dt);if(elapsed>=w.windup&&elapsed<w.windup+.14){const box=p.attackDown?{x:p.x-18,y:p.y+p.h-3,w:p.w+36,h:Math.max(48,w.range*.5)}:{x:p.facing===1?p.x+p.w-4:p.x-w.range+4,y:p.y-8,w:w.range,h:p.h+18};const combo=p.weapon==='sword'&&p.combo===3?1.5:1;const baseDamage=(11+p.stats.power*2.4+p.bonusPower*5)*w.damage*(p.skills.edge?1.25:1)*combo*(p.attackCharged?2:1)*(p.attackAfterdash?1.5:1)*(p.attackDown&&p.skills.pogo?1.5:1)*(this.hasCharm('fang')?1.12:1);
-          for(const e of this.enemies){if(e.hp<=0)continue;if(e.type==='boss'){this.hitBoss(e,box,baseDamage);continue;}if(!p.attackVictims.includes(e.id)&&overlap(box,e)){p.attackVictims.push(e.id);let damage=baseDamage;if(e.type==='knight'&&e.state!=='stunned'&&p.weapon!=='axe'&&e.facing===-p.facing&&!p.attackDown)damage*=.65;this.damageEnemy(e,damage,p.weapon==='axe'? .4:.13);this.pogoBounce();}}
+          for(const e of this.enemies){if(e.hp<=0)continue;if(e.type==='boss'){this.hitBoss(e,box,baseDamage);continue;}if(!p.attackVictims.includes(e.id)&&overlap(box,e)){p.attackVictims.push(e.id);let damage=baseDamage;if(e.type==='knight'&&e.state!=='stunned'&&p.weapon!=='axe'&&e.facing===-p.facing&&!p.attackDown)damage*=.65;this.damageEnemy(e,damage,p.weapon==='axe'? .4:.13,{weapon:true});this.pogoBounce();}}
           for(const wall of this.secretWalls)if(!wall.broken&&!p.attackVictims.includes(wall.id)&&overlap(box,wall)){p.attackVictims.push(wall.id);this.hitWall(wall);this.pogoBounce();}
           if(!p.slashShown){this.effect('slash',p.x+p.w/2,p.attackDown?p.y+p.h:p.y+25,{facing:p.facing,down:p.attackDown,color:w.color,weapon:p.weapon,range:w.range,life:.18,maxLife:.18});p.slashShown=true;}}
         if(p.attackTime===0){this.attackCooldown=.065;p.slashShown=false;p.attackDown=false;}
       }else p.slashShown=false;
-      if(this.staminaDelay<=0&&!p.block)p.stamina=Math.min(p.maxStamina,p.stamina+dt*(p.skills.flow?45:30));
+      if(this.staminaDelay<=0&&!p.block)p.stamina=Math.min(p.maxStamina,p.stamina+dt*(p.skills.flow?45:30)*(p.grounded&&this.hasCharm('anchor')?1.2:1));
       this.updateEnemies(dt);this.updateProjectiles(dt);this.updatePickups();this.updateEffects(dt);
       const cp=this.room.checkpoint;if(!this.checkpointLit&&cp&&Math.abs(p.x-cp.x)<75&&Math.abs(p.y+p.h-cp.y)<65)this.interact();
       if(this.room.bossGate&&this.enemies.some(e=>e.type==='boss'&&e.hp>0)){if(p.x>this.room.bossGate.x+50)this.arenaLocked=true;if(this.arenaLocked)p.x=clamp(p.x,this.room.bossGate.x,this.room.width-p.w-50);}
@@ -958,7 +1029,41 @@ const root=typeof window!=='undefined'?window:globalThis;
       }
       this.effect('ring',cx,kind==='rain'?e.y+30:635,{color:'#ffb37e',life:.45,maxLife:.45});
     }
+    tidalProgress(e) {return 'Marées '+e.attackCount+'/'+e.maxPoise+' · Parades '+e.poise+'/'+e.maxPoise;}
+    openTidalBoss(e) {
+      if(e.hp<=0||e.weakpoint.active)return false;
+      e.state='exposed';e.exposureDuration=this.config.assist?9:this.config.difficulty==='master'?6.8:8;e.vulnerabilityTimer=e.exposureDuration;e.timer=e.exposureDuration;e.cycleDamage=0;e.cycles++;e.attackCount=0;e.poise=0;e.armored=false;e.weakpoint.active=true;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];for(const step of e.platforms)step.active=true;this.projectiles=this.projectiles.filter(a=>a.owner!==e.id);e.actionHint='Le cœur est ouvert ! Montez dans un courant puis frappez la carapace.';this.say('Le cœur des marées s’éveille',e.actionHint,4);this.effect('ring',e.weakpoint.x+35,e.weakpoint.y+35,{color:'#b6fff0',life:1,maxLife:1});this.emit('expose',{boss:e.id});return true;
+    }
+    prepareTidalAttack(e,kind) {
+      const master=this.config.difficulty==='master',px=this.player.x+this.player.w/2;
+      this.startWindup(e,kind,(kind==='pearlRain'?1.15:1.05)-(master? .18:0)-(e.phase-1)*.06);e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];
+      if(kind==='tidalWave'){e.telegraphs.push({x:this.room.bossGate.x,y:610,w:this.room.width-this.room.bossGate.x-20,h:40,kind,parryable:false});e.actionHint='La marée monte : sautez ou prenez un courant.';}
+      else if(kind==='pearlRain'){const offsets=e.phase===3?[-140,0,140]:e.phase===2?[-90,0,90]:[0];for(const offset of offsets)e.telegraphs.push({x:clamp(px+offset-34,this.room.bossGate.x+10,this.room.width-85),y:110,w:68,h:540,kind,parryable:true});e.actionHint='Des perles tombent : déplacez-vous ou parez au dernier instant.';}
+      else {for(const x of [820,1320]){e.telegraphs.push({x,y:535,w:390,h:115,kind,parryable:true,delay:0});if(e.phase===3)e.telegraphs.push({x,y:425,w:390,h:72,kind,parryable:true,delay:.5});}e.actionHint=e.phase===3?'Deux coups de pinces : changez de hauteur ou parez.':'Les pinces se referment : sautez ou parez.';}
+    }
+    executeTidalAttack(e) {
+      e.state='attack';e.attackVolumes=[];const count=e.phase;
+      if(e.attackKind==='tidalWave'){for(let n=0;n<count;n++)e.pendingAttacks.push({type:'tide',delay:n*.48,speed:300+e.phase*35});e.timer=1.9+(count-1)*.48;}
+      else if(e.attackKind==='pearlRain'){for(let i=0;i<e.telegraphs.length;i++){const t=e.telegraphs[i];e.pendingAttacks.push({type:'pearl',x:t.x+t.w/2-15,y:90,delay:i*.17,speed:420+e.phase*35});}e.timer=1.75+(e.telegraphs.length-1)*.17;}
+      else {e.attackVolumes=e.telegraphs.map(t=>({...t,delay:t.delay||0,life:.22,hit:false}));e.timer=e.phase===3?1.1:.65;}
+      this.effect('ring',e.x+e.w/2,e.attackKind==='pearlRain'?e.y:635,{color:'#9cf6ed',life:.55,maxLife:.55});
+    }
+    updateTidalBoss(e,dt) {
+      e.hitFlash=Math.max(0,e.hitFlash-dt);e.armorFlash=Math.max(0,e.armorFlash-dt);const phase=e.hp<=e.maxHp/3?3:e.hp<=e.maxHp*2/3?2:1;
+      if(phase>e.phase&&!e.weakpoint.active){e.phase=phase;e.timer=1.2;this.projectiles=this.projectiles.filter(a=>a.owner!==e.id);this.say(phase===2?'Phase II — Le ressac':'Phase III — La grande marée',phase===2?'Les perles se multiplient et les vagues se succèdent.':'Les pinces frappent à deux hauteurs. Gardez un courant à portée.',3.5);this.effect('ring',e.x+e.w/2,e.y+70,{color:'#aefaff',life:1.1,maxLife:1.1});this.emit('phase',{phase,boss:e.id});}
+      if(!this.arenaLocked){e.state='idle';return;}e.active=true;
+      if(e.weakpoint.active){e.vulnerabilityTimer=Math.max(0,e.vulnerabilityTimer-dt);e.timer=e.vulnerabilityTimer;if(e.timer<=0)this.closeBoss(e);return;}
+      e.timer-=dt;
+      if(e.state==='windup'){e.attackProgress=clamp(1-e.timer/e.windupDuration,0,1);if(e.timer<=0)this.executeTidalAttack(e);return;}
+      if(e.state==='attack'){
+        for(const pending of e.pendingAttacks){pending.delay-=dt;if(pending.delay>0||pending.fired)continue;pending.fired=true;if(pending.type==='tide'){const cx=e.x+e.w/2;for(const direction of [-1,1])this.projectiles.push({x:cx+(direction<0?-48:0),y:610,w:48,h:40,vx:direction*pending.speed,vy:0,life:5,groundWave:true,owner:e.id,damage:22+e.phase*2,color:'#8ce7e9',kind:'tide'});}else this.projectiles.push({x:pending.x,y:pending.y,w:30,h:38,vx:0,vy:pending.speed,life:1.4,groundWave:false,owner:e.id,damage:21+e.phase*2,color:'#e6fff6',kind:'pearl'});}
+        for(const volume of e.attackVolumes){volume.delay-=dt;if(volume.delay>0)continue;volume.life-=dt;if(volume.life<=0||volume.hit||!overlap(volume,this.player))continue;volume.hit=true;this.hurt(23+e.phase*2,e,false);if(e.state!=='attack')return;}
+        if(e.timer<=0){e.attackCount++;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];if(e.attackCount>=e.maxPoise){this.openTidalBoss(e);return;}e.state='recover';e.timer=e.phase===3? .7:.95;e.actionHint=this.tidalProgress(e);}return;
+      }
+      if(e.timer<=0){const sequence=e.phase===3?['clawSweep','pearlRain','tidalWave']:e.phase===2?['pearlRain','clawSweep','tidalWave']:['tidalWave','pearlRain','clawSweep'];this.prepareTidalAttack(e,sequence[e.sequence++%sequence.length]);}
+    }
     updateBoss(e,dt) {
+      if(e.tidal){this.updateTidalBoss(e,dt);return;}
       if(e.mobile){this.updateMobileBoss(e,dt);return;}
       e.hitFlash=Math.max(0,e.hitFlash-dt);e.armorFlash=Math.max(0,e.armorFlash-dt);const phase=e.hp<=e.maxHp/3?3:e.hp<=e.maxHp*2/3?2:1;
       if(phase>e.phase){e.phase=phase;this.closeBoss(e);e.timer=1.35;this.projectiles=this.projectiles.filter(p=>p.owner!==e.id);this.say(phase===2?'Phase II — L’armure se fissure':'Phase III — Le dernier éclat',phase===2?'De nouvelles attaques se préparent. Surveillez les marques au sol.':'Le colosse déchaîne sa dernière force. Gardez le rythme.',3.5);this.effect('ring',e.x+e.w/2,e.y+e.h*.4,{color:phase===2?'#b5ebff':'#ffb680',life:1.2,maxLife:1.2});this.emit('phase',{phase,boss:e.id});}
@@ -1101,7 +1206,8 @@ const global=typeof window!=='undefined'?window:globalThis;
     forge: {top:'#190f1e', bottom:'#472832', mist:'#a7675e', back:'#2a1b2a', mid:'#3a2532', bark:'#271923', stone:'#4e3b45', edge:'#947875', grass:'#c3916a', glow:'#ffc28a', accent:'#ffbb67'},
     crystal: {top:'#101c35', bottom:'#365267', mist:'#8da5d7', back:'#223851', mid:'#304960', bark:'#193449', stone:'#3b6675', edge:'#95bfbd', grass:'#b0d9cf', glow:'#c6eaff', accent:'#dfc5ee'},
     depths: {top:'#110f20', bottom:'#473d35', mist:'#a49154', back:'#25242b', mid:'#302d30', bark:'#201e28', stone:'#514c43', edge:'#948573', grass:'#b6a87a', glow:'#ffd194', accent:'#c99f5d'},
-    astral: {top:'#090f2a', bottom:'#343454', mist:'#9f8bc9', back:'#1b2542', mid:'#263053', bark:'#161d38', stone:'#53566f', edge:'#aeb4cd', grass:'#c5c5df', glow:'#e0d6ff', accent:'#dac4a1'}
+    astral: {top:'#090f2a', bottom:'#343454', mist:'#9f8bc9', back:'#1b2542', mid:'#263053', bark:'#161d38', stone:'#53566f', edge:'#aeb4cd', grass:'#c5c5df', glow:'#e0d6ff', accent:'#dac4a1'},
+    tides: {top:'#081d2a', bottom:'#285c67', mist:'#64b9bd', back:'#173b4c', mid:'#205161', bark:'#123a48', stone:'#32616b', edge:'#8cc3bb', grass:'#d5aba0', glow:'#a3f2e5', accent:'#f0b298'}
   };
   const noise = n => {const f = Math.sin(n * 127.1 + 311.7) * 43758.5453; return f - Math.floor(f);};
   const clamp = (n,a,b) => Math.max(a,Math.min(b,n));
@@ -1119,6 +1225,7 @@ const global=typeof window!=='undefined'?window:globalThis;
     constructor(canvas) {
       this.canvas=canvas; this.ctx=canvas.getContext('2d'); this.t=0;
       this.width=1280; this.height=720; this.shake=0; this.lastHP=null;
+      this.reduceMotion=false;
       this.palette=palettes.forest;
     }
     resizeToDisplaySize() {
@@ -1184,7 +1291,8 @@ const global=typeof window!=='undefined'?window:globalThis;
       }
       c.restore();
       // Repeating foreground-background architecture in three depth planes.
-      if(['crystal','depths','astral'].includes(room.theme))this.regionScenery(room.theme,cam);
+      if(room.theme==='tides')this.tideScenery(room,cam);
+      else if(['crystal','depths','astral'].includes(room.theme))this.regionScenery(room.theme,cam);
       else{
         const stride=520,scroll=cam*.3;
         for(let i=-1;i<5;i++){
@@ -1285,6 +1393,100 @@ const global=typeof window!=='undefined'?window:globalThis;
         for(const q of stars)this.ellipse(q[0]-cam*.04,q[1],2,2,'#e4d7ff');c.restore();
       }
     }
+    tideScenery(room,cam) {
+      const c=this.ctx,p=this.palette,time=this.t;
+      // Quiet horizontal water makes this open coast distinct from the vertical forests.
+      const sea=c.createLinearGradient(0,365,0,700);
+      sea.addColorStop(0,'#3d889b14');sea.addColorStop(.3,'#58a8ad37');sea.addColorStop(1,'#071d2d00');
+      c.fillStyle=sea;c.fillRect(0,365,1280,335);
+      for(let band=0;band<8;band++){
+        const y=385+band*28,points=[];
+        for(let x=-40;x<=1320;x+=34)points.push([x,y+Math.sin(x*.009+time*.28+band)*5]);
+        this.line(points,band%2?'#a1ded41b':'#87c5cc19',band%3===0?5:2);
+      }
+      // Islands shaped like fossil shells carry tiny ruined cities above the cloud sea.
+      for(let i=-1;i<5;i++){
+        const scroll=cam*.1,key=i+Math.floor(scroll/390),x=i*390-scroll%390,y=370+noise(key+35)*65;
+        c.save();c.globalAlpha=.5;
+        this.path([[x-127,y],[x-94,y-31],[x-56,y-48],[x-22,y-65],[x+28,y-50],[x+72,y-19],[x+132,y],[x+88,y+21],[x+14,y+38],[x-67,y+19]],'#234957');
+        for(let j=0;j<5;j++){
+          const dx=-72+j*34;
+          this.line([[x+dx,y+4],[x+dx*.7,y-29],[x-20,y-58]],'#76a5a53b',1.2);
+        }
+        for(let j=0;j<3;j++){
+          const tx=x-51+j*41,h=26+noise(key*8+j)*34;
+          c.fillStyle='#305c68';c.fillRect(tx,y-40-h,12,h);
+          this.path([[tx-5,y-40-h],[tx+6,y-50-h],[tx+17,y-40-h]],'#386874');
+        }
+        this.line([[x-110,y+28],[x+92,y+28]],'#a0dad52c',2);c.restore();
+      }
+      // Moon reflections: short broken strokes leave enemies and platforms legible.
+      for(let i=0;i<17;i++){
+        const yy=409+i*9,xx=980-cam*.035+Math.sin(i*3+time*.24)*12,ww=10+i*4;
+        this.line([[xx-ww,yy],[xx+ww,yy]],'#c2e9dd24',1.2);
+      }
+      const archive=/archives/i.test(room.id||'')||room.index===13;
+      for(let i=-1;i<6;i++){
+        const stride=310,scroll=cam*.27,key=i+Math.floor(scroll/stride),x=i*stride-scroll%stride;
+        c.save();c.globalAlpha=.55;
+        const h=145+noise(key+12)*115,y=615;
+        this.path([[x-32,y],[x-29,y-h],[x-17,y-h-17],[x+17,y-h-13],[x+30,y-h+6],[x+27,y]],'#234a56','#548a914f',1);
+        this.line([[x-17,y-12],[x-17,y-h+16]],'#82acac44',2);
+        this.path([[x-42,y-h+5],[x+37,y-h+5],[x+44,y-h-7],[x-47,y-h-7]],'#38656d');
+        for(let j=0;j<3;j++)this.line([[x-25,y-h+42+j*26],[x+25,y-h+42+j*26]],'#a0b8ac29',1);
+        if(archive||key%2===0){
+          c.strokeStyle='#467d864f';c.lineWidth=16;c.beginPath();c.arc(x+155,y-h+17,125,Math.PI,TAU);c.stroke();
+          c.strokeStyle='#82adad35';c.lineWidth=1;c.beginPath();c.arc(x+155,y-h+17,133,Math.PI,TAU);c.stroke();
+        }
+        // A spiral ammonite, not a collectible: kept matte in the distant layer.
+        const sx=x+105,sy=564;
+        c.strokeStyle='#a6c2af35';c.lineWidth=3;c.beginPath();
+        for(let j=0;j<=60;j++){
+          const a=j*.17,r=2+j*.47,xx=sx+Math.cos(a)*r,yy=sy+Math.sin(a)*r;
+          if(j)c.lineTo(xx,yy);else c.moveTo(xx,yy);
+        }c.stroke();c.restore();
+        // Coral fans add warm, recognisable coastal silhouettes.
+        const cx=x+207,cy=658;
+        this.line([[cx,cy],[cx-7,cy-37],[cx-3,cy-82]],'#75968b66',4);
+        for(let j=0;j<5;j++){
+          const dir=j%2?1:-1,hy=cy-20-j*12,dx=dir*(26+noise(key+j)*16);
+          this.line([[cx-4,hy],[cx+dx*.55,hy-13],[cx+dx,hy-37]],'#b1898873',3);
+          this.line([[cx+dx*.55,hy-13],[cx+dx*.8,hy-10],[cx+dx*1.2,hy-19]],'#d3aaa26b',2);
+        }
+      }
+    }
+    updraft(column,index,player) {
+      const c=this.ctx,{x,y,w,h}=column,phase=this.t*(this.reduceMotion?36:73)+index*37;
+      c.save();
+      const mist=c.createLinearGradient(x,0,x+w,0);
+      mist.addColorStop(0,'#8ae4dd00');mist.addColorStop(.2,'#78cfc815');mist.addColorStop(.5,'#a9eee71f');mist.addColorStop(.8,'#78cfc815');mist.addColorStop(1,'#8ae4dd00');
+      c.fillStyle=mist;c.fillRect(x,y,w,h);
+      c.beginPath();c.rect(x,y,w,h);c.clip();
+      for(let ribbon=0;ribbon<3;ribbon++){
+        const points=[];
+        for(let dy=0;dy<=h;dy+=18){
+          const wave=Math.sin((dy+phase)*.018+ribbon*2.1)*(this.reduceMotion?5:11);
+          points.push([x+w*(.22+ribbon*.28)+wave,y+dy]);
+        }
+        this.line(points,ribbon===1?'#b4f1e65c':'#83d6d147',1.3);
+      }
+      for(let i=0;i<7;i++){
+        const py=y+((h-i*h/7-phase)%h+h)%h,px=x+w*(.2+noise(i+index*7)*.6);
+        const alpha=.28+Math.sin((py-y)/h*Math.PI)*.4;
+        c.globalAlpha=alpha;
+        this.line([[px-5,py+5],[px,py],[px+5,py+5]],'#c8fff2',1.5);
+        this.line([[px,py+10],[px,py+17]],'#9de7de',1);
+      }
+      c.restore();
+      // These are movement cues, always visible independently of attack prediction.
+      this.line([[x+w*.3,y+h-4],[x+w*.7,y+h-4]],'#c2f4e6b0',2);
+      const nearby=player&&player.x+player.w>x-30&&player.x<x+w+30&&player.y+player.h>y&&player.y<y+h+30;
+      if(nearby){
+        c.save();c.font='600 10px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#d4fff0';c.shadowColor='#081e2a';c.shadowBlur=5;
+        c.fillText(t('COURANT ASCENDANT'),x+w/2,y+16);
+        c.fillText(t('↓ · DESCENDRE'),x+w/2,y+31);c.restore();
+      }
+    }
     tree(x,bottom,s,color,seed=0) {
       const c=this.ctx;c.save();c.translate(x,bottom);c.scale(s,s);
       this.path([[-48,70],[-10,-20],[-7,-170],[-29,-330],[-35,-500],[-12,-675],[17,-680],[4,-485],[23,-319],[23,-165],[44,45],[79,70]],color);
@@ -1307,6 +1509,16 @@ const global=typeof window!=='undefined'?window:globalThis;
     }
     platform(pf,idx=0) {
       const c=this.ctx,p=this.palette,{x,y,w,h}=pf;
+      if(pf.oneWay&&p===palettes.tides){
+        // Thin shell shelves read as permeable from below, unlike the solid coast.
+        this.path([[x,y],[x+w,y],[x+w-6,y+8],[x+w*.7,y+15],[x+w*.24,y+13],[x+5,y+7]],'#628c88','#a4d2bc',1);
+        this.line([[x+1,y],[x+w-1,y]],'#d1f3d9',2);
+        for(let j=0;j<Math.floor(w/31);j++){
+          const xx=x+12+j*31;
+          this.line([[xx,y+3],[xx+6,y+9],[xx+14,y+11]],'#37616a',1.2);
+        }
+        return;
+      }
       const isGround=h>=70;
       const g=c.createLinearGradient(0,y,0,y+h);g.addColorStop(0,p.stone);g.addColorStop(1,p.top);
       c.fillStyle=g;c.fillRect(x,y,w,h);
@@ -1756,6 +1968,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       }
     }
     boss(e) {
+      if(e.bossType==='titan'){this.titan(e);return;}
       if(e.bossType==='moth'){this.moth(e);return;}
       if(e.bossType==='worm'){this.worm(e);return;}
       if(e.bossType==='duelist'){this.duelist(e);return;}
@@ -1869,6 +2082,150 @@ const global=typeof window!=='undefined'?window:globalThis;
         }
       }
     }
+    tideLedge(pf,index) {
+      if(pf.active===false)return;
+      const c=this.ctx,{x,y,w}=pf;
+      // The bright lip is precisely the one-way collision surface, including the claws.
+      this.path([[x,y],[x+w,y],[x+w-5,y+18],[x+w*.74,y+29],[x+w*.24,y+25],[x+5,y+16]],'#527d7e','#a9d5c2',1.5);
+      this.path([[x+4,y+4],[x+w-4,y+4],[x+w-15,y+10],[x+13,y+10]],'#a9cfb7');
+      this.line([[x+2,y],[x+w-2,y]],'#e0f7d9',2.5);
+      for(let j=0;j<Math.floor(w/32);j++){
+        const xx=x+14+j*32;
+        this.line([[xx,y+7],[xx+9,y+20],[xx+20,y+22]],'#224c59',2);
+      }
+      if(index<2){
+        this.path([[x+9,y+18],[x+29,y+17],[x+22,y+37]],'#c4bd9a','#6d9691',1);
+        this.path([[x+w-30,y+18],[x+w-9,y+17],[x+w-21,y+37]],'#c4bd9a','#6d9691',1);
+      }
+    }
+    titan(e) {
+      const c=this.ctx,cx=e.x+e.w/2,floor=e.y+e.h,phase=e.phase||1;
+      const open=!!e.weakpoint?.active,wind=e.state==='windup',progress=e.attackProgress||0;
+      const shell=e.hitFlash>0?'#aacbbc':'#4b7d7c',edge='#a6c9b7',dark='#173e4e';
+      const breathing=Math.sin(this.t*1.15)*2;
+      this.ellipse(cx,floor+3,330,19,'#041621bc');
+      // An ancient living island: broad low shell, six legs, articulated crab pincers.
+      for(let side=0;side<2;side++){
+        const dir=side?1:-1;
+        for(let leg=0;leg<3;leg++){
+          const rootX=cx+dir*(115+leg*16),rootY=floor-139+leg*29,footX=cx+dir*(208+leg*27);
+          this.line([[rootX,rootY],[footX+dir*20,floor-73+leg*11],[footX,floor-6]],dark,27);
+          this.line([[rootX,rootY-5],[footX+dir*19,floor-79+leg*11],[footX,floor-9]],'#658b86',16);
+          this.path([[footX-dir*15,floor],[footX+dir*20,floor],[footX+dir*6,floor-30]],'#a9b9a3',edge,1);
+        }
+      }
+      // Fortress turrets stay matte: the single high pearl heart is the only target.
+      for(let turret=0;turret<5;turret++){
+        const tx=cx+(turret-2)*57,base=e.y+119,top=e.y-15-Math.max(0,2-Math.abs(turret-2))*29;
+        this.path([[tx-23,base],[tx-21,top],[tx+20,top],[tx+24,base]],'#365d65','#709894',1.5);
+        this.path([[tx-28,top+1],[tx-27,top-12],[tx-15,top-12],[tx-15,top-5],[tx-5,top-5],[tx-5,top-14],[tx+6,top-14],[tx+6,top-5],[tx+16,top-5],[tx+16,top-12],[tx+28,top-12],[tx+28,top+1]],'#76958b','#acbca0',1);
+        this.path([[tx-6,top+38],[tx-6,top+19],[tx,top+10],[tx+6,top+19],[tx+6,top+38]],'#193b49');
+        this.line([[tx-13,top+48],[tx-13,base-10]],'#71918b66',1);
+        if(turret===2){
+          this.line([[tx,top-12],[tx,top-55]],'#b4b6a0',2);
+          this.path([[tx+1,top-54],[tx+30,top-49+Math.sin(this.t*.8)*3],[tx+18,top-34],[tx+1,top-36]],'#c09a8d');
+        }
+      }
+      // Scalloped carapace, broad enough to make the 52px hero feel very small.
+      this.path([[cx-231,floor-90],[cx-224,floor-183],[cx-194,e.y+86],[cx-144,e.y+36],[cx-71,e.y+4],[cx+18,e.y-4],[cx+112,e.y+20],[cx+189,e.y+76],[cx+233,floor-188],[cx+242,floor-89],[cx+170,floor-57],[cx+85,floor-42],[cx-63,floor-43],[cx-155,floor-60]],shell,edge,3);
+      this.path([[cx-217,floor-102],[cx-190,floor-146],[cx-122,floor-119],[cx-60,floor-101],[cx+59,floor-101],[cx+133,floor-126],[cx+219,floor-154],[cx+229,floor-102],[cx+140,floor-67],[cx-109,floor-64]],'#315f68','#8fbaab',2);
+      // Radial plates and etched sea spirals establish a shell, not stone armour.
+      const coreX=e.weakpoint?e.weakpoint.x+e.weakpoint.w/2:cx,coreY=e.weakpoint?e.weakpoint.y+e.weakpoint.h/2:e.y+60;
+      for(let i=0;i<8;i++){
+        const a=Math.PI*.08+i*Math.PI*.12,rx=Math.cos(a)*213,ry=Math.sin(a)*191;
+        this.line([[coreX+Math.cos(a)*58,coreY+Math.sin(a)*51],[cx+rx*.77,coreY+ry*.76],[cx+rx,floor-99]],'#254f5a',3);
+        this.line([[coreX+Math.cos(a)*62+3,coreY+Math.sin(a)*55],[cx+rx*.77+3,coreY+ry*.76]],'#add0b55c',1.5);
+      }
+      for(let side=0;side<2;side++){
+        const dir=side?1:-1,sx=cx+dir*155,sy=floor-178;
+        c.save();c.strokeStyle='#bad1b56b';c.lineWidth=2;c.beginPath();
+        for(let k=0;k<=45;k++){
+          const a=k*.18,r=2+k*.65,xx=sx+Math.cos(a)*r,yy=sy+Math.sin(a)*r;
+          if(k)c.lineTo(xx,yy);else c.moveTo(xx,yy);
+        }c.stroke();c.restore();
+        // Corals and small roof remnants make the centuries of growth visible.
+        const coralX=cx+dir*191,coralY=e.y+104;
+        this.line([[coralX,coralY],[coralX+dir*9,coralY-29],[coralX+dir*3,coralY-63]],'#d1a99a',4);
+        this.line([[coralX+dir*8,coralY-29],[coralX+dir*29,coralY-43],[coralX+dir*36,coralY-64]],'#ac8585',3);
+        this.line([[coralX+dir*5,coralY-44],[coralX-dir*12,coralY-55],[coralX-dir*15,coralY-74]],'#ad928c',3);
+        const pf=(e.platforms||[])[side],restX=pf?pf.x+pf.w/2:cx+dir*246;
+        const retract=wind&&e.attackKind==='clawSweep'?progress:0;
+        const handX=restX-dir*retract*34,handY=open&&pf?pf.y+21:floor-91-retract*53+breathing;
+        const shoulderX=cx+dir*185,shoulderY=floor-178;
+        this.line([[shoulderX,shoulderY],[cx+dir*241,floor-166],[handX,handY]],dark,51);
+        this.line([[shoulderX,shoulderY-5],[cx+dir*241,floor-171],[handX,handY-5]],'#87a69a',31);
+        this.ellipse(cx+dir*241,floor-168,23,23,'#426b71');
+        this.ellipse(cx+dir*241,floor-168,12,12,'#acb9a1');
+        if(!open){
+          const jaw=wind&&e.attackKind==='clawSweep'?10+progress*20:5+Math.sin(this.t*1.3+side)*2;
+          c.save();c.translate(handX,handY);c.scale(dir,1);
+          this.path([[-47,14],[-45,-28],[-16,-49],[28,-44],[67,-28-jaw],[85,-7-jaw],[28,-11],[-1,6]],'#8eaaa0','#c3ceae',2);
+          this.path([[-42,18],[-18,40],[25,41],[72,17+jaw],[83,3+jaw],[22,15],[0,1]],'#60878a','#a9c4b5',2);
+          this.path([[28,-11],[44,-12],[35,1]],'#e5d7ad');
+          this.path([[23,15],[42,11],[34,-1]],'#d2c8a1');
+          this.line([[-25,-28],[7,-32],[38,-24]],'#537d7d',3);c.restore();
+        }
+      }
+      // Low turtle head and seaweed beard: expressive, visibly separate from the high heart.
+      const hy=floor-79+breathing;
+      this.path([[cx-78,hy-32],[cx-63,hy-65],[cx-21,hy-73],[cx+23,hy-72],[cx+65,hy-58],[cx+81,hy-28],[cx+67,hy+16],[cx+28,hy+37],[cx-24,hy+38],[cx-67,hy+16]],'#729994','#b4c6ae',2);
+      this.path([[cx-56,hy-33],[cx-35,hy-39],[cx-17,hy-30],[cx-33,hy-20]],'#153747');
+      this.path([[cx+17,hy-30],[cx+35,hy-39],[cx+57,hy-33],[cx+34,hy-20]],'#153747');
+      this.line([[cx-44,hy-30],[cx-29,hy-29]],'#d8c596',2);
+      this.line([[cx+29,hy-29],[cx+44,hy-30]],'#d8c596',2);
+      this.path([[cx-18,hy-22],[cx,hy-31],[cx+18,hy-22],[cx+11,hy-3],[cx,hy+5],[cx-11,hy-3]],'#a3b5a1','#d0d2af',1.5);
+      this.line([[cx-33,hy+9],[cx-14,hy+15],[cx+14,hy+15],[cx+33,hy+9]],'#315d64',2);
+      for(let i=0;i<7;i++){
+        const bx=cx-36+i*12;
+        this.line([[bx,hy+26],[bx-4,hy+40],[bx+Math.sin(this.t*.6+i)*5,Math.min(floor-2,hy+58)]],i%2?'#658b82':'#a2b7a0',3);
+      }
+      for(let crack=0;crack<(phase-1)*3;crack++){
+        const x=cx-157+noise(crack+49)*310,y=e.y+109+noise(crack+77)*77;
+        this.line([[x,y],[x+13,y+12],[x+7,y+26],[x+21,y+38]],'#173e4c',4);
+        this.line([[x,y],[x+13,y+12],[x+7,y+26],[x+21,y+38]],'#d2ac91',1);
+      }
+      if(open)for(let i=0;i<(e.platforms||[]).length;i++)this.tideLedge(e.platforms[i],i);
+      // All target decoration is anchored to the exact engine weakpoint bounds.
+      if(e.weakpoint){
+        const q=e.weakpoint,rx=q.w/2,ry=q.h/2;
+        this.ellipse(coreX,coreY,rx+12,ry+12,'#173e4b');
+        c.save();c.strokeStyle='#b3cbb0';c.lineWidth=4;c.beginPath();c.ellipse(coreX,coreY,rx+8,ry+8,0,0,TAU);c.stroke();c.restore();
+        if(open){
+          this.glow(coreX,coreY,83,'#b1f6d5',.2+Math.sin(this.t*3)*.025);
+          this.ellipse(coreX,coreY,rx-3,ry-3,'#83d7c0');
+          this.ellipse(coreX-8,coreY-8,rx*.63,ry*.63,'#c9f9d8');
+          this.ellipse(coreX-11,coreY-12,rx*.22,ry*.15,'#f2ffdf');
+          c.save();c.strokeStyle='#e1ffdd';c.lineWidth=2;c.beginPath();
+          c.arc(coreX,coreY,Math.max(rx,ry)+17,-Math.PI/2,-Math.PI/2+TAU*clamp((e.vulnerabilityTimer||0)/(e.exposureDuration||8),0,1));c.stroke();
+          c.font='700 11px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#e1ffdf';c.shadowColor='#08202c';c.shadowBlur=6;
+          c.fillText(t('CŒUR DES MARÉES'),coreX,q.y-25);c.restore();
+        }else{
+          this.path([[q.x+3,coreY],[q.x+7,q.y+12],[coreX,q.y+2],[coreX-2,q.y+q.h-3],[q.x+7,q.y+q.h-12]],'#497279','#8cae9f',1.5);
+          this.path([[coreX+2,q.y+2],[q.x+q.w-7,q.y+12],[q.x+q.w-3,coreY],[q.x+q.w-7,q.y+q.h-12],[coreX+2,q.y+q.h-3]],'#3b626b','#8cae9f',1.5);
+          this.line([[coreX-9,coreY],[coreX+9,coreY]],'#9aa78d',3);
+          this.ellipse(coreX,coreY,5,5,'#728b81');
+        }
+      }
+      if(wind){
+        if(e.attackKind==='tidalWave'){
+          const radius=45+progress*45;
+          this.glow(cx,floor-15,radius,'#b0e8df',.12+progress*.15);
+          c.save();c.globalAlpha=.3+progress*.4;c.strokeStyle='#b9f0e5';c.lineWidth=2;c.beginPath();c.ellipse(cx,floor-7,110+progress*65,8+progress*7,0,0,TAU);c.stroke();c.restore();
+        }else if(e.attackKind==='pearlRain'){
+          for(const zone of e.telegraphs||[]){
+            const px=zone.x+zone.w/2,py=zone.y+17;
+            this.glow(px,py,22,'#f3c6b3',.15+progress*.2);
+            this.ellipse(px,py,3+progress*7,3+progress*9,'#e8cbb6');
+          }
+        }
+        this.bossTelegraph(e);
+      }
+      if(e.state==='stunned')this.stunned(cx,e.y-50);
+      if(!open){
+        c.save();c.font='600 11px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#c5dcd0';c.shadowColor='#0a2130';c.shadowBlur=5;
+        c.fillText(t('Marées '+(e.attackCount||0)+'/'+(e.maxPoise||2)+' · Parades '+(e.poise||0)+'/'+(e.maxPoise||2)),coreX,e.weakpoint?e.weakpoint.y+e.weakpoint.h+25:e.y+120);c.restore();
+      }
+    }
     bossTelegraph(e) {
       const c=this.ctx,x=e.x+e.w/2,floor=e.y+e.h,progress=e.attackProgress||0,kind=e.attackKind;
       const markerY=Math.max(130,e.y-34);
@@ -1881,7 +2238,7 @@ const global=typeof window!=='undefined'?window:globalThis;
           if(zone.w*zone.h>60000)c.globalAlpha=.1+progress*.1;
           c.fillStyle=color;c.fillRect(zone.x,zone.y,zone.w,zone.h);c.globalAlpha=baseAlpha;
           c.strokeStyle=color;c.lineWidth=2;c.setLineDash([8,6]);c.strokeRect(zone.x,zone.y,zone.w,zone.h);c.setLineDash([]);
-          if(zone.kind==='rain'){
+          if(zone.kind==='rain'||zone.kind==='pearlRain'){
             this.line([[zone.x+zone.w/2,zone.y-40],[zone.x+zone.w/2,zone.y-12]],color,2);
             this.line([[zone.x+zone.w/2-5,zone.y-20],[zone.x+zone.w/2,zone.y-12],[zone.x+zone.w/2+5,zone.y-20]],color,2);
           }
@@ -1901,7 +2258,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       c.globalAlpha=1;this.alert(x,markerY);
       c.strokeStyle='#ffdb9d';c.lineWidth=2;c.beginPath();c.arc(x,markerY,14,-Math.PI/2,-Math.PI/2+TAU*progress);c.stroke();
       c.font='700 11px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#ffe0b7';
-      const texts={slam:'ONDE · SAUTEZ',stomp:'ONDE · SAUTEZ',eruption:'VAGUES · SAUTEZ',volley:'ORBES · PAREZ',rain:'CHUTE · BOUGEZ',doubleSweep:'DOUBLE BALAYAGE',feathers:'PLUMES · PAREZ',tempest:'TEMPÊTE · ESQUIVEZ',dive:'PLONGÉE · ÉCARTEZ-VOUS',gust:'RAFALE · SAUTEZ',burrow:'ÉMERGENCE · BOUGEZ',twinburrow:'DOUBLE ÉMERGENCE',bite:'MORSURE · PAREZ',dashSlash:'RUÉE · PAREZ',combo:'DEUX RUÉES',crescent:'LAME D’ÉCLIPSE'};
+      const texts={slam:'ONDE · SAUTEZ',stomp:'ONDE · SAUTEZ',eruption:'VAGUES · SAUTEZ',volley:'ORBES · PAREZ',rain:'CHUTE · BOUGEZ',doubleSweep:'DOUBLE BALAYAGE',feathers:'PLUMES · PAREZ',tempest:'TEMPÊTE · ESQUIVEZ',dive:'PLONGÉE · ÉCARTEZ-VOUS',gust:'RAFALE · SAUTEZ',burrow:'ÉMERGENCE · BOUGEZ',twinburrow:'DOUBLE ÉMERGENCE',bite:'MORSURE · PAREZ',dashSlash:'RUÉE · PAREZ',combo:'DEUX RUÉES',crescent:'LAME D’ÉCLIPSE',tidalWave:'MARÉE · PRENEZ DE LA HAUTEUR',pearlRain:'PERLES · BOUGEZ OU PAREZ',clawSweep:'PINCES · SAUTEZ OU PAREZ'};
       const text=texts[kind]||'BALAYAGE · ESQUIVEZ';
       c.fillText(t(text),x,markerY-23);c.restore();
     }
@@ -1945,7 +2302,15 @@ const global=typeof window!=='undefined'?window:globalThis;
           this.line([[-4,5],[5,5]],'#2d666d',1);this.line([[0,-1],[8,-1]],'#2d666d',1);
         }else if(it.charm==='fang')this.path([[-9,-11],[10,-11],[9,-2],[2,12],[-5,15],[-1,4],[-7,1]],col,'#f9e7bb',1);
         else if(it.charm==='magnet')this.path([[0,-14],[4,-4],[13,0],[4,4],[0,15],[-4,4],[-13,0],[-4,-4]],col,'#eee2ff',1);
-        else if(it.charm==='moss'){
+        else if(it.charm==='tide'){
+          this.ellipse(0,-1,10,11,'#9fdcca');this.ellipse(-3,-4,5,5,'#e5f4d6');
+          this.line([[-13,8],[-7,12],[0,10],[7,12],[13,8]],col,2);
+        }else if(it.charm==='anchor'){
+          this.ellipse(0,-10,4,4,col);this.line([[0,-6],[0,11]],col,2.5);
+          this.line([[-6,-3],[6,-3]],col,2);
+          this.line([[-11,4],[-9,9],[0,14],[9,9],[11,4]],col,2.5);
+          this.path([[-13,3],[-5,4],[-12,8]],col);this.path([[13,3],[5,4],[12,8]],col);
+        }else if(it.charm==='moss'){
           this.line([[0,14],[0,-9]],col,2);this.ellipse(-6,-2,6,3,col);this.ellipse(6,4,6,3,col);this.ellipse(3,-8,5,3,col);
         }else{
           this.path([[0,-14],[10,-5],[10,7],[0,15],[-10,7],[-10,-5]],'#678aab',col,1.5);
@@ -1990,6 +2355,15 @@ const global=typeof window!=='undefined'?window:globalThis;
         this.path([[x+8,y],[x+w-8,y],[x+w,y+h-18],[x+w-10,y+h],[x+6,y+h],[x,y+h-12]],g,'#e9c59e',1.5);
         this.line([[x+w*.4,y+h*.4],[x+w*.5,y+h*.72],[x+w*.33,y+h]],'#65565b',3);
         this.glow(x+w/2,y+h-8,w,'#f0c593',.4);
+      }else if(kind==='clawSweep'){
+        // The swept pincer and its wake stay inside the actual damaging rectangle.
+        const dir=x+w/2<e.x+e.w/2?-1:1,tip=dir<0?x:x+w,base=dir<0?x+w:x,cy=y+h/2;
+        this.path([[base,y+5],[tip-dir*w*.22,y],[tip,cy],[tip-dir*w*.22,y+h],[base,y+h-5]],'#91d9cd55');
+        this.line([[base,y+7],[tip-dir*w*.24,y+5],[tip-dir*4,cy-5]],'#e9dfbd',3);
+        this.line([[base,y+h-7],[tip-dir*w*.24,y+h-5],[tip-dir*4,cy+5]],'#bddcd1',2.5);
+        this.path([[tip-dir*w*.27,y+9],[tip-dir*w*.07,cy-5],[tip-dir*w*.28,cy-12]],'#a9c9b9','#f0d7ac',1.5);
+        this.path([[tip-dir*w*.28,y+h-9],[tip-dir*w*.07,cy+5],[tip-dir*w*.28,cy+12]],'#709e9d','#d6d6b5',1.5);
+        for(let i=0;i<3;i++)this.line([[base+dir*w*.15,y+16+i*(h-32)/2],[tip-dir*w*.39,y+13+i*(h-26)/2]],'#b8eade66',1.2);
       }else if(kind==='bite'){
         const jaw=8+Math.sin(this.t*28)*4;
         this.path([[x,y],[x+w,y],[x+w-15,y+jaw],[x+15,y+jaw]],'#efdcad');
@@ -2014,8 +2388,21 @@ const global=typeof window!=='undefined'?window:globalThis;
       c.restore();
     }
     projectile(o) {
-      const c=this.ctx,x=o.x+(o.w||8)/2,y=o.y+(o.h||8)/2,color=o.color||'#ffc68a';
+      const c=this.ctx,x=o.x+(o.w||8)/2,y=o.y+(o.h||8)/2,color=o.color||(o.kind==='tide'?'#b5eee0':o.kind==='pearl'?'#f2d2b6':'#ffc68a');
       this.glow(x,y,35,color,.25);
+      if(o.kind==='tide'){
+        const w=o.w||48,h=o.h||40;
+        c.save();c.translate(x,y);c.scale(Math.sign(o.vx)||1,1);
+        this.path([[-w*.5,h*.5],[-w*.5,h*.18],[-w*.28,-h*.07],[-w*.16,-h*.35],[w*.05,-h*.5],[w*.32,-h*.44],[w*.5,-h*.18],[w*.38,h*.08],[w*.13,h*.02],[w*.21,-h*.13],[w*.04,-h*.18],[-w*.02,h*.08],[w*.35,h*.5]],'#5da9ae','#b5eee0',1.5);
+        this.line([[-w*.43,h*.42],[-w*.18,h*.25],[w*.08,h*.32],[w*.3,h*.41]],'#e5f6df',2);
+        this.ellipse(w*.29,-h*.34,3,2,'#f0ffe6');c.restore();return;
+      }
+      if(o.kind==='pearl'){
+        const rx=(o.w||30)/2,ry=(o.h||38)/2;
+        this.ellipse(x,y,rx,ry,'#bcaaa5');this.ellipse(x-2,y-3,rx*.78,ry*.78,'#efd5ba');
+        this.ellipse(x-rx*.28,y-ry*.33,rx*.28,ry*.22,'#fff2d9');
+        this.line([[x,y-ry-3],[x-(o.vx||0)*.035,y-ry-26]],'#e1cbb880',2);return;
+      }
       if(o.kind==='gust'){
         c.save();c.translate(x,y);c.scale(Math.sign(o.vx)||1,1);c.strokeStyle='#c4e8ee';c.lineWidth=2;
         for(let i=0;i<3;i++){c.beginPath();c.ellipse(0,-7+i*7,25-i*3,9+i*2,-.2,-2.6,2.2);c.stroke();}
@@ -2064,16 +2451,16 @@ const global=typeof window!=='undefined'?window:globalThis;
       this.palette=palettes[room.theme]||palettes.forest;
       this.background(room,camera);
       if(engine.player){
-        if(this.lastHP!==null&&engine.player.hp<this.lastHP)this.shake=6;
+        if(!this.reduceMotion&&this.lastHP!==null&&engine.player.hp<this.lastHP)this.shake=6;
         if(this.lastHP!==null&&engine.player.hp>this.lastHP)this.healAura=.8;
         this.lastHP=engine.player.hp;
       }
       this.healAura=Math.max(0,(this.healAura||0)-dt);
       for(const boss of engine.enemies||[])if(boss.type==='boss'&&boss.state==='attack'&&['slam','eruption'].includes(boss.attackKind)){
         const key=boss.id+':'+boss.sequence;
-        if(this.lastImpact!==key){this.lastImpact=key;this.shake=9;}
+        if(this.lastImpact!==key){this.lastImpact=key; if(!this.reduceMotion)this.shake=9;}
       }
-      this.shake=Math.max(0,this.shake-dt*25);
+      this.shake=this.reduceMotion?0:Math.max(0,this.shake-dt*25);
       c.save();c.translate(-(camera.x||0)+Math.sin(this.t*120)*this.shake,-(camera.y||0)+Math.cos(this.t*95)*this.shake*.55);
       const min=(camera.x||0)-180,max=(camera.x||0)+1460;
       // Wayfinding glints along exits.
@@ -2081,6 +2468,7 @@ const global=typeof window!=='undefined'?window:globalThis;
         if(engine.roomIndex!==(CM.ROOMS?.length||12)-1)this.doorway(room.width-20,false,engine.arenaLocked||(engine.roomIndex===1&&!engine.player?.doubleJump));
         if(engine.roomIndex>0)this.doorway(20,true,engine.arenaLocked);
       }
+      (room.updrafts||[]).forEach((column,i)=>{if(column.x+column.w>min&&column.x<max)this.updraft(column,i,engine.player);});
       (room.platforms||[]).forEach((pf,i)=>{if(pf.x+pf.w>min&&pf.x<max)this.platform(pf,i);});
       (room.hazards||[]).forEach(hz=>{if(hz.x+hz.w>min&&hz.x<max)this.hazard(hz);});
       if(engine.arenaLocked&&room.bossGate){
@@ -2162,6 +2550,10 @@ const global=typeof window!=='undefined'?window:globalThis;
   const SAVE_KEY = 'carlus-magnus:aurore:v1';
   const PREF_KEY = 'carlus-magnus:prefs:v1';
   const TRIAL_KEY = 'carlus-magnus:trials:v1';
+  const readPreferences = () => {try{const value=JSON.parse(localStorage.getItem(PREF_KEY)||'{}');return value&&typeof value==='object'&&!Array.isArray(value)?value:{};}catch{return {};}};
+  const preferences=readPreferences();
+  let reduceMotion=typeof preferences.reduceMotion==='boolean'?preferences.reduceMotion:matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const savePreference=patch=>{Object.assign(preferences,patch);try{localStorage.setItem(PREF_KEY,JSON.stringify({...readPreferences(),...preferences}));}catch{}};
   const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const heroes = [
     {id:'errant',name:'L’Errant',tag:'L’ÉQUILIBRE',line:'Une lame sûre. Un cœur sans peur.',color:'#a1d8cd',stats:{speed:4,power:4,vitality:4},weapon:'sword',desc:'Une voie équilibrée pour découvrir les ruines. Rapide, solide et à l’aise avec toutes les armes.'},
@@ -2199,19 +2591,25 @@ const global=typeof window!=='undefined'?window:globalThis;
   const clearInput = () => { keys.clear(); Object.keys(touch).forEach(k => touch[k]=false); };
 
   class Sound {
-    constructor(){this.ctx=null;this.enabled=true;this.nextNote=0;try{this.enabled=JSON.parse(localStorage.getItem(PREF_KEY)||'{}').sound!==false;}catch{}}
+    constructor(){this.ctx=null;this.enabled=preferences.sound!==false;this.nextNote=0;this.lastHit=0;}
     unlock(){try{this.ctx ||= new (window.AudioContext||window.webkitAudioContext)();if(this.ctx.state==='suspended')this.ctx.resume();}catch{}}
     tone(freq,duration=.1,type='sine',volume=.05,slide=0,delay=0){
       if(!this.enabled||!this.ctx||this.ctx.state!=='running')return;
       const c=this.ctx,t=c.currentTime+delay,o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.setValueAtTime(freq,t);if(slide)o.frequency.exponentialRampToValueAtTime(Math.max(20,freq+slide),t+duration);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(volume,t+.008);g.gain.exponentialRampToValueAtTime(.0001,t+duration);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+duration+.02);
     }
-    play(type){
+    play(type,event={}){
       if(type==='attack'){this.tone(160,.12,'triangle',.055,-100);this.tone(600,.055,'sawtooth',.008,-500);}
       else if(type==='jump')this.tone(210,.14,'triangle',.025,220);
       else if(type==='dash')this.tone(340,.12,'triangle',.035,-290);
       else if(type==='parry'){this.tone(920,.35,'sine',.07,400);this.tone(1380,.4,'triangle',.035,0,.04);}
       else if(type==='block')this.tone(115,.13,'square',.025,-60);
       else if(type==='hurt'){this.tone(100,.18,'sawtooth',.04,-55);}
+      else if(type==='hit'){
+        const now=this.ctx?.currentTime||0;if(now-this.lastHit<.045)return;this.lastHit=now;
+        const heavy=event.weapon==='axe',pierce=event.weapon==='spear';
+        this.tone(heavy?75:pierce?310:145,heavy? .17:.1,heavy?'triangle':'sine',heavy? .075:.045,heavy?-45:-90);
+        if(event.weakpoint)this.tone(720,.16,'triangle',.035,240);
+      }
       else if(type==='pickup'){this.tone(660,.2,'sine',.04);this.tone(990,.3,'sine',.035,0,.08);}
       else if(type==='death'){this.tone(200,.8,'triangle',.05,-140);}
       else if(type==='boss'){this.tone(65,1.2,'triangle',.07);this.tone(98,1,'sine',.045,0,.2);}
@@ -2224,7 +2622,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       else if(type==='win'){[0,4,7,12,16].forEach((v,i)=>this.tone(261.6*2**(v/12),1.5,'sine',.04,0,i*.18));}
     }
     ambient(t){if(t<this.nextNote)return;this.nextNote=t+3.8+Math.random()*2;const notes=[130.81,196,261.63,293.66,392];this.tone(notes[Math.floor(Math.random()*notes.length)],2.5,'sine',.011);}
-    toggle(){this.enabled=!this.enabled;this.unlock();try{localStorage.setItem(PREF_KEY,JSON.stringify({sound:this.enabled}));}catch{};updateSoundButton();}
+    toggle(){this.enabled=!this.enabled;this.unlock();savePreference({sound:this.enabled});updateSoundButton();}
   }
   const sound = new Sound();
   function updateSoundButton(){$('sound-button').textContent=sound.enabled?'♫':'♪';$('sound-button').style.opacity=sound.enabled?'1':'.45';$('sound-button').setAttribute('aria-label',t(sound.enabled?'Couper le son':'Activer le son'));$('sound-button').title=t(sound.enabled?'Son activé':'Son coupé');}
@@ -2260,11 +2658,11 @@ const global=typeof window!=='undefined'?window:globalThis;
     if(game&&!game.trial)saveGame();
     game=null;showScreen('title');
     const records=trialRecords();
-    openModal('trials',`<div class="eyebrow">LES ROYAUMES OUBLIÉS · ÉPREUVES LIBRES</div><h2>Cinq gardiens. Cinq façons de vaincre.</h2><p>Grimpe sur les colosses, guette un atterrissage, esquive un assaut.<br>Chaque combat est indépendant de ta sauvegarde d’aventure.</p><label class="trial-difficulty">LE NIVEAU DE DÉFI <select id="trial-difficulty"><option value="adventurer">Aventurier · le défi original</option><option value="explorer">Explorateur · plus tolérant</option><option value="master">Maître · précision et danger</option></select></label><div class="trial-cards">${CM.BOSSES.map((b,i)=>`<article class="trial-card"><div class="trial-art"><canvas id="preview-${b.id}" width="640" height="360" aria-label="${escapeHTML(t(b.name))}"></canvas><span>${['I','II','III','IV','V'][i]}</span></div><div class="trial-copy"><small>GARDIEN ${i+1} · TROIS PHASES</small><h3>${escapeHTML(t(b.name))}</h3><p>${escapeHTML(t(b.subtitle))}<br>${escapeHTML(t(b.tip))}</p><div class="trial-record">${records[b.id]?`Aventurier · ${timeLabel(records[b.id].best)}`:'Aventurier · aucun record'}${records['master:'+b.id]?`<br>Maître · ${timeLabel(records['master:'+b.id].best)}`:''}</div><button class="button primary" data-trial="${b.id}">Affronter ce gardien <span>→</span></button></div></article>`).join('')}</div><div class="modal-footer"><span>Double saut, fiole et trois armes. Records Aventurier et Maître séparés.</span></div>`);
+    openModal('trials',`<div class="eyebrow">LES ROYAUMES OUBLIÉS · ÉPREUVES LIBRES</div><h2>Six gardiens. Six façons de vaincre.</h2><p>Grimpe sur les colosses, guette un atterrissage, esquive un assaut.<br>Chaque combat est indépendant de ta sauvegarde d’aventure.</p><label class="trial-difficulty">LE NIVEAU DE DÉFI <select id="trial-difficulty"><option value="adventurer">Aventurier · le défi original</option><option value="explorer">Explorateur · plus tolérant</option><option value="master">Maître · précision et danger</option></select></label><div class="trial-cards">${CM.BOSSES.map((b,i)=>`<article class="trial-card"><div class="trial-art"><canvas id="preview-${b.id}" width="640" height="360" aria-label="${escapeHTML(t(b.name))}"></canvas><span>${['I','II','III','IV','V','VI'][i]}</span></div><div class="trial-copy"><small>GARDIEN ${i+1} · TROIS PHASES</small><h3>${escapeHTML(t(b.name))}</h3><p>${escapeHTML(t(b.subtitle))}<br>${escapeHTML(t(b.tip))}</p><div class="trial-record">${records[b.id]?`Aventurier · ${timeLabel(records[b.id].best)}`:'Aventurier · aucun record'}${records['master:'+b.id]?`<br>Maître · ${timeLabel(records['master:'+b.id].best)}`:''}</div><button class="button primary" data-trial="${b.id}">Affronter ce gardien <span>→</span></button></div></article>`).join('')}</div><div class="modal-footer"><span>Double saut, fiole et trois armes. Records Aventurier et Maître séparés.</span></div>`);
     for(const {id:type} of CM.BOSSES){
       const preview=new CM.Engine({stats:{speed:4,power:4,vitality:4}});preview.startTrial(type);
       const boss=preview.enemies.find(e=>e.type==='boss');if(boss)preview.camera.x=Math.max(0,boss.x+boss.w/2-720);
-      new CM.Renderer($(`preview-${type}`)).draw(preview,0);
+      const previewRenderer=new CM.Renderer($(`preview-${type}`));previewRenderer.reduceMotion=reduceMotion;previewRenderer.draw(preview,0);
     }
     $('modal-content').querySelectorAll('[data-trial]').forEach(button=>button.onclick=()=>startTrial(button.dataset.trial,$('trial-difficulty').value));
   }
@@ -2282,13 +2680,13 @@ const global=typeof window!=='undefined'?window:globalThis;
   }
   function openModal(mode,html){previousFocus=document.activeElement;modalMode=mode;clearInput();$('modal-content').innerHTML=translateMarkup(html);$('modal-content').querySelector('h2')?.setAttribute('id','modal-title');$('modal').classList.remove('hidden');$('modal-close').classList.toggle('hidden',mode==='dead'||mode==='win');$('modal-close').focus();$('touch-controls').classList.add('hidden');}
   function closeModal(){modalMode=null;$('modal').classList.add('hidden');$('modal-close').classList.remove('hidden');clearInput();if(screen==='game'&&touchEnabled)$('touch-controls').classList.remove('hidden');if(previousFocus?.isConnected)previousFocus.focus({preventScroll:true});}
-  function showPause(){if(!game||game.dead||game.won)return;saveGame();openModal('pause',`<div class="pause-content"><div class="eyebrow">${game.trial?'DÉFI DES GARDIENS':'UNE PAUSE AU SANCTUAIRE'}</div><h2>La lumière t’attendra.</h2><p>${game.trial?'Ce défi est indépendant de ta sauvegarde d’aventure.':'Ta progression est enregistrée sur ce navigateur.'}</p><div class="pause-buttons"><button class="button primary" id="resume-button">Reprendre le combat <span>→</span></button><button class="button secondary" id="pause-skills">${game.trial?'Choisir un autre gardien':'Développer mes talents'}</button><button class="button ghost" id="pause-zones" aria-pressed="${game.showAttackZones!==false}">Zones d’attaque : ${game.showAttackZones!==false?'affichées':'masquées'}</button><button class="button ghost" id="pause-help">Commandes et conseils</button><button class="button ghost" id="pause-title">${game.trial?'Quitter le défi':'Sauvegarder et quitter'}</button></div></div>`);$('resume-button').onclick=closeModal;$('pause-skills').onclick=game.trial?showTrials:showSkills;$('pause-help').onclick=showHelp;$('pause-title').onclick=title;$('pause-zones').onclick=()=>{game.showAttackZones=game.showAttackZones===false;saveGame();showPause();};}
-  function showHelp(){if(game?.dead||game?.won)return;openModal('help',`<div class="eyebrow">LE CARNET DE L’AVENTURIER</div><h2>Un peu d’instinct. Le bon timing.</h2><p>Explore les passages, récupère les éclats et apprends le rythme de tes adversaires. Choisis Explorateur pour découvrir, Aventurier pour le défi original ou Maître pour des dégâts accrus et des ouvertures plus courtes.</p><div class="help-grid"><div><h3>Au clavier · AZERTY et QWERTY</h3>${[['← → / Q D / A D','Se déplacer'],['Espace / ↑','Sauter, puis double saut débloqué'],['J / X','Attaquer'],['↓ / S + J, en l’air','Frappe plongeante et rebond'],['K / C (maintenir)','Lever la garde'],['Maj / L','Esquiver'],['E','Activer un sanctuaire'],['F','Boire une fiole de soin'],['I','Équiper les talismans'],['1 / 2 / 3','Épée / hache / lance'],['Tab / M / Échap','Talents / carte / pause']].map(([k,v])=>`<div class="control-row"><kbd>${k}</kbd><span>${v}</span></div>`).join('')}</div><div><h3>À la manette · disposition Xbox</h3>${[['Stick / croix','Se déplacer'],['A / X','Sauter / frapper'],['Bas + X, en l’air','Frappe plongeante'],['B / RT','Esquiver'],['LB / LT','Garder et parer'],['Y / RB','Interagir / changer d’arme'],['Croix vers le haut','Boire une fiole de soin'],['Start / Select','Pause / carte']].map(([k,v])=>`<div class="control-row"><kbd>${k}</kbd><span>${v}</span></div>`).join('')}<p class="help-tip">Les zones au sol annoncent la portée des attaques. Elles sont masquées par défaut en mode Maître ; l’option « Zones d’attaque » dans la pause permet de changer ce réglage. Les gestes des ennemis restent visibles. Lève la garde juste avant l’impact pour une parade parfaite : l’ennemi est étourdi. Maintenir la garde absorbe les coups, mais consomme de l’endurance.</p><p class="help-tip">Les colosses portent des sceaux lumineux. Brise-les ou réussis une parade pour ouvrir leur point faible. Les bras marqués deviennent des marches : grimpe et frappe la lumière avant qu’elle se referme. Chaque tiers de vie change la phase.</p><p class="help-tip">Les gardiens mobiles offrent une ouverture après deux séquences d’attaque, trois en Maître. Accumuler des parades parfaites peut aussi briser leur garde. Le papillon dévoile son cœur quand il se pose. Le serpent émerge là où tu te trouvais : bouge, puis contre-attaque. Face au chevalier, esquive ses assauts ou pare au dernier instant.</p><p class="help-tip">Une fiole rend 50 points de vie : F au clavier ou haut sur la croix de la manette. Les sanctuaires la rechargent. Ouvre les talismans avec I pour combiner deux pouvoirs.</p><p class="help-tip">Les murs fissurés cachent des trésors : frappe pour les briser. Depuis un sanctuaire, ouvre la carte pour voyager et retrouver les secrets laissés derrière toi.</p></div></div><div class="modal-footer"><button class="button secondary" id="toggle-touch">${touchEnabled?'Masquer':'Afficher'} les commandes tactiles</button><button class="button primary" id="help-done">C’est parti <span>→</span></button></div>`);$('help-done').onclick=closeModal;$('toggle-touch').onclick=()=>{touchEnabled=!touchEnabled;document.body.classList.toggle('touch-on',touchEnabled);showHelp();};}
+  function showPause(){if(!game||game.dead||game.won)return;saveGame();openModal('pause',`<div class="pause-content"><div class="eyebrow">${game.trial?'DÉFI DES GARDIENS':'UNE PAUSE AU SANCTUAIRE'}</div><h2>La lumière t’attendra.</h2><p>${game.trial?'Ce défi est indépendant de ta sauvegarde d’aventure.':'Ta progression est enregistrée sur ce navigateur.'}</p><div class="pause-buttons"><button class="button primary" id="resume-button">Reprendre le combat <span>→</span></button><button class="button secondary" id="pause-skills">${game.trial?'Choisir un autre gardien':'Développer mes talents'}</button><button class="button ghost" id="pause-zones" aria-pressed="${game.showAttackZones!==false}">Zones d’attaque : ${game.showAttackZones!==false?'affichées':'masquées'}</button><button class="button ghost" id="pause-motion" aria-pressed="${reduceMotion}">${reduceMotion?'Secousses : réduites':'Secousses : normales'}</button><button class="button ghost" id="pause-help">Commandes et conseils</button><button class="button ghost" id="pause-title">${game.trial?'Quitter le défi':'Sauvegarder et quitter'}</button></div></div>`);$('resume-button').onclick=closeModal;$('pause-skills').onclick=game.trial?showTrials:showSkills;$('pause-help').onclick=showHelp;$('pause-title').onclick=title;$('pause-motion').onclick=()=>{reduceMotion=!reduceMotion;renderer.reduceMotion=reduceMotion;savePreference({reduceMotion});showPause();};$('pause-zones').onclick=()=>{game.showAttackZones=game.showAttackZones===false;saveGame();showPause();};}
+  function showHelp(){if(game?.dead||game?.won)return;openModal('help',`<div class="eyebrow">LE CARNET DE L’AVENTURIER</div><h2>Un peu d’instinct. Le bon timing.</h2><p>Explore les passages, récupère les éclats et apprends le rythme de tes adversaires. Choisis Explorateur pour découvrir, Aventurier pour le défi original ou Maître pour des dégâts accrus et des ouvertures plus courtes.</p><div class="help-grid"><div><h3>Au clavier · AZERTY et QWERTY</h3>${[['← → / Q D / A D','Se déplacer'],['Espace / ↑','Sauter, puis double saut débloqué'],['J / X','Attaquer'],['↓ / S + J, en l’air','Frappe plongeante et rebond'],['K / C (maintenir)','Lever la garde'],['Maj / L','Esquiver'],['E','Activer un sanctuaire'],['F','Boire une fiole de soin'],['I','Équiper les talismans'],['1 / 2 / 3','Épée / hache / lance'],['Tab / M / Échap','Talents / carte / pause']].map(([k,v])=>`<div class="control-row"><kbd>${k}</kbd><span>${v}</span></div>`).join('')}</div><div><h3>À la manette · disposition Xbox</h3>${[['Stick / croix','Se déplacer'],['A / X','Sauter / frapper'],['Bas + X, en l’air','Frappe plongeante'],['B / RT','Esquiver'],['LB / LT','Garder et parer'],['Y / RB','Interagir / changer d’arme'],['Croix vers le haut','Boire une fiole de soin'],['Start / Select','Pause / carte']].map(([k,v])=>`<div class="control-row"><kbd>${k}</kbd><span>${v}</span></div>`).join('')}<p class="help-tip">Les zones au sol annoncent la portée des attaques. Elles sont masquées par défaut en mode Maître ; l’option « Zones d’attaque » dans la pause permet de changer ce réglage. Les gestes des ennemis restent visibles. Lève la garde juste avant l’impact pour une parade parfaite : l’ennemi est étourdi. Maintenir la garde absorbe les coups, mais consomme de l’endurance.</p><p class="help-tip">Les colosses portent des sceaux lumineux. Brise-les ou réussis une parade pour ouvrir leur point faible. Les bras marqués deviennent des marches : grimpe et frappe la lumière avant qu’elle se referme. Chaque tiers de vie change la phase.</p><p class="help-tip">Les gardiens mobiles offrent une ouverture après deux séquences d’attaque, trois en Maître. Accumuler des parades parfaites peut aussi briser leur garde. Le papillon dévoile son cœur quand il se pose. Le serpent émerge là où tu te trouvais : bouge, puis contre-attaque. Face au chevalier, esquive ses assauts ou pare au dernier instant.</p><p class="help-tip">Une fiole rend 50 points de vie : F au clavier ou haut sur la croix de la manette. Les sanctuaires la rechargent. Ouvre les talismans avec I pour combiner deux pouvoirs.</p><p class="help-tip">Dans les Marées célestes, les courants lumineux te portent vers le haut. Maintiens Bas pour redescendre, ou sors du courant sur le côté. Atlas ouvre sa carapace après plusieurs assauts ou parades : utilise les courants pour atteindre son cœur.</p><p class="help-tip">Les murs fissurés cachent des trésors : frappe pour les briser. Depuis un sanctuaire, ouvre la carte pour voyager et retrouver les secrets laissés derrière toi.</p></div></div><div class="modal-footer"><button class="button secondary" id="toggle-touch">${touchEnabled?'Masquer':'Afficher'} les commandes tactiles</button><button class="button primary" id="help-done">C’est parti <span>→</span></button></div>`);$('help-done').onclick=closeModal;$('toggle-touch').onclick=()=>{touchEnabled=!touchEnabled;document.body.classList.toggle('touch-on',touchEnabled);showHelp();};}
   function skillList(){const list=CM.SKILLS||[];return Array.isArray(list)?list:Object.entries(list).map(([id,value])=>({id,...value}));}
   function showCharms(){
     if(!game||game.dead||game.won)return;
     const owned=game.ownedCharms||[],equipped=game.equippedCharms||[];
-    openModal('charms',`<div class="eyebrow">LES TRÉSORS DES ROYAUMES</div><h2>Deux talismans. Ta façon de jouer.</h2><p>Explore les détours pour retrouver ces six objets. Combine librement leurs pouvoirs.</p><div class="charm-slots">${[0,1].map(i=>{const c=CM.CHARMS.find(x=>x.id===equipped[i]);return `<div class="charm-slot ${c?'filled':''}"><span>${c?escapeHTML(c.symbol):'◇'}</span><div><small>EMPLACEMENT ${i+1}</small><strong>${c?escapeHTML(t(c.name)):'Aucun talisman'}</strong></div></div>`;}).join('')}</div><div class="charms-grid">${CM.CHARMS.map(c=>{const found=owned.includes(c.id),on=equipped.includes(c.id);return `<article class="charm-card ${on?'equipped':''} ${found?'':'unfound'}"><span class="charm-symbol" style="--charm-color:${c.color}">${escapeHTML(c.symbol)}</span><small>${on?'ÉQUIPÉ':found?'DÉCOUVERT':'À DÉCOUVRIR'}</small><h3>${escapeHTML(t(c.name))}</h3><p>${escapeHTML(t(c.description))}</p><button data-charm="${c.id}" ${!found||(!on&&equipped.length>=2)?'disabled':''}>${on?'Retirer':!found?'Caché dans le monde':equipped.length>=2?'Deux emplacements occupés':'Équiper'}</button></article>`;}).join('')}</div><div class="modal-footer"><span>${owned.length} / ${CM.CHARMS.length} découverts · ${equipped.length} / 2 équipés${game.trial?' · Défis sans talismans de campagne':''}</span><button class="button primary" id="charms-done">Reprendre <span>→</span></button></div>`);
+    openModal('charms',`<div class="eyebrow">LES TRÉSORS DES ROYAUMES</div><h2>Deux talismans. Ta façon de jouer.</h2><p>Explore les détours pour retrouver ces huit objets. Combine librement leurs pouvoirs.</p><div class="charm-slots">${[0,1].map(i=>{const c=CM.CHARMS.find(x=>x.id===equipped[i]);return `<div class="charm-slot ${c?'filled':''}"><span>${c?escapeHTML(c.symbol):'◇'}</span><div><small>EMPLACEMENT ${i+1}</small><strong>${c?escapeHTML(t(c.name)):'Aucun talisman'}</strong></div></div>`;}).join('')}</div><div class="charms-grid">${CM.CHARMS.map(c=>{const found=owned.includes(c.id),on=equipped.includes(c.id);return `<article class="charm-card ${on?'equipped':''} ${found?'':'unfound'}"><span class="charm-symbol" style="--charm-color:${c.color}">${escapeHTML(c.symbol)}</span><small>${on?'ÉQUIPÉ':found?'DÉCOUVERT':'À DÉCOUVRIR'}</small><h3>${escapeHTML(t(c.name))}</h3><p>${escapeHTML(t(c.description))}</p><button data-charm="${c.id}" ${!found||(!on&&equipped.length>=2)?'disabled':''}>${on?'Retirer':!found?'Caché dans le monde':equipped.length>=2?'Deux emplacements occupés':'Équiper'}</button></article>`;}).join('')}</div><div class="modal-footer"><span>${owned.length} / ${CM.CHARMS.length} découverts · ${equipped.length} / 2 équipés${game.trial?' · Défis sans talismans de campagne':''}</span><button class="button primary" id="charms-done">Reprendre <span>→</span></button></div>`);
     $('charms-done').onclick=closeModal;
     $('modal-content').querySelectorAll('[data-charm]').forEach(el=>el.onclick=()=>{if(game.equipCharm(el.dataset.charm)){sound.play('pickup');saveGame();showCharms();updateHUD();}});
   }
@@ -2304,7 +2702,7 @@ const global=typeof window!=='undefined'?window:globalThis;
     $('modal-content').querySelectorAll('[data-travel]').forEach(button=>button.onclick=()=>{if(game.travelTo(Number(button.dataset.travel))){saveGame();closeModal();updateHUD();}});
   }
   function showDeath(){openModal('dead',`<div class="pause-content"><div class="eyebrow">CE N’EST QU’UN CONTRETEMPS</div><div class="win-symbol">◇</div><h2>Une flamme ne s’éteint pas si vite.</h2><p>Retourne au dernier sanctuaire. Observe les signaux, ménage ton endurance et réessaie.</p><div class="pause-buttons"><button class="button primary" id="retry-button">Rallumer la flamme <span>→</span></button><button class="button ghost" id="death-title">Retour à l’accueil</button></div></div>`);$('retry-button').onclick=()=>{game.respawn();closeModal();saveGame();updateHUD();};$('death-title').onclick=title;$('retry-button').focus();}
-  function showWin(){saveGame();openModal('win',`<div class="pause-content"><div class="eyebrow">POUR CHARLES, QUI N’A PAS RENONCÉ</div><div class="win-symbol">✺</div><h2>L’Aurore se lève à nouveau.</h2><p>Les cinq gardiens sont tombés. Des racines jusqu’aux étoiles, les royaumes retrouvent leur lumière.<br>Et tout cela, c’est grâce à toi.</p><div class="run-stats"><div><strong>${Math.floor(game.time/60)}:${String(Math.floor(game.time%60)).padStart(2,'0')}</strong><span>TEMPS D’AVENTURE</span></div><div><strong>${game.kills||0}</strong><span>ENNEMIS VAINCUS</span></div><div><strong>${game.deaths||0}</strong><span>RETOURS</span></div></div><div class="pause-buttons"><button class="button primary" id="win-new">Une autre voie, une autre aventure <span>→</span></button><button class="button ghost" id="win-title">Savourer la victoire</button></div></div>`);$('win-new').onclick=selectHero;$('win-title').onclick=title;$('win-new').focus();}
+  function showWin(){saveGame();openModal('win',`<div class="pause-content"><div class="eyebrow">POUR CHARLES, QUI N’A PAS RENONCÉ</div><div class="win-symbol">✺</div><h2>L’Aurore se lève à nouveau.</h2><p>Les six gardiens sont tombés. Des racines aux marées célestes, les royaumes retrouvent leur lumière.<br>Et tout cela, c’est grâce à toi.</p><div class="run-stats"><div><strong>${Math.floor(game.time/60)}:${String(Math.floor(game.time%60)).padStart(2,'0')}</strong><span>TEMPS D’AVENTURE</span></div><div><strong>${game.kills||0}</strong><span>ENNEMIS VAINCUS</span></div><div><strong>${game.deaths||0}</strong><span>RETOURS</span></div></div><div class="pause-buttons"><button class="button primary" id="win-new">Une autre voie, une autre aventure <span>→</span></button><button class="button ghost" id="win-title">Savourer la victoire</button></div></div>`);$('win-new').onclick=selectHero;$('win-title').onclick=title;$('win-new').focus();}
   function updateHUD(){
     if(!game)return;const p=game.player;
     $('save-indicator').classList.toggle('hidden',!!game.trial);
@@ -2316,10 +2714,10 @@ const global=typeof window!=='undefined'?window:globalThis;
     $('shard-count').textContent=game.shards||0;
     $('flask-count').textContent=`${p.flasks} / ${p.maxFlasks}`;
     $('heal-button').disabled=!p.flasks||p.hp>=p.maxHp||!!modalMode||game.dead||game.won;
-    $('heal-button').title=I.choose(`F · Boire une fiole de soin (${p.skills.restoration?75:50} PV) · Recharge au sanctuaire`,`F · Drink a healing flask (${p.skills.restoration?75:50} HP) · Refill at a shrine`);
+    $('heal-button').title=I.choose(`F · Boire une fiole de soin (${(p.skills.restoration?75:50)+(game.hasCharm('tide')?15:0)} PV) · Recharge au sanctuaire`,`F · Drink a healing flask (${(p.skills.restoration?75:50)+(game.hasCharm('tide')?15:0)} HP) · Refill at a shrine`);
     $('charm-count').textContent=`${game.equippedCharms?.length||0}/2`;
     $('skill-badge').classList.toggle('hidden',!game.skillPoints);$('skill-badge').textContent=game.skillPoints;
-    $('room-number').textContent=game.trial?t('DÉFI DES GARDIENS')+' · '+timeLabel(game.time):`${t(game.roomIndex<6?'I · LES TERRES ASSOUPIES':'II · LES ROYAUMES OUBLIÉS')} / ${String(game.roomIndex+1).padStart(2,'0')}`;
+    $('room-number').textContent=game.trial?t('DÉFI DES GARDIENS')+' · '+timeLabel(game.time):`${t(game.roomIndex<6?'I · LES TERRES ASSOUPIES':game.roomIndex<12?'II · LES ROYAUMES OUBLIÉS':'III · LES MARÉES CÉLESTES')} / ${String(game.roomIndex+1).padStart(2,'0')}`;
     $('room-name').textContent=t(game.room.name);$('room-subtitle').textContent=t(game.trial?'Ta sauvegarde d’aventure est préservée.':game.room.subtitle||'');
     $('weapon-slots').querySelectorAll('button').forEach(el=>el.classList.toggle('active',el.dataset.weapon===p.weapon));
     const boss=game.enemies.find(e=>e.type==='boss'&&e.hp>0);
@@ -2385,12 +2783,13 @@ const global=typeof window!=='undefined'?window:globalThis;
   const blur=()=>{clearInput();if(game&&!modalMode&&!game.dead&&!game.won)showPause();};window.addEventListener('blur',blur);document.addEventListener('visibilitychange',()=>{if(document.hidden)blur();});window.addEventListener('pagehide',saveGame);
   window.addEventListener('error',e=>{console.error('Carlus Magnus:',e.message);});
   try{renderer=new CM.Renderer($('world'));}catch(e){$('fatal-error').classList.remove('hidden');localizedText('fatal-error','Le monde n’a pas pu être chargé. Recharge la page pour réessayer.');throw e;}
+  renderer.reduceMotion=reduceMotion;
   translateStatic();updateSoundButton();$('continue-game').classList.toggle('hidden',!readSave());
   function frame(now){const dt=Math.min(.05,(now-lastTime)/1000||0);lastTime=now;elapsed+=dt;
     if(screen==='game'&&game){
       const controls=input();
       if(!modalMode&&!game.dead&&!game.won){let remaining=dt;while(remaining>0){const step=Math.min(remaining,1/120);game.update(step,controls);remaining-=step;if(game.dead||game.won)break;}sound.ambient(elapsed);saveClock+=dt;if(saveClock>12){saveGame();saveClock=0;}}
-      if(game.events?.length){for(const ev of game.events.splice(0)){sound.play(ev.type);if(ev.type==='save')saveGame();}}
+      if(game.events?.length){for(const ev of game.events.splice(0)){sound.play(ev.type,ev);if(ev.type==='save')saveGame();}}
       renderer.draw(game,modalMode?0:dt);hudClock+=dt;if(hudClock>.06){updateHUD();hudClock=0;}
       if(game.dead&&modalMode!=='dead')showDeath();else if(game.won&&modalMode!=='win'){if(game.trial)showTrialWin();else showWin();}
     }else renderer.drawTitle(elapsed);
@@ -2398,7 +2797,7 @@ const global=typeof window!=='undefined'?window:globalThis;
   }
   requestAnimationFrame(frame);
   // Read-only instrumentation for reproducible QA; game state is not exposed.
-  window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name,language:I.locale}),version:'1.3.0'});
+  window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name,language:I.locale}),version:'1.4.0'});
 }
 
 </script>
