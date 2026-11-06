@@ -2,16 +2,16 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#081b24"><meta name="description" content="Carlus Magnus — Les éclats d’Aurore. Une aventure de plateforme et de mêlée, créée pour Charles. Explorez les ruines, maîtrisez la parade et réveillez la lumière.">
-  <title>Carlus Magnus — Les éclats d’Aurore</title>
+  <meta name="theme-color" content="#081b24"><meta name="description" data-i18n-content="Carlus Magnus — Les éclats d’Aurore. Une aventure de plateforme et de mêlée, créée pour Charles. Explorez les ruines, maîtrisez la parade et réveillez la lumière." content="Carlus Magnus — Les éclats d’Aurore. Une aventure de plateforme et de mêlée, créée pour Charles. Explorez les ruines, maîtrisez la parade et réveillez la lumière.">
+  <title data-i18n="Carlus Magnus — Les éclats d’Aurore">Carlus Magnus — Les éclats d’Aurore</title>
   <style>:root{--ink:#081b24;--panel:#102931;--paper:#efe9d9;--muted:#95b3b3;--gold:#e8c989;--teal:#75dfca;--line:rgba(192,220,211,.18)}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#040f16;color:var(--paper);font-family:Inter,"Segoe UI",Arial,sans-serif}button,select{font:inherit}button,a,select{-webkit-tap-highlight-color:transparent}button{color:inherit;cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:5px}button{border:0}button:disabled{opacity:.4;cursor:not-allowed}a{color:inherit;text-decoration:none}button,select{touch-action:manipulation}.hidden{display:none!important}
 #game-shell{position:relative;width:100%;height:100%;overflow:hidden;isolation:isolate;background:#071a22}#world{position:absolute;width:100%;height:100%;object-fit:contain;inset:0;z-index:-3}.vignette{position:absolute;inset:0;pointer-events:none;z-index:-2;background:linear-gradient(90deg,rgba(4,16,23,.73) 0%,rgba(4,16,23,.12) 62%,transparent),linear-gradient(0deg,rgba(3,13,19,.85),transparent 23%,transparent 75%,rgba(3,13,19,.7))}body.playing .vignette{background:linear-gradient(0deg,rgba(3,13,19,.5),transparent 12%,transparent 78%,rgba(3,13,19,.4))}
 #topbar{position:absolute;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;height:94px;padding:0 4.6%;z-index:12;border-bottom:1px solid rgba(185,211,207,.09)}.brand{display:flex;align-items:center;gap:13px;font-size:12px;letter-spacing:.2em}.brand b{font-weight:400;color:var(--gold)}.crest{font-size:38px;color:var(--gold);line-height:1}.top-actions{display:flex;align-items:center;gap:12px}.made-for{font-size:9px;letter-spacing:.19em;color:var(--muted);margin-right:24px}.icon-button{border:1px solid var(--line);background:rgba(11,32,40,.45);width:35px;height:35px;color:#c7d8d0;border-radius:50%;font-size:19px;display:grid;place-items:center;transition:.2s}.icon-button:hover{border-color:var(--gold);color:var(--gold);background:#17323a}
-.screen{position:absolute;inset:94px 0 0}.title-content{position:absolute;left:9.1%;top:10%;}.eyebrow{font-size:10px;letter-spacing:.22em;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:13px}.eyebrow .line{width:27px;height:1px;background:var(--gold)}h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:.035em;font-size:clamp(60px,7.2vw,116px);line-height:.94;margin:30px 0 23px;text-shadow:0 4px 30px #051a24}h1 span{color:var(--gold)}.subtitle{font-size:11px;letter-spacing:.35em;display:flex;gap:16px;align-items:center}.subtitle span{width:28px;background:#8d8564;height:1px}.intro{font-size:15px;line-height:1.9;color:#abbfbc;margin:28px 0 26px;letter-spacing:.015em}.intro strong{color:#dedecb;font-weight:400}.title-buttons{display:flex;gap:12px;flex-wrap:wrap}.button{min-height:49px;padding:0 24px;display:inline-flex;align-items:center;justify-content:center;gap:28px;font-size:12px;font-weight:600;letter-spacing:.035em;border:1px solid transparent;transition:transform .18s,background .18s,border-color .18s}.button:hover{transform:translateY(-2px)}.button span{font-size:20px;font-weight:400}.primary{color:#102a30;background:var(--gold);box-shadow:0 3px 24px #e8c98912}.primary:hover{background:#f5dfaa}.secondary{background:#122c33d9;border-color:#617e76;color:#dce8df}.ghost{background:transparent;border-color:var(--line);color:var(--muted)}.title-notes{display:flex;align-items:center;gap:13px;font-size:8px;letter-spacing:.12em;color:#6f9292;margin-top:24px}.title-notes i{width:3px;height:3px;border-radius:50%;background:#7c958b}.title-footer{position:absolute;bottom:25px;left:4.6%;right:4.6%;display:flex;justify-content:space-between;align-items:center;font-size:8px;letter-spacing:.19em;color:#668b8e}.title-footer button{background:none;color:#a9c1b9;font-size:10px;letter-spacing:.02em}.title-footer button span{margin-left:10px;color:var(--gold)}.world-caption{position:absolute;right:13%;bottom:17%;display:flex;gap:13px;align-items:center;color:#b5d2c9;font-size:8px;letter-spacing:.2em}.world-caption small{display:block;color:#668c8e;font-size:10px;letter-spacing:.02em;margin-top:7px}.small-star{font-size:28px;color:var(--gold)}
+.screen{position:absolute;inset:94px 0 0}.title-content{position:absolute;left:9.1%;top:10%;}.eyebrow{font-size:10px;letter-spacing:.22em;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:13px}.eyebrow .line{width:27px;height:1px;background:var(--gold)}h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:.035em;font-size:clamp(60px,7.2vw,116px);line-height:.94;margin:30px 0 23px;text-shadow:0 4px 30px #051a24}h1 span{color:var(--gold)}.subtitle{font-size:11px;letter-spacing:.35em;display:flex;gap:16px;align-items:center}.subtitle span:not([data-i18n]){width:28px;background:#8d8564;height:1px}.intro{font-size:15px;line-height:1.9;color:#abbfbc;margin:28px 0 26px;letter-spacing:.015em}.intro strong{color:#dedecb;font-weight:400}.title-buttons{display:flex;gap:12px;flex-wrap:wrap}.button{min-height:49px;padding:0 24px;display:inline-flex;align-items:center;justify-content:center;gap:28px;font-size:12px;font-weight:600;letter-spacing:.035em;border:1px solid transparent;transition:transform .18s,background .18s,border-color .18s}.button:hover{transform:translateY(-2px)}.button span{font-size:20px;font-weight:400}.primary{color:#102a30;background:var(--gold);box-shadow:0 3px 24px #e8c98912}.primary:hover{background:#f5dfaa}.secondary{background:#122c33d9;border-color:#617e76;color:#dce8df}.ghost{background:transparent;border-color:var(--line);color:var(--muted)}.title-notes{display:flex;align-items:center;gap:13px;font-size:8px;letter-spacing:.12em;color:#6f9292;margin-top:24px}.title-notes i{width:3px;height:3px;border-radius:50%;background:#7c958b}.title-footer{position:absolute;bottom:25px;left:4.6%;right:4.6%;display:flex;justify-content:space-between;align-items:center;font-size:8px;letter-spacing:.19em;color:#668b8e}.title-footer button{background:none;color:#a9c1b9;font-size:10px;letter-spacing:.02em}.title-footer button span{margin-left:10px;color:var(--gold)}.world-caption{position:absolute;right:13%;bottom:17%;display:flex;gap:13px;align-items:center;color:#b5d2c9;font-size:8px;letter-spacing:.2em}.world-caption small{display:block;color:#668c8e;font-size:10px;letter-spacing:.02em;margin-top:7px}.small-star{font-size:28px;color:var(--gold)}
 #hero-screen{padding:30px 7% 25px;background:linear-gradient(90deg,#061921ed,#0a242ddb);overflow-y:auto}.selection-heading h2{font-family:Georgia,serif;font-weight:400;font-size:34px;margin:12px 0}.selection-heading p{font-size:12px;color:var(--muted);margin:0 0 22px}.hero-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.hero-card{position:relative;text-align:left;background:linear-gradient(150deg,#173a4399,#0b2026e0);border:1px solid var(--line);padding:16px 20px;transition:.2s;overflow:hidden}.hero-card:hover{background:#1c3c43}.hero-card.selected{border-color:var(--gold);box-shadow:inset 0 0 40px #e8c98908}.hero-card.selected:after{content:'✦';position:absolute;right:15px;top:12px;color:var(--gold)}.hero-portrait{height:116px;display:flex;justify-content:center;background:radial-gradient(ellipse at center,#58c9bd19,transparent 70%);margin-bottom:8px}.hero-portrait svg{height:100%;width:110px}.hero-card small{color:var(--gold);font-size:8px;letter-spacing:.18em}.hero-card h3{font-family:Georgia,serif;font-size:23px;font-weight:400;margin:7px 0 9px}.hero-card .tagline{font-size:10px;color:var(--muted);min-height:26px}.mini-stat{display:flex;justify-content:space-between;font-size:8px;letter-spacing:.05em;margin-top:9px;color:#99b7b4}.stat-dots{display:flex;gap:4px;align-items:center}.stat-dots i{width:10px;height:3px;background:#2b454a}.stat-dots i.on{background:#b9cdbd}.selected .stat-dots i.on{background:var(--gold)}.creation-bottom{display:flex;align-items:center;gap:35px;margin:20px 0;min-height:90px}.creation-bottom>div{flex:1}#hero-description{max-width:370px;font-size:12px;color:#a2bcb8;line-height:1.8}#hero-description strong{display:block;color:var(--paper);font-weight:500;margin-bottom:4px}.loadout{display:grid;grid-template-columns:1fr 1.3fr;gap:10px 15px;align-items:center;max-width:460px;margin-left:auto}.loadout label{font-size:8px;letter-spacing:.13em;color:#9ab5ae}.loadout select{width:100%;color:#d3dfd4;background:#102b33;border:1px solid var(--line);padding:10px;font-size:11px}.selection-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:19px}.selection-footer>span{font-size:10px;color:var(--muted)}#custom-controls{max-width:330px}.custom-stat{display:flex;align-items:center;justify-content:space-between;font-size:11px;margin:5px 0}.custom-stat>div{display:flex;align-items:center;gap:12px}.custom-stat button{background:#22434b;width:25px;height:25px;border:1px solid var(--line)}.points-left{font-size:10px;color:var(--gold);margin-bottom:8px}
 body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}body.playing .brand{font-size:9px;gap:8px;opacity:.55}body.playing .crest{font-size:23px}body.playing .made-for{display:none}body.playing .top-actions{pointer-events:auto;gap:7px}body.playing .icon-button{width:28px;height:28px;font-size:15px}#hud{position:absolute;inset:0;pointer-events:none}#hud button{pointer-events:auto}.vitals{position:absolute;top:70px;left:36px;width:220px}.vitals-title{display:flex;justify-content:space-between;font-size:11px;color:#e5e7d4;margin-bottom:8px}.vitals-title span:last-child{color:#91a9a0;font-size:10px}.health-track,.stamina-track{width:100%;background:#071318ce;border:1px solid #9ac4b333;height:11px;padding:2px}.health-track>div{height:100%;background:linear-gradient(90deg,#5bad97,#92e1bb);transition:width .12s}.stamina-track{height:5px;width:75%;margin-top:6px;border:0;padding:0}.stamina-track>div{height:100%;background:#e6c786;transition:width .1s}.weapon-slots{display:flex;gap:5px;margin-top:12px}.weapon-slots button{padding:6px 7px;font-size:8px;background:#0a1e26a6;border:1px solid #44636066;color:#8baaa7}.weapon-slots button.active{color:var(--gold);border-color:#d3b4709e;background:#2f382ed9}kbd{font:inherit;font-size:.85em;display:inline-block;min-width:16px;text-align:center;padding:2px 4px;border:1px solid #a8c7be40;border-radius:2px;color:#bfd3c9;margin-right:4px}.location{position:absolute;top:66px;left:50%;transform:translateX(-50%);text-align:center;text-shadow:0 2px 10px #001}.location>span{display:block;font-size:7px;letter-spacing:.23em;color:#b99f70;margin-bottom:8px}.location strong{font-family:Georgia,serif;font-size:19px;font-weight:400;letter-spacing:.03em}.location small{display:block;font-size:9px;color:#91aaa4;margin-top:6px}.game-actions{display:flex;gap:8px;position:absolute;right:36px;top:72px;align-items:center}.game-actions button{position:relative;background:#0b2028b5;border:1px solid var(--line);font-size:10px;padding:8px 10px;color:#becfc4}.game-actions kbd{margin:0 0 0 6px}.shards{color:var(--gold);font-size:17px;margin-right:9px}.shards b{font-size:12px;font-weight:500}.game-actions em{position:absolute;right:-6px;top:-7px;background:var(--gold);color:#14353a;font-style:normal;border-radius:8px;padding:1px 5px}.bottom-controls{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:20px;white-space:nowrap;color:#8faeaa;font-size:9px}.bottom-controls kbd{background:#071a24aa;color:#c9d3c2}#save-indicator{position:absolute;right:28px;bottom:19px;font-size:9px;color:var(--teal);opacity:0;transition:opacity .4s}#save-indicator.visible{opacity:1}#toast{position:absolute;left:50%;top:25%;transform:translateX(-50%);padding:15px 25px;border-top:1px solid #c7b3827a;border-bottom:1px solid #c7b3823a;background:linear-gradient(90deg,transparent,#0b242ce8 15%,#0b242ce8 85%,transparent);display:flex;align-items:center;gap:15px;text-align:left;max-width:80%;min-width:320px}#toast>span{font-size:31px;color:var(--gold)}#toast strong{font-family:Georgia,serif;font-weight:400;font-size:19px}#toast p{font-size:11px;color:#9fbeb5;line-height:1.5;margin:5px 0 0}#boss-hud{position:absolute;bottom:64px;left:25%;width:50%;text-align:center}#boss-hud>div:first-child>span{font-size:7px;letter-spacing:.23em;color:#c4a68a;display:block}#boss-hud strong{display:block;margin:6px 0 10px;font-family:Georgia,serif;font-weight:400;font-size:20px}.boss-track{height:9px;border:1px solid #c5a38a68;background:#170f19;padding:2px}.boss-track>div{height:100%;background:linear-gradient(90deg,#ba7558,#e3ae83);transition:width .2s}
-#modal{position:absolute;inset:0;background:#041218bf;backdrop-filter:blur(8px);display:grid;place-items:center;padding:25px;z-index:30}.modal-panel{position:relative;border:1px solid #82958b40;background:linear-gradient(145deg,#15333bed,#0b222bf5);box-shadow:0 30px 120px #0008;max-width:900px;max-height:94%;overflow:auto;width:100%;padding:45px}.modal-close{position:absolute;right:16px;top:16px}.modal-panel h2{font-family:Georgia,serif;font-size:35px;font-weight:400;margin:12px 0 12px}.modal-panel p{color:#9db9b2;font-size:13px;line-height:1.7}.modal-panel .eyebrow{font-size:8px}.pause-content{max-width:400px;margin:auto;padding:20px 0;text-align:center}.pause-content .eyebrow{justify-content:center}.pause-buttons{display:grid;gap:11px;margin-top:30px}.pause-buttons .button{width:100%}.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 35px;margin-top:23px}.help-grid h3{font-size:12px;font-weight:500;color:var(--gold);margin:0 0 12px}.control-row{display:flex;justify-content:space-between;font-size:11px;color:#adc4bd;align-items:center;margin:8px 0;gap:15px}.help-tip{padding:12px 16px;background:#72b9a80c;border-left:2px solid #a0bea2;font-size:11px!important}.modal-footer{border-top:1px solid var(--line);padding-top:19px;margin-top:24px;display:flex;gap:14px;align-items:center;justify-content:space-between}.modal-footer span{font-size:10px;color:var(--muted)}.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:24px}.skill-card{padding:20px;border:1px solid var(--line);background:#071b2299}.skill-card.owned{border-color:#75dfca6e;background:#13423855}.skill-card .skill-symbol{font-size:23px;color:var(--gold);display:block;margin-bottom:10px}.skill-card h3{font-size:13px;font-weight:500;margin:0}.skill-card p{font-size:10px;min-height:44px;margin:8px 0}.skill-card button{width:100%;padding:9px;background:#d2c08a;color:#19363b;font-size:10px}.skill-card.owned button{background:#234e48;color:#94d8bd}.map-rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}.map-room{position:relative;padding:20px 15px;border:1px solid #71928c45;background:#071d2466;min-height:115px}.map-room.current{border-color:var(--gold);background:#4e493124}.map-room.locked{opacity:.4}.map-room .map-icon{color:var(--gold);font-size:23px}.map-room strong{display:block;font-family:Georgia,serif;font-weight:400;font-size:16px;margin-top:8px}.map-room small{display:block;color:var(--muted);font-size:9px;margin-top:8px}.map-room.current:after{content:'VOUS ÊTES ICI';position:absolute;right:8px;top:8px;font-size:6px;color:var(--gold);letter-spacing:.12em}.win-symbol{font-size:54px;color:var(--gold);margin:5px 0 12px}.run-stats{display:flex;justify-content:center;gap:30px;margin:25px 0}.run-stats strong{display:block;color:var(--gold);font-family:Georgia,serif;font-size:28px;font-weight:400}.run-stats span{font-size:9px;color:var(--muted)}#fatal-error{position:absolute;inset:20%;z-index:99;background:#15343b;padding:40px;border:1px solid var(--gold);line-height:1.8}
+#modal{position:absolute;inset:0;background:#041218bf;backdrop-filter:blur(8px);display:grid;place-items:center;padding:25px;z-index:30}.modal-panel{position:relative;border:1px solid #82958b40;background:linear-gradient(145deg,#15333bed,#0b222bf5);box-shadow:0 30px 120px #0008;max-width:900px;max-height:94%;overflow:auto;width:100%;padding:45px}.modal-close{position:absolute;right:16px;top:16px}.modal-panel h2{font-family:Georgia,serif;font-size:35px;font-weight:400;margin:12px 0 12px}.modal-panel p{color:#9db9b2;font-size:13px;line-height:1.7}.modal-panel .eyebrow{font-size:8px}.pause-content{max-width:400px;margin:auto;padding:20px 0;text-align:center}.pause-content .eyebrow{justify-content:center}.pause-buttons{display:grid;gap:11px;margin-top:30px}.pause-buttons .button{width:100%}.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 35px;margin-top:23px}.help-grid h3{font-size:12px;font-weight:500;color:var(--gold);margin:0 0 12px}.control-row{display:flex;justify-content:space-between;font-size:11px;color:#adc4bd;align-items:center;margin:8px 0;gap:15px}.help-tip{padding:12px 16px;background:#72b9a80c;border-left:2px solid #a0bea2;font-size:11px!important}.modal-footer{border-top:1px solid var(--line);padding-top:19px;margin-top:24px;display:flex;gap:14px;align-items:center;justify-content:space-between}.modal-footer span{font-size:10px;color:var(--muted)}.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:24px}.skill-card{padding:20px;border:1px solid var(--line);background:#071b2299}.skill-card.owned{border-color:#75dfca6e;background:#13423855}.skill-card .skill-symbol{font-size:23px;color:var(--gold);display:block;margin-bottom:10px}.skill-card h3{font-size:13px;font-weight:500;margin:0}.skill-card p{font-size:10px;min-height:44px;margin:8px 0}.skill-card button{width:100%;padding:9px;background:#d2c08a;color:#19363b;font-size:10px}.skill-card.owned button{background:#234e48;color:#94d8bd}.map-rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}.map-room{position:relative;padding:20px 15px;border:1px solid #71928c45;background:#071d2466;min-height:115px}.map-room.current{border-color:var(--gold);background:#4e493124}.map-room.locked{opacity:.4}.map-room .map-icon{color:var(--gold);font-size:23px}.map-room strong{display:block;font-family:Georgia,serif;font-weight:400;font-size:16px;margin-top:8px}.map-room small{display:block;color:var(--muted);font-size:9px;margin-top:8px}.map-room.current:after{content:attr(data-here);position:absolute;right:8px;top:8px;font-size:6px;color:var(--gold);letter-spacing:.12em}.win-symbol{font-size:54px;color:var(--gold);margin:5px 0 12px}.run-stats{display:flex;justify-content:center;gap:30px;margin:25px 0}.run-stats strong{display:block;color:var(--gold);font-family:Georgia,serif;font-size:28px;font-weight:400}.run-stats span{font-size:9px;color:var(--muted)}#fatal-error{position:absolute;inset:20%;z-index:99;background:#15343b;padding:40px;border:1px solid var(--gold);line-height:1.8}
 #touch-controls{position:absolute;bottom:35px;left:25px;right:25px;display:flex;justify-content:space-between;align-items:end;pointer-events:none;z-index:15}#touch-controls button{pointer-events:auto;border:1px solid #b2d5c644;background:#0c283a99;color:#dbdcca;width:54px;height:54px;border-radius:50%;touch-action:none;user-select:none;font-size:11px}.touch-move,.touch-fight{display:flex;gap:9px}.touch-move button{font-size:25px!important}.touch-fight button[data-input="attack"]{background:#b79e636e}.touch-fight button[data-input="jump"]{background:#4a8b836e}.touch-on .bottom-controls{display:none}
 @media(min-aspect-ratio:19/10){.title-content{top:6%}h1{font-size:12vh}.intro{margin:20px 0}.title-notes{margin-top:16px}.hero-portrait{height:80px}.selection-heading h2{font-size:28px}#hero-screen{padding-top:20px}.selection-heading p{margin-bottom:14px}.creation-bottom{margin:13px 0}.hero-card{padding-top:10px;padding-bottom:10px}}
 @media(max-width:950px){#topbar{height:72px;padding:0 25px}.screen{top:72px}.title-content{left:7%;top:13%}.made-for{display:none}h1{font-size:78px}.eyebrow{font-size:8px}.world-caption{right:8%;bottom:22%}.title-footer .edition{display:none}.title-footer{left:25px;right:25px}.hero-card{padding:12px}.hero-portrait{height:90px}.hero-card h3{font-size:21px}.creation-bottom{gap:20px}.selection-footer>span{max-width:220px;line-height:1.6}.vitals{left:20px;width:185px;top:55px}.location{top:52px}.location strong{font-size:16px}.location small{display:none}.game-actions{right:20px;top:56px}.game-actions kbd{display:none}.game-actions button{font-size:9px}.bottom-controls{gap:10px;font-size:8px}#save-indicator{bottom:44px}.modal-panel{padding:32px}.hero-card .tagline{font-size:9px}.stat-dots{gap:3px}.stat-dots i{width:7px}.skills-grid{gap:9px}.skill-card{padding:15px}}
@@ -31,54 +31,619 @@ body.playing #topbar{height:50px;padding:0 24px;border:0;pointer-events:none}bod
 @media(max-width:950px){.game-actions{max-width:300px}.game-actions kbd{display:none}.flask-button{margin-top:7px;padding:4px 7px}.charms-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.game-actions{max-width:190px;gap:5px}.game-actions button{font-size:9px;padding:6px}.game-actions .shards{width:100%;text-align:right;margin-right:0}.game-actions small{display:none}.charms-grid{grid-template-columns:1fr 1fr;gap:9px}.charm-card{padding:14px 11px}.charm-card h3{font-size:18px}.charm-slots{gap:9px}.charm-slot{padding:12px 9px;gap:8px}.charm-slot strong{font-size:15px}.charm-slot>span{font-size:23px}.flask-button{font-size:8px}.flask-button>span{font-size:14px}.touch-fight{max-width:220px;flex-wrap:wrap;justify-content:flex-end}}
 @media(max-height:550px) and (orientation:landscape){.flask-button{position:absolute;left:230px;top:30px;margin:0}.game-actions{max-width:330px}.game-actions small{display:none}.charm-card{padding:14px}.charm-symbol{width:35px;height:35px;font-size:23px;margin-bottom:9px}}
+
+/* Language controls remain reachable both in game and inside the modal focus trap. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.language-switch{display:inline-flex;align-items:center}.language-switch select{min-height:32px;width:96px;padding:5px 8px;background:#102b33;color:var(--paper);border:1px solid var(--line);border-radius:5px;font-size:11px;cursor:pointer}.modal-language{position:absolute;right:60px;top:16px;z-index:2}.modal-panel{padding-top:64px}.button>.i18n-text,#heal-button>.i18n-text{font-size:inherit;font-weight:inherit}.title-footer button>.i18n-text{margin-left:0;color:inherit}
+@media(max-width:650px){.language-switch select{width:85px;font-size:10px;min-height:30px}.modal-panel{padding-top:64px}.top-actions{gap:6px}}
+
+.subtitle>.i18n-text{flex:none;white-space:nowrap}.flask-button>.i18n-text{color:inherit}
 </style>
 </head>
 <body>
 <main id="game-shell">
-  <canvas id="world" width="1280" height="720" aria-label="Monde de Carlus Magnus, jeu de plateforme en 2D"></canvas>
+  <canvas id="world" width="1280" height="720" aria-label="Monde de Carlus Magnus, jeu de plateforme en 2D" data-i18n-aria="Monde de Carlus Magnus, jeu de plateforme en 2D"></canvas>
   <div class="vignette" aria-hidden="true"></div>
   <header id="topbar">
-    <a class="brand" href="#" id="brand" aria-label="Carlus Magnus, menu"><span class="crest">✧</span><span>CARLUS <b>MAGNUS</b></span></a>
-    <div class="top-actions"><span class="made-for">POUR CHARLES, L’AVENTURIER.</span><button class="icon-button" id="sound-button" aria-label="Couper le son" title="Son">♫</button><button class="icon-button" id="fullscreen-button" aria-label="Plein écran" title="Plein écran">⛶</button><button class="icon-button" id="help-button" aria-label="Commandes et aide" title="Commandes">?</button></div>
+    <a class="brand" href="#" id="brand" aria-label="Carlus Magnus, menu" data-i18n-aria="Carlus Magnus, menu"><span class="crest">✧</span><span>CARLUS <b data-i18n="MAGNUS">MAGNUS</b></span></a>
+    <div class="top-actions"><label class="language-switch"><span class="sr-only" data-i18n="Langue du jeu">Langue du jeu</span><select id="language-select" aria-label="Langue du jeu" data-i18n-aria="Langue du jeu"><option value="fr">Français</option><option value="en">English</option></select></label><span class="made-for" data-i18n="POUR CHARLES, L’AVENTURIER.">POUR CHARLES, L’AVENTURIER.</span><button class="icon-button" id="sound-button" aria-label="Couper le son" data-i18n-aria="Couper le son" title="Son" data-i18n-title="Son">♫</button><button class="icon-button" id="fullscreen-button" aria-label="Plein écran" data-i18n-aria="Plein écran" title="Plein écran" data-i18n-title="Plein écran">⛶</button><button class="icon-button" id="help-button" aria-label="Commandes et aide" data-i18n-aria="Commandes et aide" title="Commandes" data-i18n-title="Commandes">?</button></div>
   </header>
 
   <section id="title-screen" class="screen">
     <div class="title-content">
-      <div class="eyebrow"><span class="line"></span> LES ROYAUMES OUBLIÉS · CHAPITRE II</div>
-      <h1>CARLUS<br><span>MAGNUS</span></h1>
-      <div class="subtitle"><span></span> LES ÉCLATS D’AURORE <span></span></div>
-      <p class="intro">Sous les racines d’un royaume oublié,<br>quelque chose brille encore.<br><strong>À toi de le réveiller.</strong></p>
-      <div class="title-buttons"><button class="button primary" id="new-game">Commencer l’aventure <span>→</span></button><button class="button secondary hidden" id="continue-game">Continuer <span>↗</span></button></div>
-      <button class="trial-entry" id="trial-button"><span class="trial-rune">♜</span><span><b>Défis des gardiens</b><small>5 BOSS · TROUVE LEUR POINT FAIBLE</small></span><span>↗</span></button>
-      <div class="title-notes"><span>⌨ CLAVIER</span><i></i><span>◈ MANETTE</span><i></i><span>12 ZONES · 5 BOSS</span></div>
+      <div class="eyebrow"><span class="line"></span> <span class="i18n-text" data-i18n="LES ROYAUMES OUBLIÉS · CHAPITRE II">LES ROYAUMES OUBLIÉS · CHAPITRE II</span></div>
+      <h1>CARLUS<br><span data-i18n="MAGNUS">MAGNUS</span></h1>
+      <div class="subtitle"><span></span> <span class="i18n-text" data-i18n="LES ÉCLATS D’AURORE">LES ÉCLATS D’AURORE</span> <span></span></div>
+      <p class="intro"><span class="i18n-text" data-i18n="Sous les racines d’un royaume oublié,">Sous les racines d’un royaume oublié,</span><br><span class="i18n-text" data-i18n="quelque chose brille encore.">quelque chose brille encore.</span><br><strong data-i18n="À toi de le réveiller.">À toi de le réveiller.</strong></p>
+      <div class="title-buttons"><button class="button primary" id="new-game"><span class="i18n-text" data-i18n="Commencer l’aventure">Commencer l’aventure</span> <span>→</span></button><button class="button secondary hidden" id="continue-game"><span class="i18n-text" data-i18n="Continuer">Continuer</span> <span>↗</span></button></div>
+      <button class="trial-entry" id="trial-button"><span class="trial-rune">♜</span><span><b data-i18n="Défis des gardiens">Défis des gardiens</b><small data-i18n="5 BOSS · TROUVE LEUR POINT FAIBLE">5 BOSS · TROUVE LEUR POINT FAIBLE</small></span><span>↗</span></button>
+      <div class="title-notes"><span data-i18n="⌨ CLAVIER">⌨ CLAVIER</span><i></i><span data-i18n="◈ MANETTE">◈ MANETTE</span><i></i><span data-i18n="12 ZONES · 5 BOSS">12 ZONES · 5 BOSS</span></div>
     </div>
-    <div class="world-caption"><span class="small-star">✧</span><div>LES TERRES ASSOUPIES<small>Une aventure en deux chapitres</small></div></div>
-    <footer class="title-footer"><span>EXPLORER · COMBATTRE · S’ÉLEVER</span><button id="title-help">Découvrir les commandes <span>↗</span></button><a class="edition" href="carlus-magnus.html" download="carlus-magnus.html" title="Télécharger le jeu complet, jouable hors connexion">JOUER HORS CONNEXION ↧</a></footer>
+    <div class="world-caption"><span class="small-star">✧</span><div><span class="i18n-text" data-i18n="LES TERRES ASSOUPIES">LES TERRES ASSOUPIES</span><small data-i18n="Une aventure en deux chapitres">Une aventure en deux chapitres</small></div></div>
+    <footer class="title-footer"><span data-i18n="EXPLORER · COMBATTRE · S’ÉLEVER">EXPLORER · COMBATTRE · S’ÉLEVER</span><button id="title-help"><span class="i18n-text" data-i18n="Découvrir les commandes">Découvrir les commandes</span> <span>↗</span></button><a class="edition" href="carlus-magnus.html" download="carlus-magnus.html" title="Télécharger le jeu complet, jouable hors connexion" data-i18n-title="Télécharger le jeu complet, jouable hors connexion" data-i18n="JOUER HORS CONNEXION ↧">JOUER HORS CONNEXION ↧</a></footer>
   </section>
 
-  <section id="hero-screen" class="screen hidden" aria-label="Choix du personnage">
-    <div class="selection-heading"><div class="eyebrow">01 / CHOISIS TA VOIE</div><h2>Chaque héros a sa lumière.</h2><p>Trois façons de partir. Ou une qui n’appartient qu’à toi.</p></div>
+  <section id="hero-screen" class="screen hidden" aria-label="Choix du personnage" data-i18n-aria="Choix du personnage">
+    <div class="selection-heading"><div class="eyebrow" data-i18n="01 / CHOISIS TA VOIE">01 / CHOISIS TA VOIE</div><h2 data-i18n="Chaque héros a sa lumière.">Chaque héros a sa lumière.</h2><p data-i18n="Trois façons de partir. Ou une qui n’appartient qu’à toi.">Trois façons de partir. Ou une qui n’appartient qu’à toi.</p></div>
     <div id="hero-cards" class="hero-cards"></div>
-    <div class="creation-bottom"><div id="hero-description"></div><div id="custom-controls" class="hidden"></div><div class="loadout"><label for="weapon-select">ARME DE DÉPART</label><select id="weapon-select"><option value="sword">Épée · vive et équilibrée</option><option value="axe">Hache · lente et puissante</option><option value="spear">Lance · allonge généreuse</option></select><label for="difficulty-select">TON AVENTURE</label><select id="difficulty-select"><option value="adventurer">Aventurier · le défi original</option><option value="explorer">Explorateur · dégâts ennemis réduits</option><option value="master">Maître · précision et danger</option></select></div></div>
-    <div class="selection-footer"><button class="button ghost" id="hero-back">← Retour</button><span id="allocation-note">Les trois armes restent disponibles pendant l’aventure.</span><button class="button primary" id="begin-game">Entrer dans les ruines <span>→</span></button></div>
+    <div class="creation-bottom"><div id="hero-description"></div><div id="custom-controls" class="hidden"></div><div class="loadout"><label for="weapon-select" data-i18n="ARME DE DÉPART">ARME DE DÉPART</label><select id="weapon-select"><option value="sword" data-i18n="Épée · vive et équilibrée">Épée · vive et équilibrée</option><option value="axe" data-i18n="Hache · lente et puissante">Hache · lente et puissante</option><option value="spear" data-i18n="Lance · allonge généreuse">Lance · allonge généreuse</option></select><label for="difficulty-select" data-i18n="TON AVENTURE">TON AVENTURE</label><select id="difficulty-select"><option value="adventurer" data-i18n="Aventurier · le défi original">Aventurier · le défi original</option><option value="explorer" data-i18n="Explorateur · dégâts ennemis réduits">Explorateur · dégâts ennemis réduits</option><option value="master" data-i18n="Maître · précision et danger">Maître · précision et danger</option></select></div></div>
+    <div class="selection-footer"><button class="button ghost" id="hero-back" data-i18n="← Retour">← Retour</button><span id="allocation-note" data-i18n="Les trois armes restent disponibles pendant l’aventure.">Les trois armes restent disponibles pendant l’aventure.</span><button class="button primary" id="begin-game"><span class="i18n-text" data-i18n="Entrer dans les ruines">Entrer dans les ruines</span> <span>→</span></button></div>
   </section>
 
   <div id="hud" class="hidden">
-    <div class="vitals"><div class="vitals-title"><span id="hero-name">L’Errant</span><span id="hp-text"></span></div><div class="health-track"><div id="health-fill"></div></div><div class="stamina-track"><div id="stamina-fill"></div></div><div class="weapon-slots" id="weapon-slots"><button data-weapon="sword" title="1 · Épée"><kbd>1</kbd> ÉPÉE</button><button data-weapon="axe" title="2 · Hache"><kbd>2</kbd> HACHE</button><button data-weapon="spear" title="3 · Lance"><kbd>3</kbd> LANCE</button></div><button id="heal-button" class="flask-button"><span>♧</span> Fiole <b id="flask-count">1 / 1</b><kbd>F</kbd></button></div>
+    <div class="vitals"><div class="vitals-title"><span id="hero-name" data-i18n="L’Errant">L’Errant</span><span id="hp-text"></span></div><div class="health-track"><div id="health-fill"></div></div><div class="stamina-track"><div id="stamina-fill"></div></div><div class="weapon-slots" id="weapon-slots"><button data-weapon="sword" title="1 · Épée" data-i18n-title="1 · Épée"><kbd>1</kbd> <span class="i18n-text" data-i18n="ÉPÉE">ÉPÉE</span></button><button data-weapon="axe" title="2 · Hache" data-i18n-title="2 · Hache"><kbd>2</kbd> <span class="i18n-text" data-i18n="HACHE">HACHE</span></button><button data-weapon="spear" title="3 · Lance" data-i18n-title="3 · Lance"><kbd>3</kbd> <span class="i18n-text" data-i18n="LANCE">LANCE</span></button></div><button id="heal-button" class="flask-button"><span>♧</span> <span class="i18n-text" data-i18n="Fiole">Fiole</span> <b id="flask-count">1 / 1</b><kbd data-i18n="F">F</kbd></button></div>
     <div class="location"><span id="room-number"></span><strong id="room-name"></strong><small id="room-subtitle"></small></div>
-    <div class="game-actions"><span class="shards">✦ <b id="shard-count">0</b></span><button id="skills-button">Talents <kbd>Tab</kbd><em id="skill-badge" class="hidden">!</em></button><button id="charms-button">Talismans <small id="charm-count">0/2</small><kbd>I</kbd></button><button id="map-button">Carte <kbd>M</kbd></button><button id="pause-button" aria-label="Pause">Ⅱ</button></div>
-    <div id="boss-hud" class="hidden"><div class="boss-heading"><span id="boss-phase">PHASE I / III</span><strong id="boss-name"></strong></div><div class="boss-track"><div id="boss-fill"></div><i></i><i></i></div><div class="boss-status"><span id="boss-state"></span><span id="boss-window"></span></div><p id="boss-hint"></p></div>
+    <div class="game-actions"><span class="shards">✦ <b id="shard-count">0</b></span><button id="skills-button"><span class="i18n-text" data-i18n="Talents">Talents</span> <kbd data-i18n="Tab">Tab</kbd><em id="skill-badge" class="hidden">!</em></button><button id="charms-button"><span class="i18n-text" data-i18n="Talismans">Talismans</span> <small id="charm-count">0/2</small><kbd data-i18n="I">I</kbd></button><button id="map-button"><span class="i18n-text" data-i18n="Carte">Carte</span> <kbd data-i18n="M">M</kbd></button><button id="pause-button" aria-label="Pause" data-i18n-aria="Pause">Ⅱ</button></div>
+    <div id="boss-hud" class="hidden"><div class="boss-heading"><span id="boss-phase" data-i18n="PHASE I / III">PHASE I / III</span><strong id="boss-name"></strong></div><div class="boss-track"><div id="boss-fill"></div><i></i><i></i></div><div class="boss-status"><span id="boss-state"></span><span id="boss-window"></span></div><p id="boss-hint"></p></div>
     <div id="toast" class="hidden" role="status"><span>✧</span><div><strong id="toast-title"></strong><p id="toast-sub"></p></div></div>
-    <div class="bottom-controls"><span><kbd>← →</kbd> Bouger</span><span><kbd>Espace</kbd> Sauter</span><span><kbd>J</kbd> Frapper</span><span><kbd>K</kbd> Garde / parade</span><span><kbd>⇧</kbd> Esquive</span><span><kbd>E</kbd> Interagir</span></div>
-    <div id="save-indicator">✧ Progression enregistrée</div>
+    <div class="bottom-controls"><span><kbd>← →</kbd> <span class="i18n-text" data-i18n="Bouger">Bouger</span></span><span><kbd data-i18n="Espace">Espace</kbd> <span class="i18n-text" data-i18n="Sauter">Sauter</span></span><span><kbd data-i18n="J">J</kbd> <span class="i18n-text" data-i18n="Frapper">Frapper</span></span><span><kbd data-i18n="K">K</kbd> <span class="i18n-text" data-i18n="Garde / parade">Garde / parade</span></span><span><kbd>⇧</kbd> <span class="i18n-text" data-i18n="Esquive">Esquive</span></span><span><kbd data-i18n="E">E</kbd> <span class="i18n-text" data-i18n="Interagir">Interagir</span></span></div>
+    <div id="save-indicator" data-i18n="✧ Progression enregistrée">✧ Progression enregistrée</div>
   </div>
 
-  <div id="touch-controls" class="hidden" aria-label="Commandes tactiles"><div class="touch-move"><button data-input="left" aria-label="Aller à gauche">←</button><button data-input="right" aria-label="Aller à droite">→</button></div><div class="touch-fight"><button data-input="interact">E</button><button data-input="heal">Soin</button><button data-input="block">Garde</button><button data-input="dash">Dash</button><button data-input="pogo" aria-label="Attaque plongeante">↓ Frappe</button><button data-input="attack">Frappe</button><button data-input="jump">Saut</button></div></div>
+  <div id="touch-controls" class="hidden" aria-label="Commandes tactiles" data-i18n-aria="Commandes tactiles"><div class="touch-move"><button data-input="left" aria-label="Aller à gauche" data-i18n-aria="Aller à gauche">←</button><button data-input="right" aria-label="Aller à droite" data-i18n-aria="Aller à droite">→</button></div><div class="touch-fight"><button data-input="interact" data-i18n="E">E</button><button data-input="heal" data-i18n="Soin">Soin</button><button data-input="block" data-i18n="Garde">Garde</button><button data-input="dash" data-i18n="Dash">Dash</button><button data-input="pogo" aria-label="Attaque plongeante" data-i18n-aria="Attaque plongeante" data-i18n="↓ Frappe">↓ Frappe</button><button data-input="attack" data-i18n="Frappe">Frappe</button><button data-input="jump" data-i18n="Saut">Saut</button></div></div>
 
-  <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-panel"><button id="modal-close" class="icon-button modal-close" aria-label="Fermer">×</button><div id="modal-content"></div></div></div>
+  <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-panel"><button id="modal-close" class="icon-button modal-close" aria-label="Fermer" data-i18n-aria="Fermer" data-i18n="×">×</button><label class="language-switch modal-language"><span class="sr-only" data-i18n="Langue du jeu">Langue du jeu</span><select id="modal-language-select" aria-label="Langue du jeu" data-i18n-aria="Langue du jeu"><option value="fr">Français</option><option value="en">English</option></select></label><div id="modal-content"></div></div></div>
   <div id="fatal-error" class="hidden" role="alert"></div>
 </main>
 <script>
+'use strict';
+{
+  const root = typeof window !== 'undefined' ? window : globalThis;
+  const CM = root.CM = root.CM || {};
+  const LANGUAGE_KEY = 'carlus-magnus:language:v1';
+  const dictionary = new Map(), folded = new Map(), patterns = [], listeners = new Set();
+  let locale = 'fr';
+  try {
+    const saved = root.localStorage?.getItem(LANGUAGE_KEY);
+    if (saved === 'en' || saved === 'fr') locale = saved;
+  } catch {}
+  try {
+    const requested = new URLSearchParams(root.location?.search || '').get('lang');
+    if (requested === 'en' || requested === 'fr') {
+      locale = requested;
+      try { root.localStorage?.setItem(LANGUAGE_KEY, locale); } catch {}
+    }
+  } catch {}
+  const I18N = CM.I18N = {
+    get locale() { return locale; },
+    choose(fr, en) { return locale === 'en' ? en : fr; },
+    add(entries) {
+      for (const [fr, en] of Object.entries(entries)) {
+        dictionary.set(fr, en);
+        folded.set(fr.toLocaleLowerCase('fr'), en);
+      }
+    },
+    addPattern(expression, translate) { patterns.push([expression, translate]); },
+    t(value) {
+      const source = String(value ?? '');
+      if (locale !== 'en' || !source) return source;
+      if (dictionary.has(source)) return dictionary.get(source);
+      const trimmed = source.trim();
+      let translated;
+      if (dictionary.has(trimmed)) translated = dictionary.get(trimmed);
+      else {
+        const base = folded.get(trimmed.toLocaleLowerCase('fr'));
+        if (base !== undefined) {
+          translated = trimmed === trimmed.toLocaleUpperCase('fr') ? base.toLocaleUpperCase('en')
+            : trimmed === trimmed.toLocaleLowerCase('fr') ? base.toLocaleLowerCase('en') : base;
+        }
+      }
+      if (translated !== undefined) return source.replace(trimmed, () => translated);
+      for (const [expression, translate] of patterns) {
+        expression.lastIndex = 0;
+        const match = expression.exec(source);
+        if (match) return translate(...match.slice(1));
+      }
+      return source;
+    },
+    setLocale(next) {
+      if (next !== 'en' && next !== 'fr') return false;
+      try { root.localStorage?.setItem(LANGUAGE_KEY, next); } catch {}
+      try {
+        const url = new URL(root.location.href);
+        if (url.searchParams.has('lang')) {
+          url.searchParams.set('lang', next);
+          root.history?.replaceState(null, '', url.href);
+        }
+      } catch {}
+      if (next === locale) return true;
+      locale = next;
+      for (const listener of listeners) listener(locale);
+      return true;
+    },
+    subscribe(listener) { listeners.add(listener); return () => listeners.delete(listener); }
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = I18N;
+}
+
+</script><script>
+'use strict';
+{
+  const root = typeof window !== 'undefined' ? window : globalThis;
+  const I18N = root.CM.I18N;
+  // Translate display values only. Engine IDs, French source data and saves stay intact.
+  I18N.add({
+    'Épée d’aurore': 'Dawn Sword',
+    'Épée': 'Sword',
+    'Vive, équilibrée. Le troisième coup frappe plus fort.': 'Fast and balanced. The third strike hits harder.',
+    'Hache du veilleur': 'Warden’s Axe',
+    'Hache': 'Axe',
+    'Lente et puissante. Brise la garde des sentinelles.': 'Slow and powerful. Breaks the sentinels’ guard.',
+    'Lance astrale': 'Astral Spear',
+    'Lance': 'Spear',
+    'Une longue portée pour garder les monstres à distance.': 'Long reach to keep monsters at a distance.',
+
+    'Cœur vaillant': 'Brave Heart',
+    '+30 points de vie. Soigne à l’acquisition.': '+30 health. Fully heals you when acquired.',
+    'Lame éveillée': 'Awakened Blade',
+    '+25 % de dégâts avec toutes les armes.': '+25% damage with all weapons.',
+    'Souffle du vent': 'Wind’s Breath',
+    'Endurance +30, récupération plus rapide.': '+30 stamina and faster recovery.',
+    'Contre-éclat': 'Radiant Riposte',
+    'Après une parade parfaite, le prochain coup dans les 3 s inflige le double de dégâts.': 'After a perfect parry, your next strike within 3 seconds deals double damage.',
+    'Garde de cristal': 'Crystal Guard',
+    'Le blocage absorbe tous les dégâts si votre endurance suffit.': 'Blocking absorbs all damage if you have enough stamina.',
+    'Pas fantôme': 'Phantom Step',
+    'Esquive plus longue, coût réduit et recharge accélérée.': 'A longer dash with a lower cost and shorter cooldown.',
+    'Étoile plongeante': 'Falling Star',
+    '+50 % de dégâts avec les attaques aériennes vers le bas.': '+50% damage with downward aerial attacks.',
+    'Éclair tranchant': 'Lightning Edge',
+    'Le prochain coup dans les 1,2 s après une esquive inflige +50 % de dégâts.': 'Your next strike within 1.2 seconds of a dash deals +50% damage.',
+    'Écho de vie': 'Echo of Life',
+    'Chaque parade parfaite rend 8 points de vie.': 'Each perfect parry restores 8 health.',
+    'Seconde fiole': 'Second Flask',
+    'Portez deux fioles. Les sanctuaires les remplissent.': 'Carry two flasks. Shrines refill them.',
+    'Source pure': 'Pure Spring',
+    'Chaque fiole soigne 75 points de vie au lieu de 50.': 'Each flask restores 75 health instead of 50.',
+    'Geste juste': 'Efficient Strike',
+    'Les attaques consomment 25 % d’endurance en moins.': 'Attacks consume 25% less stamina.',
+
+    'Cœur de jade': 'Jade Heart',
+    '+25 points de vie maximale.': '+25 maximum health.',
+    'Plume du zéphyr': 'Zephyr Feather',
+    '+10 % de vitesse de course.': '+10% running speed.',
+    'Croc solaire': 'Sun Fang',
+    '+12 % de dégâts avec toutes les attaques.': '+12% damage with all attacks.',
+    'Étoile aimantée': 'Magnetic Star',
+    'Attire les objets proches à distance.': 'Draws nearby items toward you.',
+    'Mousse vivante': 'Living Moss',
+    'Vaincre un monstre ordinaire rend 5 points de vie.': 'Defeating a regular monster restores 5 health.',
+    'Miroir de l’aube': 'Dawn Mirror',
+    'La fenêtre de parade parfaite dure 45 ms de plus.': 'Extends the perfect parry window by 45 ms.',
+
+    'Le Veilleur de pierre': 'The Stone Warden',
+    'Un cœur sous la roche': 'A heart beneath the stone',
+    'Brisez les sceaux ou parez, puis grimpez sur ses bras.': 'Break the seals or parry, then climb its arms.',
+    'Cœur de pierre': 'Stone Heart',
+    'Sceaux ou parade': 'Seals or parry',
+    'Le Roi des cendres': 'The Ash King',
+    'La couronne oubliée': 'The forgotten crown',
+    'Ouvrez son armure, escaladez les épaules et frappez sa couronne.': 'Open his armor, climb his shoulders and strike his crown.',
+    'Couronne': 'Crown',
+    'Sylphe, aile d’orage': 'Sylphe, Stormwing',
+    'La tempête prend son envol': 'The storm takes flight',
+    'Évitez ses plumes ou parez-les plusieurs fois. Quand elle se pose, frappez son cœur.': 'Dodge her feathers or parry them several times. When she lands, strike her heart.',
+    'Cœur d’orage': 'Storm Heart',
+    'Atterrissage ou parade': 'Landing or parry',
+    'Nacre, gueule des profondeurs': 'Nacre, Maw of the Depths',
+    'Écoutez le sol trembler': 'Listen to the trembling earth',
+    'Quittez les marques au sol. Plusieurs enchaînements ou parades exposent son cœur.': 'Leave the ground markers. Several attack sequences or parries expose its heart.',
+    'Cœur de nacre': 'Pearl Heart',
+    'Morsure ou parade': 'Bite or parry',
+    'Le Chevalier de l’Éclipse': 'The Eclipse Knight',
+    'Une dernière danse': 'One last dance',
+    'Parez ses ruées ou esquivez plusieurs enchaînements, puis ripostez dès que sa garde s’ouvre.': 'Parry his charges or dodge several attack sequences, then strike when his guard opens.',
+    'Garde ouverte': 'Open Guard',
+    'Récupération ou parade': 'Recovery or parry',
+
+    'Éclaireur': 'Scout',
+    'La vitesse est une armure.': 'Speed is armor.',
+    'Gardien': 'Guardian',
+    'Solide, patient, implacable.': 'Steadfast, patient, relentless.',
+    'Duelliste': 'Duelist',
+    'La précision fait la différence.': 'Precision makes the difference.',
+
+    'La Clairière des lucioles': 'Firefly Glade',
+    'Une étincelle suffit à réveiller le monde.': 'One spark can awaken the world.',
+    'Flèches ou Q/D : courir · Espace : sauter · J : attaquer': 'Arrows or A/D: run · Space: jump · J: attack',
+    'Le Cloître des racines': 'The Root Cloister',
+    'L’air se souvient de ceux qui savaient voler.': 'The air remembers those who once could fly.',
+    'Maintenir K bloque. Appuyer au dernier instant déclenche une parade parfaite.': 'Hold K to block. Press at the last moment for a perfect parry.',
+    'Le Pont du Veilleur': 'The Warden’s Bridge',
+    'L’acier a une mémoire. Apprenez son rythme.': 'Steel has a memory. Learn its rhythm.',
+    'Le Veilleur annonce chaque coup. Sa charge se pare ; son onde de choc se saute.': 'The Warden signals every strike. Parry its charge; jump over its shockwave.',
+    'Brisez les deux sceaux aux chevilles, ou parez un coup. Grimpez sur les bras et frappez le cœur !': 'Break both ankle seals or parry a strike. Climb its arms and hit the heart!',
+    'L’Aqueduc oublié': 'The Forgotten Aqueduct',
+    'Au-dessus du vide, une autre voie s’ouvre.': 'Above the void, another path opens.',
+    'Le double saut et l’esquive aérienne permettent de franchir les grandes brèches.': 'Use double jump and aerial dash to cross the wide gaps.',
+    'Les Forges du crépuscule': 'The Twilight Forges',
+    'Le cœur du royaume bat encore sous la cendre.': 'The kingdom’s heart still beats beneath the ashes.',
+    'Trois armes, trois rythmes : 1 épée · 2 hache · 3 lance. Tab ouvre les talents.': 'Three weapons, three rhythms: 1 sword · 2 axe · 3 spear. Tab opens skills.',
+    'La Couronne d’Aurore': 'The Crown of Dawn',
+    'Charles, rallume la dernière étoile.': 'Charles, rekindle the last star.',
+    'Les orbes se parent. L’onde de feu se saute. Quand le Roi s’épuise, frappez.': 'Parry the orbs. Jump over the fire wave. Strike when the King tires.',
+    'Deux sceaux ouvrent la couronne. Grimpez sur les mains et les épaules pendant que le Roi est vulnérable.': 'Two seals open the crown. Climb his hands and shoulders while the King is vulnerable.',
+    'Les Jardins de cristal': 'The Crystal Gardens',
+    'Au-delà de la couronne, les étoiles refleurissent.': 'Beyond the crown, the stars bloom again.',
+    'Les talismans offrent des bonus différents. Deux peuvent être équipés à la fois.': 'Talismans grant different bonuses. Equip up to two at a time.',
+    'Le Nid des orages': 'The Storm Nest',
+    'Le ciel lui-même a des ailes.': 'The sky itself has wings.',
+    'Parez les plumes ou évitez plusieurs attaques. Quand Sylphe se pose, frappez son cœur !': 'Parry the feathers or dodge several attacks. When Sylphe lands, strike her heart!',
+    'Les Racines de nacre': 'The Pearl Roots',
+    'Sous le cristal, un ancien monde respire.': 'Beneath the crystal, an ancient world breathes.',
+    'Les sauteurs se prêtent aux rebonds : bas + attaque en plein vol.': 'Bounce off hoppers: down + attack while airborne.',
+    'La Gueule du monde': 'The Maw of the World',
+    'Chaque vibration annonce sa venue.': 'Every tremor heralds its arrival.',
+    'Quittez la marque avant l’émergence. Plusieurs morsures évitées ou parades épuisent Nacre.': 'Leave the marker before it emerges. Dodge several bites or parry to wear Nacre down.',
+    'Les Marches célestes': 'The Celestial Steps',
+    'L’aube attend au bout du chemin.': 'Dawn waits at the end of the path.',
+    'Une fiole se remplit à chaque sanctuaire. Gardez-la pour le bon moment.': 'Your flask refills at every shrine. Save it for the right moment.',
+    'Le Seuil de l’Éclipse': 'The Eclipse Threshold',
+    'Charles, la dernière lumière est entre tes mains.': 'Charles, the last light is in your hands.',
+    'Parez ses ruées ou esquivez plusieurs enchaînements. Frappez quand sa garde s’ouvre.': 'Parry his charges or dodge several attack sequences. Strike when his guard opens.',
+
+    'Éclat d’aurore': 'Dawn Shard',
+    'Ailes d’aurore': 'Dawn Wings',
+    'Cœur des cimes': 'Heart of the Heights',
+    'Fer stellaire': 'Star Iron',
+    'Braise éternelle': 'Eternal Ember',
+    'Source de vie': 'Spring of Life',
+    'Perle des profondeurs': 'Pearl of the Depths',
+    'Lame d’étoile': 'Star Blade',
+    'Sceau des cimes': 'Seal of the Heights',
+    'Sceau stellaire': 'Star Seal',
+    'Sceau des braises': 'Ember Seal',
+    'avant-bras': 'forearm',
+    'main': 'hand',
+    'épaule': 'shoulder',
+
+    'Les éclats d’Aurore': 'Shards of Dawn',
+    'Explorez, trouvez les ailes et rendez la lumière au royaume.': 'Explore, find the wings and restore light to the kingdom.',
+    'Brisez les deux sceaux ou réussissez une parade parfaite.': 'Break both seals or perform a perfect parry.',
+    'L’aventure reprend': 'The adventure continues',
+    'Les Royaumes oubliés': 'The Forgotten Realms',
+    'Une nouvelle route s’ouvre après la Couronne d’Aurore.': 'A new path opens beyond the Crown of Dawn.',
+    'La lumière vous relève': 'The light raises you again',
+    'Vos éclats et vos talents sont conservés.': 'You keep your shards and skills.',
+    'Voyage par la lumière': 'Travel through light',
+    'Sanctuaire ravivé': 'Shrine rekindled',
+    'Vie, endurance et fioles restaurées. Progression sauvegardée.': 'Health, stamina and flasks restored. Progress saved.',
+    'Grimpez sur les mains et les épaules. Frappez la couronne !': 'Climb his hands and shoulders. Strike the crown!',
+    'Grimpez sur les bras. Frappez le cœur lumineux !': 'Climb its arms. Strike the glowing heart!',
+    'Le colosse est vulnérable !': 'The colossus is vulnerable!',
+    'Sa garde se fissure': 'Its guard is cracking',
+    'Son armure se referme. Brisez les sceaux ou parez un coup.': 'Its armor closes. Break the seals or parry a strike.',
+    'FISSURE': 'CRACKED',
+    'SCEAU BRISÉ': 'SEAL BROKEN',
+    'ARMURE': 'ARMOR',
+    'Un secret se révèle': 'A secret is revealed',
+    'Défi remporté !': 'Challenge cleared!',
+    'L’aurore se lève, Charles.': 'Dawn rises, Charles.',
+    'Le colosse s’incline.': 'The colossus falls.',
+    'Le royaume a retrouvé sa lumière.': 'Light has returned to the kingdom.',
+    'Les royaumes s’ouvrent': 'The realms open',
+    'Le gardien s’incline': 'The guardian falls',
+    '3 points de talent · Poursuivez votre route vers la droite.': '3 skill points · Continue to the right.',
+    'Un nouveau talent vous attend': 'A new skill awaits',
+    'Tab : ouvrir les talents': 'Tab: open skills',
+    'PARADE !': 'PARRY!',
+    'Garde brisée': 'Guard broken',
+    'Esquivez, puis laissez revenir votre endurance.': 'Dash away, then let your stamina recover.',
+    'Une aile manque encore': 'You still need your wings',
+    'Trouvez les Ailes d’aurore sur la grande terrasse.': 'Find the Dawn Wings on the high terrace.',
+    'L’aurore grandit': 'Dawn grows brighter',
+    '1 point de talent obtenu · Tab pour choisir.': '1 skill point earned · Press Tab to choose.',
+    'Double saut acquis ! Appuyez une seconde fois sur Espace en l’air.': 'Double jump unlocked! Press Space again while airborne.',
+    'Une nouvelle étincelle': 'A new spark',
+    '55 points de vie restaurés.': '55 health restored.',
+    'Ouvrez les talismans avec I pour l’équiper.': 'Press I to open talismans and equip it.',
+    'Dégâts augmentés · 1 point de talent': 'Damage increased · 1 skill point',
+    'Vie maximale augmentée · 1 point de talent': 'Maximum health increased · 1 skill point',
+
+    'Deux balayages : parez le premier, ou sautez puis retombez.': 'Two sweeps: parry the first, or jump and land between them.',
+    'Le bras balaie le sol : sautez ou parez au dernier instant.': 'Its arm sweeps the ground: jump or parry at the last moment.',
+    'Des colonnes vont tomber : quittez les marques lumineuses !': 'Pillars are about to fall: leave the glowing markers!',
+    'Orbes d’aurore : une parade parfaite ouvre la couronne.': 'Dawn orbs: a perfect parry opens the crown.',
+    'Trois vagues de feu : gardez un double saut pour la suite.': 'Three fire waves: save your double jump for the next wave.',
+    'Le sol va trembler : sautez au-dessus de l’onde.': 'The ground will shake: jump over the wave.',
+    'Phase II — L’armure se fissure': 'Phase II — Cracks in the armor',
+    'Phase III — Le dernier éclat': 'Phase III — The final spark',
+    'De nouvelles attaques se préparent. Surveillez les marques au sol.': 'New attacks are coming. Watch the ground markers.',
+    'Le colosse déchaîne sa dernière force. Gardez le rythme.': 'The colossus unleashes its last strength. Keep the rhythm.',
+    'Sylphe est posée. Frappez son cœur lumineux !': 'Sylphe has landed. Strike her glowing heart!',
+    'Le cœur est exposé. Approchez et frappez !': 'The heart is exposed. Move in and strike!',
+    'Sa garde est ouverte. Ripostez maintenant !': 'His guard is open. Strike back now!',
+    'Une ouverture !': 'An opening!',
+    'Elle plonge : esquivez de côté ou parez !': 'She is diving: dash aside or parry!',
+    'Une rafale approche : sautez au-dessus du vent.': 'A gust is coming: jump over the wind.',
+    'Les plumes se parent. Après plusieurs enchaînements ou parades, elle se posera.': 'Parry the feathers. After several attack sequences or parries, she will land.',
+    'La mâchoire se referme : parez ou reculez !': 'Its jaws are closing: parry or back away!',
+    'Deux émergences successives : continuez à bouger !': 'Two eruptions in a row: keep moving!',
+    'Le sol tremble sous vos pieds : quittez la marque !': 'The ground shakes beneath you: leave the marker!',
+    'Une lame d’éclipse puis une ruée : parez ou sautez !': 'An eclipse blade, then a charge: parry or jump!',
+    'Deux ruées : gardez une esquive pour la seconde.': 'Two charges: save a dash for the second.',
+    'La lame s’allume : parez la ruée ou sautez.': 'His blade lights up: parry the charge or jump.',
+    'Son rythme change. Observez ses nouvelles attaques.': 'Its rhythm changes. Watch its new attacks.',
+    'Sa dernière force se réveille.': 'Its last strength awakens.',
+    'Phase II': 'Phase II',
+    'Phase III': 'Phase III',
+
+    // Canvas labels: attacks, weak points, floating feedback and shrine prompt.
+    'GORGE EXPOSÉE': 'THROAT EXPOSED',
+    'OUVERTURE': 'OPENING',
+    'CŒUR EXPOSÉ': 'HEART EXPOSED',
+    'COURONNE OUVERTE': 'CROWN EXPOSED',
+    'CŒUR OUVERT': 'HEART EXPOSED',
+    'ONDE · SAUTEZ': 'WAVE · JUMP',
+    'VAGUES · SAUTEZ': 'WAVES · JUMP',
+    'ORBES · PAREZ': 'ORBS · PARRY',
+    'CHUTE · BOUGEZ': 'FALLING · MOVE',
+    'DOUBLE BALAYAGE': 'DOUBLE SWEEP',
+    'PLUMES · PAREZ': 'FEATHERS · PARRY',
+    'TEMPÊTE · ESQUIVEZ': 'TEMPEST · DODGE',
+    'PLONGÉE · ÉCARTEZ-VOUS': 'DIVE · MOVE ASIDE',
+    'RAFALE · SAUTEZ': 'GUST · JUMP',
+    'ÉMERGENCE · BOUGEZ': 'ERUPTION · MOVE',
+    'DOUBLE ÉMERGENCE': 'DOUBLE ERUPTION',
+    'MORSURE · PAREZ': 'BITE · PARRY',
+    'RUÉE · PAREZ': 'CHARGE · PARRY',
+    'DEUX RUÉES': 'TWO CHARGES',
+    'LAME D’ÉCLIPSE': 'ECLIPSE BLADE',
+    'BALAYAGE · ESQUIVEZ': 'SWEEP · DODGE',
+    'E · Se reposer': 'E · Rest'
+  });
+
+  // Complete, anchored messages only: never replace pieces of a name or sentence.
+  I18N.addPattern(/^PRESSION (\d+)\/(\d+)$/, (current, total) => `PRESSURE ${current}/${total}`);
+  I18N.addPattern(/^Parade réussie : (\d+)\/(\d+)\. Maintenez la pression !$/, (current, total) => `Successful parry: ${current}/${total}. Keep up the pressure!`);
+  I18N.addPattern(/^Son souffle faiblit : (\d+)\/(\d+) échanges\. Esquivez encore ou parez !$/, (current, total) => `It is tiring: ${current}/${total} exchanges. Keep dodging or parry!`);
+}
+
+</script><script>
+'use strict';
+{
+  const root=typeof window!=='undefined'?window:globalThis;
+  const I=root.CM.I18N;
+  I.add({
+    "Carlus Magnus — Les éclats d’Aurore":"Carlus Magnus — Shards of Dawn",
+    "Carlus Magnus — Les éclats d’Aurore. Une aventure de plateforme et de mêlée, créée pour Charles. Explorez les ruines, maîtrisez la parade et réveillez la lumière.":"Carlus Magnus — Shards of Dawn. A platforming and melee adventure made for Charles. Explore the ruins, master the parry and awaken the light.",
+    "Monde de Carlus Magnus, jeu de plateforme en 2D":"Carlus Magnus world, a 2D platforming game",
+    "Carlus Magnus, menu":"Carlus Magnus, menu",
+    "Langue du jeu":"Game language",
+    "POUR CHARLES, L’AVENTURIER.":"FOR CHARLES, THE ADVENTURER.",
+    "Couper le son":"Mute sound",
+    "Activer le son":"Enable sound",
+    "Son":"Sound",
+    "Son activé":"Sound on",
+    "Son coupé":"Sound off",
+    "Plein écran":"Fullscreen",
+    "Commandes et aide":"Controls and help",
+    "Commandes":"Controls",
+    "LES ROYAUMES OUBLIÉS · CHAPITRE II":"THE FORGOTTEN REALMS · CHAPTER II",
+    "LES ÉCLATS D’AURORE":"SHARDS OF DAWN",
+    "Sous les racines d’un royaume oublié,":"Beneath the roots of a forgotten kingdom,",
+    "quelque chose brille encore.":"something still shines.",
+    "À toi de le réveiller.":"It is yours to awaken.",
+    "Commencer l’aventure":"Begin the adventure",
+    "Continuer":"Continue",
+    "Défis des gardiens":"Guardian trials",
+    "5 BOSS · TROUVE LEUR POINT FAIBLE":"5 BOSSES · FIND THEIR WEAK SPOT",
+    "⌨ CLAVIER":"⌨ KEYBOARD",
+    "◈ MANETTE":"◈ CONTROLLER",
+    "12 ZONES · 5 BOSS":"12 AREAS · 5 BOSSES",
+    "LES TERRES ASSOUPIES":"THE SLEEPING LANDS",
+    "Une aventure en deux chapitres":"An adventure in two chapters",
+    "EXPLORER · COMBATTRE · S’ÉLEVER":"EXPLORE · FIGHT · RISE",
+    "Découvrir les commandes":"Learn the controls",
+    "Télécharger le jeu complet, jouable hors connexion":"Download the full game to play offline",
+    "JOUER HORS CONNEXION ↧":"PLAY OFFLINE ↧",
+    "Choix du personnage":"Choose a character",
+    "01 / CHOISIS TA VOIE":"01 / CHOOSE YOUR PATH",
+    "Chaque héros a sa lumière.":"Every hero has a light.",
+    "Trois façons de partir. Ou une qui n’appartient qu’à toi.":"Three ways to begin. Or one that is yours alone.",
+    "ARME DE DÉPART":"STARTING WEAPON",
+    "Épée · vive et équilibrée":"Sword · quick and balanced",
+    "Hache · lente et puissante":"Axe · slow and powerful",
+    "Lance · allonge généreuse":"Spear · generous reach",
+    "TON AVENTURE":"YOUR ADVENTURE",
+    "Aventurier · le défi original":"Adventurer · the original challenge",
+    "Explorateur · dégâts ennemis réduits":"Explorer · reduced enemy damage",
+    "Explorateur · plus tolérant":"Explorer · more forgiving",
+    "Maître · précision et danger":"Master · precision and danger",
+    "← Retour":"← Back",
+    "Les trois armes restent disponibles pendant l’aventure.":"All three weapons remain available throughout the adventure.",
+    "Entrer dans les ruines":"Enter the ruins",
+    "L’Errant":"The Wanderer",
+    "L’ÉQUILIBRE":"BALANCE",
+    "Une lame sûre. Un cœur sans peur.":"A steady blade. A fearless heart.",
+    "Une voie équilibrée pour découvrir les ruines. Rapide, solide et à l’aise avec toutes les armes.":"A balanced path through the ruins. Quick, sturdy and comfortable with every weapon.",
+    "Sylve":"Sylve",
+    "LA VITESSE":"SPEED",
+    "Insaisissable entre deux ombres.":"Elusive between two shadows.",
+    "Une aventurière vive qui choisit ses distances. Sa lance compense sa force modeste par une excellente portée.":"A nimble adventurer who chooses her distance. Her spear makes up for modest strength with excellent reach.",
+    "Bastion":"Bastion",
+    "LA PUISSANCE":"POWER",
+    "Quand la montagne prend les armes.":"When the mountain takes up arms.",
+    "Plus lent, plus robuste. Ses coups de hache font la différence, à condition de bien choisir le moment.":"Slower and tougher. His axe makes every strike count, provided you choose the right moment.",
+    "Ton héros":"Your hero",
+    "LA LIBERTÉ":"FREEDOM",
+    "Ta façon de faire la légende.":"Your way to become a legend.",
+    "Répartis 12 points entre vitesse, force et vitalité. Chaque caractéristique doit rester entre 1 et 7.":"Assign 12 points to speed, strength and vitality. Each attribute must stay between 1 and 7.",
+    "VITESSE":"SPEED",
+    "FORCE":"STRENGTH",
+    "VITALITÉ":"VITALITY",
+    "Vitesse":"Speed",
+    "Force":"Strength",
+    "Vitalité":"Vitality",
+    "NOM DU HÉROS":"HERO NAME",
+    "Distribue les 12 points pour commencer.":"Assign all 12 points to begin.",
+    "ÉPÉE":"SWORD",
+    "HACHE":"AXE",
+    "LANCE":"SPEAR",
+    "1 · Épée":"1 · Sword",
+    "2 · Hache":"2 · Axe",
+    "3 · Lance":"3 · Spear",
+    "Fiole":"Flask",
+    "Talents":"Skills",
+    "Talismans":"Talismans",
+    "Carte":"Map",
+    "Bouger":"Move",
+    "Espace":"Space",
+    "Sauter":"Jump",
+    "Frapper":"Strike",
+    "Garde / parade":"Block / parry",
+    "Esquive":"Dash",
+    "Interagir":"Interact",
+    "✧ Progression enregistrée":"✧ Progress saved",
+    "Sauvegarde indisponible dans ce navigateur":"Saving is unavailable in this browser",
+    "Commandes tactiles":"Touch controls",
+    "Aller à gauche":"Move left",
+    "Aller à droite":"Move right",
+    "Soin":"Heal",
+    "Garde":"Block",
+    "Attaque plongeante":"Downward strike",
+    "↓ Frappe":"↓ Strike",
+    "Frappe":"Strike",
+    "Saut":"Jump",
+    "Fermer":"Close",
+    "L’aventure n’a pas pu démarrer. Recharge la page puis essaie une nouvelle aventure.":"The adventure could not start. Reload the page, then try a new adventure.",
+    "Le monde n’a pas pu être chargé. Recharge la page pour réessayer.":"The world could not load. Reload the page to try again.",
+    "Le plein écran n’est pas disponible dans ce navigateur":"Fullscreen is not available in this browser",
+    "LES ROYAUMES OUBLIÉS · ÉPREUVES LIBRES":"THE FORGOTTEN REALMS · FREE TRIALS",
+    "Cinq gardiens. Cinq façons de vaincre.":"Five guardians. Five ways to win.",
+    "Grimpe sur les colosses, guette un atterrissage, esquive un assaut.":"Climb the colossi, wait for a landing, dodge an assault.",
+    "Chaque combat est indépendant de ta sauvegarde d’aventure.":"Each fight is separate from your adventure save.",
+    "LE NIVEAU DE DÉFI":"CHALLENGE LEVEL",
+    "Aventurier · aucun record":"Adventurer · no record yet",
+    "Affronter ce gardien":"Challenge this guardian",
+    "Double saut, fiole et trois armes. Records Aventurier et Maître séparés.":"Double jump, a flask and three weapons. Separate Adventurer and Master records.",
+    "LE GARDIEN S’INCLINE":"THE GUARDIAN FALLS",
+    "Tu as trouvé les ouvertures jusque dans la dernière phase.":"You found the openings, right through the final phase.",
+    "TEMPS DU DÉFI":"TRIAL TIME",
+    "RETOURS":"REVIVALS",
+    "Ta sauvegarde d’aventure est préservée.":"Your adventure save is preserved.",
+    "Relever le défi à nouveau":"Take the challenge again",
+    "Choisir un autre gardien":"Choose another guardian",
+    "Retour à l’accueil":"Back to the title screen",
+    "DÉFI DES GARDIENS":"GUARDIAN TRIAL",
+    "UNE PAUSE AU SANCTUAIRE":"A REST AT THE SHRINE",
+    "La lumière t’attendra.":"The light will wait for you.",
+    "Ce défi est indépendant de ta sauvegarde d’aventure.":"This trial is separate from your adventure save.",
+    "Ta progression est enregistrée sur ce navigateur.":"Your progress is saved in this browser.",
+    "Reprendre le combat":"Return to the fight",
+    "Développer mes talents":"Develop my skills",
+    "Zones d’attaque : affichées":"Attack zones: shown",
+    "Zones d’attaque : masquées":"Attack zones: hidden",
+    "Commandes et conseils":"Controls and tips",
+    "Quitter le défi":"Leave the trial",
+    "Sauvegarder et quitter":"Save and quit",
+    "LE CARNET DE L’AVENTURIER":"THE ADVENTURER’S JOURNAL",
+    "Un peu d’instinct. Le bon timing.":"A little instinct. The right timing.",
+    "Explore les passages, récupère les éclats et apprends le rythme de tes adversaires. Choisis Explorateur pour découvrir, Aventurier pour le défi original ou Maître pour des dégâts accrus et des ouvertures plus courtes.":"Explore the passages, collect shards and learn your enemies’ rhythms. Choose Explorer to discover the world, Adventurer for the original challenge, or Master for higher damage and shorter openings.",
+    "Au clavier · AZERTY et QWERTY":"Keyboard · AZERTY and QWERTY",
+    "Se déplacer":"Move",
+    "Espace / ↑":"Space / ↑",
+    "Sauter, puis double saut débloqué":"Jump; double jump once unlocked",
+    "Attaquer":"Attack",
+    "↓ / S + J, en l’air":"↓ / S + J, in the air",
+    "Frappe plongeante et rebond":"Downward strike and bounce",
+    "K / C (maintenir)":"K / C (hold)",
+    "Lever la garde":"Raise your guard",
+    "Maj / L":"Shift / L",
+    "Esquiver":"Dash",
+    "Activer un sanctuaire":"Activate a shrine",
+    "Boire une fiole de soin":"Drink a healing flask",
+    "Équiper les talismans":"Equip talismans",
+    "Épée / hache / lance":"Sword / axe / spear",
+    "Tab / M / Échap":"Tab / M / Esc",
+    "Talents / carte / pause":"Skills / map / pause",
+    "À la manette · disposition Xbox":"Controller · Xbox layout",
+    "Stick / croix":"Stick / D-pad",
+    "Sauter / frapper":"Jump / strike",
+    "Bas + X, en l’air":"Down + X, in the air",
+    "Frappe plongeante":"Downward strike",
+    "Garder et parer":"Block and parry",
+    "Interagir / changer d’arme":"Interact / switch weapon",
+    "Croix vers le haut":"D-pad up",
+    "Pause / carte":"Pause / map",
+    "Les zones au sol annoncent la portée des attaques. Elles sont masquées par défaut en mode Maître ; l’option « Zones d’attaque » dans la pause permet de changer ce réglage. Les gestes des ennemis restent visibles. Lève la garde juste avant l’impact pour une parade parfaite : l’ennemi est étourdi. Maintenir la garde absorbe les coups, mais consomme de l’endurance.":"Ground zones show where attacks will reach. They are hidden by default in Master mode; change this with “Attack zones” in the pause menu. Enemy movements remain visible. Raise your guard just before impact for a perfect parry that staggers the enemy. Holding your guard absorbs hits but uses stamina.",
+    "Les colosses portent des sceaux lumineux. Brise-les ou réussis une parade pour ouvrir leur point faible. Les bras marqués deviennent des marches : grimpe et frappe la lumière avant qu’elle se referme. Chaque tiers de vie change la phase.":"The colossi wear glowing seals. Break them or land a perfect parry to expose their weak spot. Marked arms become steps: climb and strike the light before it closes. Each third of their health brings a new phase.",
+    "Les gardiens mobiles offrent une ouverture après deux séquences d’attaque, trois en Maître. Accumuler des parades parfaites peut aussi briser leur garde. Le papillon dévoile son cœur quand il se pose. Le serpent émerge là où tu te trouvais : bouge, puis contre-attaque. Face au chevalier, esquive ses assauts ou pare au dernier instant.":"The mobile guardians open up after two attack sequences, or three on Master. Repeated perfect parries can also break their guard. The moth exposes its heart when it lands. The serpent erupts where you were standing: move, then counterattack. Dodge the knight’s assaults or parry at the last moment.",
+    "Une fiole rend 50 points de vie : F au clavier ou haut sur la croix de la manette. Les sanctuaires la rechargent. Ouvre les talismans avec I pour combiner deux pouvoirs.":"A flask restores 50 health: press F or D-pad up. Shrines refill it. Open talismans with I to combine two powers.",
+    "Les murs fissurés cachent des trésors : frappe pour les briser. Depuis un sanctuaire, ouvre la carte pour voyager et retrouver les secrets laissés derrière toi.":"Cracked walls hide treasure: strike them to break through. Open the map at a shrine to travel back and find secrets you left behind.",
+    "Masquer les commandes tactiles":"Hide touch controls",
+    "Afficher les commandes tactiles":"Show touch controls",
+    "C’est parti":"Let’s go",
+    "LES TRÉSORS DES ROYAUMES":"TREASURES OF THE REALMS",
+    "Deux talismans. Ta façon de jouer.":"Two talismans. Your way to play.",
+    "Explore les détours pour retrouver ces six objets. Combine librement leurs pouvoirs.":"Explore hidden paths to find all six items. Combine their powers freely.",
+    "Aucun talisman":"No talisman",
+    "ÉQUIPÉ":"EQUIPPED",
+    "DÉCOUVERT":"DISCOVERED",
+    "À DÉCOUVRIR":"UNDISCOVERED",
+    "Retirer":"Unequip",
+    "Caché dans le monde":"Hidden in the world",
+    "Deux emplacements occupés":"Both slots occupied",
+    "Équiper":"Equip",
+    "Reprendre":"Resume",
+    "FAIRE GRANDIR SA LUMIÈRE":"LET YOUR LIGHT GROW",
+    "Les talents de l’Aurore.":"Skills of the Dawn.",
+    "· Collecte les éclats et terrasse les gardiens.":"· Collect shards and defeat guardians.",
+    "✓ Acquis":"✓ Learned",
+    "Les talents s’appliquent immédiatement et sont sauvegardés.":"Skills take effect immediately and are saved.",
+    "Chaque détour est une découverte.":"Every detour is a discovery.",
+    "Le sanctuaire te relie aux terres déjà découvertes. Choisis ta destination.":"The shrine connects you to lands you have discovered. Choose your destination.",
+    "Approche un sanctuaire pour voyager vers les zones déjà découvertes.":"Approach a shrine to travel to areas you have already discovered.",
+    "Terre inexplorée":"Unexplored land",
+    "VOUS ÊTES ICI":"YOU ARE HERE",
+    "Passage découvert":"Passage discovered",
+    "Un nouveau chemin t’attend":"A new path awaits",
+    "Voyager au sanctuaire →":"Travel to the shrine →",
+    "✧ Les sanctuaires soignent et enregistrent le retour.":"✧ Shrines heal you and save your return point.",
+    "↟ Double saut acquis : explore les hauteurs et les murs fissurés.":"↟ Double jump unlocked: explore the heights and cracked walls.",
+    "↟ Trouve les Ailes d’aurore pour revisiter les hauteurs.":"↟ Find the Dawn Wings to revisit the heights.",
+    "En route":"Onward",
+    "CE N’EST QU’UN CONTRETEMPS":"JUST A SETBACK",
+    "Une flamme ne s’éteint pas si vite.":"A flame does not fade so easily.",
+    "Retourne au dernier sanctuaire. Observe les signaux, ménage ton endurance et réessaie.":"Return to the last shrine. Watch the tells, manage your stamina and try again.",
+    "Rallumer la flamme":"Rekindle the flame",
+    "POUR CHARLES, QUI N’A PAS RENONCÉ":"FOR CHARLES, WHO NEVER GAVE UP",
+    "L’Aurore se lève à nouveau.":"Dawn rises again.",
+    "Les cinq gardiens sont tombés. Des racines jusqu’aux étoiles, les royaumes retrouvent leur lumière.":"The five guardians have fallen. From the roots to the stars, light returns to the realms.",
+    "Et tout cela, c’est grâce à toi.":"And it is all thanks to you.",
+    "TEMPS D’AVENTURE":"ADVENTURE TIME",
+    "ENNEMIS VAINCUS":"ENEMIES DEFEATED",
+    "Une autre voie, une autre aventure":"Another path, another adventure",
+    "Savourer la victoire":"Savour the victory",
+    "Explorateur":"Explorer",
+    "Aventurier":"Adventurer",
+    "Maître":"Master",
+    "Défi":"Trial",
+    "I · LES TERRES ASSOUPIES":"I · THE SLEEPING LANDS",
+    "II · LES ROYAUMES OUBLIÉS":"II · THE FORGOTTEN REALMS",
+    "Le Gardien":"The Guardian",
+    "Point faible vulnérable":"Weak spot exposed",
+    "Guette une ouverture":"Watch for an opening",
+    "SCEAUX":"SEALS",
+    "ARMURE FERMÉE":"ARMOUR CLOSED",
+    "PARADES":"PARRIES",
+    "OBSERVE ET ESQUIVE":"WATCH AND DODGE",
+    "Brise les sceaux ou pare une attaque, puis grimpe vers le point faible.":"Break the seals or parry an attack, then climb to the weak spot."
+  });
+  I.addPattern(/^(\d+) points? à distribuer · 12 au total$/,n=>n+' point'+(n==='1'?'':'s')+' to assign · 12 total');
+  I.addPattern(/^(Réduire|Augmenter) (.+)$/, (verb,stat)=>(verb==='Réduire'?'Decrease ':'Increase ')+I.t(stat));
+  I.addPattern(/^GARDIEN (\d+) · TROIS PHASES$/,n=>'GUARDIAN '+n+' · THREE PHASES');
+  I.addPattern(/^(Aventurier|Maître) · (\d+:\d+)$/,(mode,time)=>I.t(mode)+' · '+time);
+  I.addPattern(/^(.+) est vaincu\.$/,name=>I.t(name)+' is defeated.');
+  I.addPattern(/^EMPLACEMENT (\d+)$/,n=>'SLOT '+n);
+  I.addPattern(/^(\d+) \/ (\d+) découverts · (\d+) \/ 2 équipés( · Défis sans talismans de campagne)?$/,(owned,total,equipped,trial)=>owned+' / '+total+' discovered · '+equipped+' / 2 equipped'+(trial?' · Trials exclude campaign talismans':''));
+  I.addPattern(/^(\d+) points? de talent disponibles?$/,n=>n+' skill point'+(n==='1'?'':'s')+' available');
+  I.addPattern(/^(\d+) points? · Apprendre$/,n=>n+' point'+(n==='1'?'':'s')+' · Learn');
+  I.addPattern(/^Après (.+)$/,names=>'Requires '+names);
+  I.addPattern(/^✦ Trésors (\d+) \/ (\d+)( · Un secret demeure)?$/,(found,total,secret)=>'✦ Treasures '+found+' / '+total+(secret?' · A secret remains':''));
+}
+
+</script><script>
 'use strict';
 {
 const root=typeof window!=='undefined'?window:globalThis;
@@ -99,7 +664,7 @@ const root=typeof window!=='undefined'?window:globalThis;
     {id:'vigor',name:'Cœur vaillant',description:'+30 points de vie. Soigne à l’acquisition.',cost:1},
     {id:'edge',name:'Lame éveillée',description:'+25 % de dégâts avec toutes les armes.',cost:1},
     {id:'flow',name:'Souffle du vent',description:'Endurance +30, récupération plus rapide.',cost:1},
-    {id:'riposte',name:'Contre-éclat',description:'Après une parade parfaite, le prochain coup inflige le double de dégâts.',cost:2,requires:'edge'},
+    {id:'riposte',name:'Contre-éclat',description:'Après une parade parfaite, le prochain coup dans les 3 s inflige le double de dégâts.',cost:2,requires:'edge'},
     {id:'aegis',name:'Garde de cristal',description:'Le blocage absorbe tous les dégâts si votre endurance suffit.',cost:2,requires:'vigor'},
     {id:'longdash',name:'Pas fantôme',description:'Esquive plus longue, coût réduit et recharge accélérée.',cost:2,requires:'flow'},
     {id:'pogo',name:'Étoile plongeante',description:'+50 % de dégâts avec les attaques aériennes vers le bas.',cost:2,requires:'edge'},
@@ -120,9 +685,9 @@ const root=typeof window!=='undefined'?window:globalThis;
   const BOSSES=CM.BOSSES=[
     {id:'warden',name:'Le Veilleur de pierre',subtitle:'Un cœur sous la roche',tip:'Brisez les sceaux ou parez, puis grimpez sur ses bras.',roomIndex:2,weakpointLabel:'Cœur de pierre',openingLabel:'Sceaux ou parade'},
     {id:'king',name:'Le Roi des cendres',subtitle:'La couronne oubliée',tip:'Ouvrez son armure, escaladez les épaules et frappez sa couronne.',roomIndex:5,weakpointLabel:'Couronne',openingLabel:'Sceaux ou parade'},
-    {id:'moth',name:'Sylphe, aile d’orage',subtitle:'La tempête prend son envol',tip:'Évitez ses plumes. Frappez son cœur quand elle se pose, ou parez une plume.',roomIndex:7,weakpointLabel:'Cœur d’orage',openingLabel:'Atterrissage ou parade'},
-    {id:'worm',name:'Nacre, gueule des profondeurs',subtitle:'Écoutez le sol trembler',tip:'Quittez la marque au sol. Après sa morsure, son cœur reste exposé.',roomIndex:9,weakpointLabel:'Cœur de nacre',openingLabel:'Morsure ou parade'},
-    {id:'duelist',name:'Le Chevalier de l’Éclipse',subtitle:'Une dernière danse',tip:'Parez sa ruée ou esquivez sa combinaison, puis ripostez.',roomIndex:11,weakpointLabel:'Garde ouverte',openingLabel:'Récupération ou parade'}
+    {id:'moth',name:'Sylphe, aile d’orage',subtitle:'La tempête prend son envol',tip:'Évitez ses plumes ou parez-les plusieurs fois. Quand elle se pose, frappez son cœur.',roomIndex:7,weakpointLabel:'Cœur d’orage',openingLabel:'Atterrissage ou parade'},
+    {id:'worm',name:'Nacre, gueule des profondeurs',subtitle:'Écoutez le sol trembler',tip:'Quittez les marques au sol. Plusieurs enchaînements ou parades exposent son cœur.',roomIndex:9,weakpointLabel:'Cœur de nacre',openingLabel:'Morsure ou parade'},
+    {id:'duelist',name:'Le Chevalier de l’Éclipse',subtitle:'Une dernière danse',tip:'Parez ses ruées ou esquivez plusieurs enchaînements, puis ripostez dès que sa garde s’ouvre.',roomIndex:11,weakpointLabel:'Garde ouverte',openingLabel:'Récupération ou parade'}
   ];
   CM.ARCHETYPES = [
     {id:'scout',name:'Éclaireur',subtitle:'La vitesse est une armure.',stats:{speed:6,power:3,vitality:3},weapon:'sword'},
@@ -139,11 +704,11 @@ const root=typeof window!=='undefined'?window:globalThis;
   ];
   ROOMS.push(
     {id:'crystal',name:'Les Jardins de cristal',subtitle:'Au-delà de la couronne, les étoiles refleurissent.',theme:'crystal',width:2440,height:720,checkpoint:{x:140,y:650},platforms:[platform(0,650,790,80),platform(1030,650,670,80),platform(1940,650,500,80),platform(420,535,210),platform(730,410,210),platform(990,520,200),platform(1320,520,180),platform(1570,370,210),platform(1800,510,210),platform(2140,460,180)],hazards:[{x:790,y:675,w:240,h:45},{x:1700,y:675,w:240,h:45}],enemies:[enemy('c1','spitter',550,602),enemy('c2','hopper',1130,616),enemy('c3','flyer',1550,430),enemy('c4','spitter',2090,602)],pickups:[pickup('c-sh1','shard',480,495,'Éclat d’aurore'),pickup('c-sh2','shard',800,370,'Éclat d’aurore'),pickup('c-sh3','shard',1390,480,'Éclat d’aurore'),pickup('c-charm','charm',1660,330,'Étoile aimantée',{charm:'magnet'}),pickup('c-sh4','shard',2190,420,'Éclat d’aurore')],hint:'Les talismans offrent des bonus différents. Deux peuvent être équipés à la fois.'},
-    {id:'storm',name:'Le Nid des orages',subtitle:'Le ciel lui-même a des ailes.',theme:'crystal',width:1920,height:720,checkpoint:{x:140,y:650},bossGate:{x:330},platforms:[platform(0,650,1920,80),{...platform(700,500,210),oneWay:true},{...platform(1270,500,210),oneWay:true}],hazards:[],enemies:[enemy('boss-moth','boss',1160,280,{bossType:'moth',name:'SYLPHE, AILE D’ORAGE'})],pickups:[],hint:'Les plumes se parent. Après son attaque, Sylphe se pose : approchez et frappez !'},
+    {id:'storm',name:'Le Nid des orages',subtitle:'Le ciel lui-même a des ailes.',theme:'crystal',width:1920,height:720,checkpoint:{x:140,y:650},bossGate:{x:330},platforms:[platform(0,650,1920,80),{...platform(700,500,210),oneWay:true},{...platform(1270,500,210),oneWay:true}],hazards:[],enemies:[enemy('boss-moth','boss',1160,280,{bossType:'moth',name:'SYLPHE, AILE D’ORAGE'})],pickups:[],hint:'Parez les plumes ou évitez plusieurs attaques. Quand Sylphe se pose, frappez son cœur !'},
     {id:'depths',name:'Les Racines de nacre',subtitle:'Sous le cristal, un ancien monde respire.',theme:'depths',width:2500,height:720,checkpoint:{x:140,y:650},platforms:[platform(0,650,900,80),platform(1150,650,610,80),platform(2010,650,490,80),platform(450,520,200),platform(730,390,210),platform(970,520,220),platform(1400,500,230),platform(1660,355,180),platform(1870,495,220),platform(2220,440,180)],hazards:[{x:900,y:676,w:250,h:44},{x:1760,y:676,w:250,h:44}],enemies:[enemy('d1','hopper',520,616),enemy('d2','spitter',830,602),enemy('d3','hopper',1280,616),enemy('d4','spitter',1570,602),enemy('d5','flyer',2130,430)],pickups:[pickup('d-sh1','shard',500,480,'Éclat d’aurore'),pickup('d-sh2','shard',800,350,'Éclat d’aurore'),pickup('d-charm','charm',1710,315,'Mousse vivante',{charm:'moss'}),pickup('d-sh3','shard',1940,455,'Éclat d’aurore'),pickup('d-relic','relic',2280,400,'Perle des profondeurs',{bonus:'vitality'})],hint:'Les sauteurs se prêtent aux rebonds : bas + attaque en plein vol.'},
-    {id:'burrow',name:'La Gueule du monde',subtitle:'Chaque vibration annonce sa venue.',theme:'depths',width:1900,height:720,checkpoint:{x:140,y:650},bossGate:{x:330},platforms:[platform(0,650,1900,80),{...platform(720,500,190),oneWay:true},{...platform(1320,500,190),oneWay:true}],hazards:[],enemies:[enemy('boss-worm','boss',1190,480,{bossType:'worm',name:'NACRE, GUEULE DES PROFONDEURS'})],pickups:[],hint:'Quittez la marque avant l’émergence. Parez la morsure ou attendez son épuisement.'},
+    {id:'burrow',name:'La Gueule du monde',subtitle:'Chaque vibration annonce sa venue.',theme:'depths',width:1900,height:720,checkpoint:{x:140,y:650},bossGate:{x:330},platforms:[platform(0,650,1900,80),{...platform(720,500,190),oneWay:true},{...platform(1320,500,190),oneWay:true}],hazards:[],enemies:[enemy('boss-worm','boss',1190,480,{bossType:'worm',name:'NACRE, GUEULE DES PROFONDEURS'})],pickups:[],hint:'Quittez la marque avant l’émergence. Plusieurs morsures évitées ou parades épuisent Nacre.'},
     {id:'astral',name:'Les Marches célestes',subtitle:'L’aube attend au bout du chemin.',theme:'astral',width:2680,height:720,checkpoint:{x:140,y:650},platforms:[platform(0,650,760,80),platform(1020,650,660,80),platform(1940,650,740,80),platform(420,525,210),platform(730,390,190),platform(940,510,200),platform(1260,490,190),platform(1520,345,200),platform(1760,500,200),platform(2070,510,180),platform(2320,365,220)],hazards:[{x:760,y:675,w:260,h:45},{x:1680,y:675,w:260,h:45}],enemies:[enemy('s1','knight',540,590),enemy('s2','spitter',1120,602),enemy('s3','hopper',1460,616),enemy('s4','flyer',1840,420),enemy('s5','knight',2190,590)],pickups:[pickup('s-sh1','shard',475,485,'Éclat d’aurore'),pickup('s-sh2','shard',790,350,'Éclat d’aurore'),pickup('s-charm','charm',1600,305,'Miroir de l’aube',{charm:'mirror'}),pickup('s-sh3','shard',1810,460,'Éclat d’aurore'),pickup('s-relic','relic',2410,325,'Lame d’étoile',{bonus:'power'})],hint:'Une fiole se remplit à chaque sanctuaire. Gardez-la pour le bon moment.'},
-    {id:'eclipse',name:'Le Seuil de l’Éclipse',subtitle:'Charles, la dernière lumière est entre tes mains.',theme:'astral',width:1980,height:720,checkpoint:{x:140,y:650},bossGate:{x:330},platforms:[platform(0,650,1980,80),{...platform(730,480,170),oneWay:true},{...platform(1430,480,170),oneWay:true}],hazards:[],enemies:[enemy('boss-duelist','boss',1320,558,{bossType:'duelist',name:'LE CHEVALIER DE L’ÉCLIPSE'})],pickups:[],hint:'Sa ruée se pare. Esquivez sa combinaison puis frappez pendant sa récupération.'}
+    {id:'eclipse',name:'Le Seuil de l’Éclipse',subtitle:'Charles, la dernière lumière est entre tes mains.',theme:'astral',width:1980,height:720,checkpoint:{x:140,y:650},bossGate:{x:330},platforms:[platform(0,650,1980,80),{...platform(730,480,170),oneWay:true},{...platform(1430,480,170),oneWay:true}],hazards:[],enemies:[enemy('boss-duelist','boss',1320,558,{bossType:'duelist',name:'LE CHEVALIER DE L’ÉCLIPSE'})],pickups:[],hint:'Parez ses ruées ou esquivez plusieurs enchaînements. Frappez quand sa garde s’ouvre.'}
   );
   ROOMS[0].pickups.push(pickup('charm-heart','charm',795,610,'Cœur de jade',{charm:'heart'}));
   ROOMS[1].pickups.push(pickup('charm-wind','charm',1900,290,'Plume du zéphyr',{charm:'wind'}));
@@ -435,7 +1000,7 @@ const root=typeof window!=='undefined'?window:globalThis;
     prepareMobileAttack(e,kind) {
       const p=this.player,cx=e.x+e.w/2;e.attackKind=kind;e.facing=p.x+15>cx?1:-1;e.state='windup';e.timer=kind==='burrow'||kind==='twinburrow'?1.05:kind==='bite'? .75:kind==='combo'? .75:.85;e.windupDuration=e.timer;e.attackProgress=0;e.hitPlayer=false;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];e.targetX=clamp(p.x+15,this.room.bossGate.x+110,this.room.width-140);e.targetY=p.y+26;
       if(e.bossType==='moth'){
-        e.actionHint=kind==='dive'?'Elle plonge : esquivez de côté ou parez !':kind==='gust'?'Une rafale approche : sautez au-dessus du vent.':'Les plumes se parent. Elle se posera après la salve.';
+        e.actionHint=kind==='dive'?'Elle plonge : esquivez de côté ou parez !':kind==='gust'?'Une rafale approche : sautez au-dessus du vent.':'Les plumes se parent. Après plusieurs enchaînements ou parades, elle se posera.';
         if(kind==='dive')e.telegraphs=[{x:Math.min(e.x,e.targetX-e.w/2),y:e.y,w:Math.abs(e.x-(e.targetX-e.w/2))+e.w,h:650-e.y,kind:'dive',parryable:true}];
         if(kind==='gust')e.telegraphs=[{x:this.room.bossGate.x,y:574,w:this.room.width-this.room.bossGate.x-30,h:76,kind:'gust',parryable:false}];
       }else if(e.bossType==='worm'){
@@ -528,6 +1093,7 @@ const root=typeof window!=='undefined'?window:globalThis;
 const global=typeof window!=='undefined'?window:globalThis;
   'use strict';
   const CM = global.CM = global.CM || {};
+  const t = value => CM.I18N?.t(value) ?? value;
   const TAU = Math.PI * 2;
   const palettes = {
     forest: {top:'#06151e', bottom:'#193d43', mist:'#409e91', back:'#102f38', mid:'#103038', bark:'#102932', stone:'#263f46', edge:'#59827a', grass:'#64b398', glow:'#80f8d1', accent:'#d4ac66'},
@@ -982,7 +1548,7 @@ const global=typeof window!=='undefined'?window:globalThis;
           this.line([[bx-sx*8,by],[bx,by],[bx,by-sy*8]],color,1.5);
         }
         c.globalAlpha=1;c.font='700 10px system-ui, sans-serif';c.textAlign='center';c.fillStyle=color;c.shadowColor='#091528';c.shadowBlur=6;
-        c.fillText(style==='worm'?'GORGE EXPOSÉE':style==='duelist'?'OUVERTURE':'CŒUR EXPOSÉ',cx,z.y-13);c.restore();
+        c.fillText(t(style==='worm'?'GORGE EXPOSÉE':style==='duelist'?'OUVERTURE':'CŒUR EXPOSÉ'),cx,z.y-13);c.restore();
       }
     }
     moth(e) {
@@ -1181,7 +1747,7 @@ const global=typeof window!=='undefined'?window:globalThis;
         c.arc(cx,cy,Math.max(w,h)*.72,-Math.PI/2,-Math.PI/2+TAU*clamp((e.vulnerabilityTimer||0)/6.5,0,1));c.stroke();c.restore();
         for(let i=0;i<5;i++){const a=this.t*.9+i*TAU/5;this.ellipse(cx+Math.cos(a)*42,cy+Math.sin(a)*45,1.4,1.4,'#dcffe7');}
         c.save();c.font='700 11px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#d9ffe5';c.shadowColor='#05131f';c.shadowBlur=6;
-        c.fillText(king?'COURONNE OUVERTE':'CŒUR OUVERT',cx,y-28);c.restore();
+        c.fillText(t(king?'COURONNE OUVERTE':'CŒUR OUVERT'),cx,y-28);c.restore();
       }else{
         // Closed shutters are deliberately matte, never a false glowing target.
         this.path([[x+2,y+10],[cx-2,y],[cx-2,y+h],[x+2,y+h-9]],king?'#625552':'#486265','#7d928a',1);
@@ -1337,7 +1903,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       c.font='700 11px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#ffe0b7';
       const texts={slam:'ONDE · SAUTEZ',stomp:'ONDE · SAUTEZ',eruption:'VAGUES · SAUTEZ',volley:'ORBES · PAREZ',rain:'CHUTE · BOUGEZ',doubleSweep:'DOUBLE BALAYAGE',feathers:'PLUMES · PAREZ',tempest:'TEMPÊTE · ESQUIVEZ',dive:'PLONGÉE · ÉCARTEZ-VOUS',gust:'RAFALE · SAUTEZ',burrow:'ÉMERGENCE · BOUGEZ',twinburrow:'DOUBLE ÉMERGENCE',bite:'MORSURE · PAREZ',dashSlash:'RUÉE · PAREZ',combo:'DEUX RUÉES',crescent:'LAME D’ÉCLIPSE'};
       const text=texts[kind]||'BALAYAGE · ESQUIVEZ';
-      c.fillText(text,x,markerY-23);c.restore();
+      c.fillText(t(text),x,markerY-23);c.restore();
     }
     secretWall(wall) {
       const c=this.ctx,p=this.palette,x=wall.x,y=wall.y,w=wall.w,h=wall.h;
@@ -1403,7 +1969,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       const c=this.ctx,ratio=clamp(f.life/(f.maxLife||f.life||1),0,1),col=f.color||this.palette.glow;
       c.save();c.globalAlpha=ratio;
       if(f.type==='text'){
-        c.font='600 17px system-ui, sans-serif';c.textAlign='center';c.shadowBlur=8;c.shadowColor='#06121d';c.fillStyle=col;c.fillText(f.text||'',f.x,f.y);
+        c.font='600 17px system-ui, sans-serif';c.textAlign='center';c.shadowBlur=8;c.shadowColor='#06121d';c.fillStyle=col;c.fillText(t(f.text||''),f.x,f.y);
       }else if(f.type==='ring'){
         c.strokeStyle=col;c.lineWidth=2+ratio*3;c.beginPath();c.arc(f.x,f.y,12+(1-ratio)*55,0,TAU);c.stroke();
       }else if(f.type==='slash'){
@@ -1531,7 +2097,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       points.forEach(pt=>{
         this.checkpoint(pt,!!engine.checkpointLit);
         if(engine.player&&!engine.arenaLocked&&Math.abs(engine.player.x-pt.x)<100){
-          c.save();c.font='500 12px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#c1ded0';c.fillText('E · Se reposer',pt.x,pt.y-87);c.restore();
+          c.save();c.font='500 12px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#c1ded0';c.fillText(t('E · Se reposer'),pt.x,pt.y-87);c.restore();
         }
       });
       (engine.pickups||[]).forEach(p=>{if(p.x>min&&p.x<max)this.pickup(p);});
@@ -1578,6 +2144,21 @@ const global=typeof window!=='undefined'?window:globalThis;
 {
   'use strict';
   const $ = id => document.getElementById(id);
+  const I=CM.I18N, t=value=>I.t(value);
+  // Localize known UI templates before insertion; input values and player names are never scanned.
+  const translateMarkup=html=>String(html).replace(/>([^<>]+)</g,(_,text)=>'>'+t(text)+'<').replace(/(aria-label|title)="([^"]*)"/g,(_,attr,value)=>attr+'="'+escapeHTML(t(value))+'"');
+  let translatingUI=false;
+  function localizedText(id,source){const el=$(id);el.dataset.i18n=source;el.textContent=t(source);}
+  function translateStatic(){
+    document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));
+    for(const [data,attribute] of [['i18nTitle','title'],['i18nAria','aria-label'],['i18nContent','content']]){
+      const selector='[data-'+data.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())+']';
+      document.querySelectorAll(selector).forEach(el=>el.setAttribute(attribute,t(el.dataset[data])));
+    }
+    document.documentElement.lang=I.locale;document.title=t('Carlus Magnus — Les éclats d’Aurore');
+    $('language-select').value=I.locale;$('modal-language-select').value=I.locale;
+  }
+
   const SAVE_KEY = 'carlus-magnus:aurore:v1';
   const PREF_KEY = 'carlus-magnus:prefs:v1';
   const TRIAL_KEY = 'carlus-magnus:trials:v1';
@@ -1646,30 +2227,30 @@ const global=typeof window!=='undefined'?window:globalThis;
     toggle(){this.enabled=!this.enabled;this.unlock();try{localStorage.setItem(PREF_KEY,JSON.stringify({sound:this.enabled}));}catch{};updateSoundButton();}
   }
   const sound = new Sound();
-  function updateSoundButton(){$('sound-button').textContent=sound.enabled?'♫':'♪';$('sound-button').style.opacity=sound.enabled?'1':'.45';$('sound-button').setAttribute('aria-label',sound.enabled?'Couper le son':'Activer le son');$('sound-button').title=sound.enabled?'Son activé':'Son coupé';}
+  function updateSoundButton(){$('sound-button').textContent=sound.enabled?'♫':'♪';$('sound-button').style.opacity=sound.enabled?'1':'.45';$('sound-button').setAttribute('aria-label',t(sound.enabled?'Couper le son':'Activer le son'));$('sound-button').title=t(sound.enabled?'Son activé':'Son coupé');}
   function readSave(){try{const s=JSON.parse(localStorage.getItem(SAVE_KEY));return s?.version===1&&s.config&&s.snapshot?s:null;}catch{return null;}}
-  function saveGame(){if(!game||game.trial)return;try{localStorage.setItem(SAVE_KEY,JSON.stringify({version:1,config,snapshot:game.snapshot(),savedAt:Date.now()}));$('save-indicator').classList.add('visible');clearTimeout(saveTimer);saveTimer=setTimeout(()=>$('save-indicator').classList.remove('visible'),1800);}catch{$('save-indicator').textContent='Sauvegarde indisponible dans ce navigateur';$('save-indicator').classList.add('visible');}}
+  function saveGame(){if(translatingUI||!game||game.trial)return;try{localizedText('save-indicator','✧ Progression enregistrée');localStorage.setItem(SAVE_KEY,JSON.stringify({version:1,config,snapshot:game.snapshot(),savedAt:Date.now()}));$('save-indicator').classList.add('visible');clearTimeout(saveTimer);saveTimer=setTimeout(()=>$('save-indicator').classList.remove('visible'),1800);}catch{localizedText('save-indicator','Sauvegarde indisponible dans ce navigateur');$('save-indicator').classList.add('visible');}}
   function showScreen(id){screen=id;['title','hero'].forEach(s=>$(s+'-screen').classList.toggle('hidden',s!==id));$('hud').classList.toggle('hidden',id!=='game');$('touch-controls').classList.toggle('hidden',id!=='game'||!touchEnabled);document.body.classList.toggle('playing',id==='game');document.body.classList.toggle('touch-on',touchEnabled);clearInput();}
   function title(){saveGame();closeModal();game=null;showScreen('title');$('continue-game').classList.toggle('hidden',!readSave());}
   function portrait(h){const heavy=h.id==='bastion',customHero=h.id==='custom';return `<svg viewBox="0 0 120 140" aria-hidden="true"><ellipse cx="60" cy="128" rx="32" ry="6" fill="#06171f" opacity=".6"/><path d="M28 127 35 62Q60 37 85 62L98 128 66 116 56 129Z" fill="${h.color}" opacity=".22"/><path d="M${heavy?'30':'39'} 116 41 64Q60 54 80 64L${heavy?'91':'82'} 116 61 102Z" fill="${h.color}"/><path d="M45 68 53 107 60 91 68 111 77 69" fill="#163a43"/><path d="m47 112-3 16h12l5-22 6 22h12l-6-16" fill="#0c2630"/><path d="M45 49Q44 25 60 22Q80 28 76 50L70 65 51 62Z" fill="#d3d4b9"/><path d="M42 46Q42 20 61 17Q80 21 80 47L68 39 50 42Z" fill="#275360"/><path d="m47 45 27-1-3 11-20 1Z" fill="#0d2731"/><path d="M51 47h6m8 0h6" stroke="${h.color}" stroke-width="3"/><path d="M43 61Q30 67 26 84L40 94 49 85 46 71M78 62l12 20-9 12-10-9" fill="${h.color}"/><path d="M84 113V${h.id==='sylve'?'29':'65'}" stroke="#ba9368" stroke-width="5"/>${heavy?'<path d="M83 66Q109 54 109 85L85 83Z" fill="#cadcd1"/>':h.id==='sylve'?'<path d="m84 12-8 23 8-4 7 4Z" fill="#d9eadd"/>':'<path d="m84 43-5 10 2 40h6l2-40Z" fill="#d9eadd"/><path d="M75 93h19" stroke="#e9c58c" stroke-width="4"/>'}${customHero?'<path d="m60 1 3 8 8 3-8 3-3 8-3-8-8-3 8-3Z" fill="#e8c989"/>':''}</svg>`;}
   function renderHeroes(){
-    $('hero-cards').innerHTML=heroes.map((h,i)=>`<button class="hero-card ${selected===i?'selected':''}" data-hero="${i}" aria-pressed="${selected===i}"><div class="hero-portrait">${portrait(h)}</div><small>${h.tag}</small><h3>${h.name}</h3><div class="tagline">${h.line}</div>${[['speed','VITESSE'],['power','FORCE'],['vitality','VITALITÉ']].map(([key,label])=>`<div class="mini-stat"><span>${label}</span><span class="stat-dots">${Array.from({length:7},(_,j)=>`<i class="${j<(i===3?custom[key]:h.stats[key])?'on':''}"></i>`).join('')}</span></div>`).join('')}</button>`).join('');
+    $('hero-cards').innerHTML=translateMarkup(heroes.map((h,i)=>`<button class="hero-card ${selected===i?'selected':''}" data-hero="${i}" aria-pressed="${selected===i}"><div class="hero-portrait">${portrait(h)}</div><small>${t(h.tag)}</small><h3>${t(h.name)}</h3><div class="tagline">${t(h.line)}</div>${[['speed','VITESSE'],['power','FORCE'],['vitality','VITALITÉ']].map(([key,label])=>`<div class="mini-stat"><span>${label}</span><span class="stat-dots">${Array.from({length:7},(_,j)=>`<i class="${j<(i===3?custom[key]:h.stats[key])?'on':''}"></i>`).join('')}</span></div>`).join('')}</button>`).join(''));
     $('hero-cards').querySelectorAll('[data-hero]').forEach(el=>el.onclick=()=>{selected=Number(el.dataset.hero);$('weapon-select').value=heroes[selected].weapon;renderHeroes();sound.tone(440,.08,'sine',.02);});
-    const h=heroes[selected];$('hero-description').innerHTML=`<strong>${h.name} · ${h.tag.toLowerCase()}</strong>${h.desc}`;
+    const h=heroes[selected];$('hero-description').innerHTML=`<strong>${escapeHTML(t(h.name))} · ${escapeHTML(t(h.tag).toLowerCase())}</strong>${escapeHTML(t(h.desc))}`;
     $('custom-controls').classList.toggle('hidden',selected!==3);
     const remaining=12-custom.speed-custom.power-custom.vitality;
-    $('custom-controls').innerHTML=`<div class="points-left">${remaining} point${remaining>1?'s':''} à distribuer · 12 au total</div>${[['speed','Vitesse'],['power','Force'],['vitality','Vitalité']].map(([key,label])=>`<div class="custom-stat"><span>${label}</span><div><button data-stat="${key}" data-step="-1" aria-label="Réduire ${label}" ${custom[key]<=1?'disabled':''}>−</button><b>${custom[key]}</b><button data-stat="${key}" data-step="1" aria-label="Augmenter ${label}" ${remaining<=0||custom[key]>=7?'disabled':''}>+</button></div></div>`).join('')}`;
-    $('custom-controls').insertAdjacentHTML('afterbegin',`<label class="custom-name-label" for="custom-name">NOM DU HÉROS <input id="custom-name" maxlength="24" value="${escapeHTML(customName)}" autocomplete="off"></label>`);
+    $('custom-controls').innerHTML=translateMarkup(`<div class="points-left">${remaining} point${remaining>1?'s':''} à distribuer · 12 au total</div>${[['speed','Vitesse'],['power','Force'],['vitality','Vitalité']].map(([key,label])=>`<div class="custom-stat"><span>${label}</span><div><button data-stat="${key}" data-step="-1" aria-label="Réduire ${label}" ${custom[key]<=1?'disabled':''}>−</button><b>${custom[key]}</b><button data-stat="${key}" data-step="1" aria-label="Augmenter ${label}" ${remaining<=0||custom[key]>=7?'disabled':''}>+</button></div></div>`).join('')}`);
+    $('custom-controls').insertAdjacentHTML('afterbegin',translateMarkup(`<label class="custom-name-label" for="custom-name">NOM DU HÉROS <input id="custom-name" maxlength="24" value="${escapeHTML(customName)}" autocomplete="off"></label>`));
     $('custom-name').addEventListener('input',e=>customName=e.target.value);
     $('custom-controls').querySelectorAll('[data-stat]').forEach(el=>el.onclick=()=>{custom[el.dataset.stat]+=Number(el.dataset.step);renderHeroes();});
     $('begin-game').disabled=selected===3&&remaining!==0;
-    $('allocation-note').textContent=selected===3&&remaining?'Distribue les 12 points pour commencer.':'Les trois armes restent disponibles pendant l’aventure.';
+    $('allocation-note').textContent=t(selected===3&&remaining?'Distribue les 12 points pour commencer.':'Les trois armes restent disponibles pendant l’aventure.');
   }
   function selectHero(){saveGame();game=null;closeModal();showScreen('hero');renderHeroes();}
   function start(resume=false){
     sound.unlock();closeModal();const saved=resume?readSave():null;
-    config=saved?.config||{name:selected===3?(customName.trim()||'Charles'):heroes[selected].name,stats:{...(selected===3?custom:heroes[selected].stats)},weapon:$('weapon-select').value,difficulty:$('difficulty-select').value,assist:$('difficulty-select').value==='explorer',color:heroes[selected].color};
-    try{game=new CM.Engine(config,saved?.snapshot||null);}catch(error){console.error(error);$('fatal-error').classList.remove('hidden');$('fatal-error').textContent='L’aventure n’a pas pu démarrer. Recharge la page puis essaie une nouvelle aventure.';return;}
+    config=saved?.config||{heroId:heroes[selected].id,name:selected===3?(customName.trim()||'Charles'):heroes[selected].name,stats:{...(selected===3?custom:heroes[selected].stats)},weapon:$('weapon-select').value,difficulty:$('difficulty-select').value,assist:$('difficulty-select').value==='explorer',color:heroes[selected].color};
+    try{game=new CM.Engine(config,saved?.snapshot||null);}catch(error){console.error(error);$('fatal-error').classList.remove('hidden');localizedText('fatal-error','L’aventure n’a pas pu démarrer. Recharge la page puis essaie une nouvelle aventure.');return;}
     game.player.color=config.color;showScreen('game');saveClock=0;hudClock=1;saveGame();updateHUD();$('world').focus();
   }
 
@@ -1679,7 +2260,7 @@ const global=typeof window!=='undefined'?window:globalThis;
     if(game&&!game.trial)saveGame();
     game=null;showScreen('title');
     const records=trialRecords();
-    openModal('trials',`<div class="eyebrow">LES ROYAUMES OUBLIÉS · ÉPREUVES LIBRES</div><h2>Cinq gardiens. Cinq façons de vaincre.</h2><p>Grimpe sur les colosses, guette un atterrissage, esquive un assaut.<br>Chaque combat est indépendant de ta sauvegarde d’aventure.</p><label class="trial-difficulty">LE NIVEAU DE DÉFI <select id="trial-difficulty"><option value="adventurer">Aventurier · le défi original</option><option value="explorer">Explorateur · plus tolérant</option><option value="master">Maître · précision et danger</option></select></label><div class="trial-cards">${CM.BOSSES.map((b,i)=>`<article class="trial-card"><div class="trial-art"><canvas id="preview-${b.id}" width="640" height="360" aria-label="${escapeHTML(b.name)}"></canvas><span>${['I','II','III','IV','V'][i]}</span></div><div class="trial-copy"><small>GARDIEN ${i+1} · TROIS PHASES</small><h3>${escapeHTML(b.name)}</h3><p>${escapeHTML(b.subtitle)}<br>${escapeHTML(b.tip)}</p><div class="trial-record">${records[b.id]?`Aventurier · ${timeLabel(records[b.id].best)}`:'Aventurier · aucun record'}${records['master:'+b.id]?`<br>Maître · ${timeLabel(records['master:'+b.id].best)}`:''}</div><button class="button primary" data-trial="${b.id}">Affronter ce gardien <span>→</span></button></div></article>`).join('')}</div><div class="modal-footer"><span>Double saut, fiole et trois armes. Records Aventurier et Maître séparés.</span></div>`);
+    openModal('trials',`<div class="eyebrow">LES ROYAUMES OUBLIÉS · ÉPREUVES LIBRES</div><h2>Cinq gardiens. Cinq façons de vaincre.</h2><p>Grimpe sur les colosses, guette un atterrissage, esquive un assaut.<br>Chaque combat est indépendant de ta sauvegarde d’aventure.</p><label class="trial-difficulty">LE NIVEAU DE DÉFI <select id="trial-difficulty"><option value="adventurer">Aventurier · le défi original</option><option value="explorer">Explorateur · plus tolérant</option><option value="master">Maître · précision et danger</option></select></label><div class="trial-cards">${CM.BOSSES.map((b,i)=>`<article class="trial-card"><div class="trial-art"><canvas id="preview-${b.id}" width="640" height="360" aria-label="${escapeHTML(t(b.name))}"></canvas><span>${['I','II','III','IV','V'][i]}</span></div><div class="trial-copy"><small>GARDIEN ${i+1} · TROIS PHASES</small><h3>${escapeHTML(t(b.name))}</h3><p>${escapeHTML(t(b.subtitle))}<br>${escapeHTML(t(b.tip))}</p><div class="trial-record">${records[b.id]?`Aventurier · ${timeLabel(records[b.id].best)}`:'Aventurier · aucun record'}${records['master:'+b.id]?`<br>Maître · ${timeLabel(records['master:'+b.id].best)}`:''}</div><button class="button primary" data-trial="${b.id}">Affronter ce gardien <span>→</span></button></div></article>`).join('')}</div><div class="modal-footer"><span>Double saut, fiole et trois armes. Records Aventurier et Maître séparés.</span></div>`);
     for(const {id:type} of CM.BOSSES){
       const preview=new CM.Engine({stats:{speed:4,power:4,vitality:4}});preview.startTrial(type);
       const boss=preview.enemies.find(e=>e.type==='boss');if(boss)preview.camera.x=Math.max(0,boss.x+boss.w/2-720);
@@ -1693,31 +2274,31 @@ const global=typeof window!=='undefined'?window:globalThis;
     game=new CM.Engine(config);game.startTrial(type);game.player.color=config.color;
     showScreen('game');saveClock=0;hudClock=1;clearTimeout(saveTimer);$('save-indicator').classList.remove('visible');updateHUD();
   }
-  function showTrialWin(){
+  function showTrialWin(record=true){
     const type=game.trialBossType||CM.BOSSES.find(b=>b.roomIndex===game.roomIndex)?.id||'warden';
-    if(!config.assist){try{const records=trialRecords(),key=config.difficulty==='master'?'master:'+type:type,old=records[key];records[key]={best:Math.min(old?.best??Infinity,game.time),wins:(old?.wins||0)+1};localStorage.setItem(TRIAL_KEY,JSON.stringify(records));}catch{}}
-    openModal('win',`<div class="pause-content"><div class="eyebrow">LE GARDIEN S’INCLINE</div><div class="win-symbol">♜</div><h2>${escapeHTML(CM.BOSSES.find(b=>b.id===type)?.name)} est vaincu.</h2><p>Tu as trouvé les ouvertures jusque dans la dernière phase.</p><div class="run-stats"><div><strong>${timeLabel(game.time)}</strong><span>TEMPS DU DÉFI</span></div><div><strong>${game.deaths}</strong><span>RETOURS</span></div></div><p>Ta sauvegarde d’aventure est préservée.</p><div class="pause-buttons"><button class="button primary" id="trial-retry">Relever le défi à nouveau <span>→</span></button><button class="button secondary" id="trial-other">Choisir un autre gardien</button><button class="button ghost" id="trial-home">Retour à l’accueil</button></div></div>`);
+    if(record&&!config.assist){try{const records=trialRecords(),key=config.difficulty==='master'?'master:'+type:type,old=records[key];records[key]={best:Math.min(old?.best??Infinity,game.time),wins:(old?.wins||0)+1};localStorage.setItem(TRIAL_KEY,JSON.stringify(records));}catch{}}
+    openModal('win',`<div class="pause-content"><div class="eyebrow">LE GARDIEN S’INCLINE</div><div class="win-symbol">♜</div><h2>${escapeHTML(t(CM.BOSSES.find(b=>b.id===type)?.name))} est vaincu.</h2><p>Tu as trouvé les ouvertures jusque dans la dernière phase.</p><div class="run-stats"><div><strong>${timeLabel(game.time)}</strong><span>TEMPS DU DÉFI</span></div><div><strong>${game.deaths}</strong><span>RETOURS</span></div></div><p>Ta sauvegarde d’aventure est préservée.</p><div class="pause-buttons"><button class="button primary" id="trial-retry">Relever le défi à nouveau <span>→</span></button><button class="button secondary" id="trial-other">Choisir un autre gardien</button><button class="button ghost" id="trial-home">Retour à l’accueil</button></div></div>`);
     $('trial-retry').onclick=()=>startTrial(type,config.difficulty||'adventurer');$('trial-other').onclick=showTrials;$('trial-home').onclick=title;
   }
-  function openModal(mode,html){previousFocus=document.activeElement;modalMode=mode;clearInput();$('modal-content').innerHTML=html;$('modal-content').querySelector('h2')?.setAttribute('id','modal-title');$('modal').classList.remove('hidden');$('modal-close').classList.toggle('hidden',mode==='dead'||mode==='win');$('modal-close').focus();$('touch-controls').classList.add('hidden');}
+  function openModal(mode,html){previousFocus=document.activeElement;modalMode=mode;clearInput();$('modal-content').innerHTML=translateMarkup(html);$('modal-content').querySelector('h2')?.setAttribute('id','modal-title');$('modal').classList.remove('hidden');$('modal-close').classList.toggle('hidden',mode==='dead'||mode==='win');$('modal-close').focus();$('touch-controls').classList.add('hidden');}
   function closeModal(){modalMode=null;$('modal').classList.add('hidden');$('modal-close').classList.remove('hidden');clearInput();if(screen==='game'&&touchEnabled)$('touch-controls').classList.remove('hidden');if(previousFocus?.isConnected)previousFocus.focus({preventScroll:true});}
   function showPause(){if(!game||game.dead||game.won)return;saveGame();openModal('pause',`<div class="pause-content"><div class="eyebrow">${game.trial?'DÉFI DES GARDIENS':'UNE PAUSE AU SANCTUAIRE'}</div><h2>La lumière t’attendra.</h2><p>${game.trial?'Ce défi est indépendant de ta sauvegarde d’aventure.':'Ta progression est enregistrée sur ce navigateur.'}</p><div class="pause-buttons"><button class="button primary" id="resume-button">Reprendre le combat <span>→</span></button><button class="button secondary" id="pause-skills">${game.trial?'Choisir un autre gardien':'Développer mes talents'}</button><button class="button ghost" id="pause-zones" aria-pressed="${game.showAttackZones!==false}">Zones d’attaque : ${game.showAttackZones!==false?'affichées':'masquées'}</button><button class="button ghost" id="pause-help">Commandes et conseils</button><button class="button ghost" id="pause-title">${game.trial?'Quitter le défi':'Sauvegarder et quitter'}</button></div></div>`);$('resume-button').onclick=closeModal;$('pause-skills').onclick=game.trial?showTrials:showSkills;$('pause-help').onclick=showHelp;$('pause-title').onclick=title;$('pause-zones').onclick=()=>{game.showAttackZones=game.showAttackZones===false;saveGame();showPause();};}
-  function showHelp(){if(game?.dead||game?.won)return;openModal('help',`<div class="eyebrow">LE CARNET DE L’AVENTURIER</div><h2>Un peu d’instinct. Le bon timing.</h2><p>Explore les passages, récupère les éclats et apprends le rythme de tes adversaires. Choisis Explorateur pour découvrir, Aventurier pour le défi original ou Maître pour des dégâts accrus et des ouvertures plus courtes.</p><div class="help-grid"><div><h3>Au clavier · AZERTY et QWERTY</h3>${[['← → / Q D / A D','Se déplacer'],['Espace / ↑','Sauter, puis double saut débloqué'],['J / X','Attaquer'],['↓ / S + J, en l’air','Frappe plongeante et rebond'],['K / C (maintenir)','Lever la garde'],['Maj / L','Esquiver'],['E','Activer un sanctuaire'],['F','Boire une fiole de soin'],['I','Équiper les talismans'],['1 / 2 / 3','Épée / hache / lance'],['Tab / M / Échap','Talents / carte / pause']].map(([k,v])=>`<div class="control-row"><kbd>${k}</kbd><span>${v}</span></div>`).join('')}</div><div><h3>À la manette · disposition Xbox</h3>${[['Stick / croix','Se déplacer'],['A / X','Sauter / frapper'],['Bas + X, en l’air','Frappe plongeante'],['B / RT','Esquiver'],['LB / LT','Garder et parer'],['Y / RB','Interagir / changer d’arme'],['Croix vers le haut','Boire une fiole de soin'],['Start / Select','Pause / carte']].map(([k,v])=>`<div class="control-row"><kbd>${k}</kbd><span>${v}</span></div>`).join('')}<p class="help-tip">Les zones au sol annoncent la portée des attaques. Elles sont masquées par défaut en mode Maître ; l’option « Zones d’attaque » dans la pause permet de changer ce réglage. Les gestes des ennemis restent visibles. Lève la garde juste avant l’impact pour une parade parfaite : l’ennemi est étourdi. Maintenir la garde absorbe les coups, mais consomme de l’endurance.</p><p class="help-tip">Les colosses portent des sceaux lumineux. Brise-les ou réussis une parade pour ouvrir leur point faible. Les bras marqués deviennent des marches : grimpe et frappe la lumière avant qu’elle se referme. Chaque tiers de vie change la phase.</p><p class="help-tip">Le papillon dévoile son cœur quand il se pose. Le serpent émerge là où tu te trouvais : bouge, puis contre-attaque. Face au chevalier, esquive ses assauts ou pare au dernier instant.</p><p class="help-tip">Une fiole rend 50 points de vie : F au clavier ou haut sur la croix de la manette. Les sanctuaires la rechargent. Ouvre les talismans avec I pour combiner deux pouvoirs.</p><p class="help-tip">Les murs fissurés cachent des trésors : frappe pour les briser. Depuis un sanctuaire, ouvre la carte pour voyager et retrouver les secrets laissés derrière toi.</p></div></div><div class="modal-footer"><button class="button secondary" id="toggle-touch">${touchEnabled?'Masquer':'Afficher'} les commandes tactiles</button><button class="button primary" id="help-done">C’est parti <span>→</span></button></div>`);$('help-done').onclick=closeModal;$('toggle-touch').onclick=()=>{touchEnabled=!touchEnabled;document.body.classList.toggle('touch-on',touchEnabled);showHelp();};}
+  function showHelp(){if(game?.dead||game?.won)return;openModal('help',`<div class="eyebrow">LE CARNET DE L’AVENTURIER</div><h2>Un peu d’instinct. Le bon timing.</h2><p>Explore les passages, récupère les éclats et apprends le rythme de tes adversaires. Choisis Explorateur pour découvrir, Aventurier pour le défi original ou Maître pour des dégâts accrus et des ouvertures plus courtes.</p><div class="help-grid"><div><h3>Au clavier · AZERTY et QWERTY</h3>${[['← → / Q D / A D','Se déplacer'],['Espace / ↑','Sauter, puis double saut débloqué'],['J / X','Attaquer'],['↓ / S + J, en l’air','Frappe plongeante et rebond'],['K / C (maintenir)','Lever la garde'],['Maj / L','Esquiver'],['E','Activer un sanctuaire'],['F','Boire une fiole de soin'],['I','Équiper les talismans'],['1 / 2 / 3','Épée / hache / lance'],['Tab / M / Échap','Talents / carte / pause']].map(([k,v])=>`<div class="control-row"><kbd>${k}</kbd><span>${v}</span></div>`).join('')}</div><div><h3>À la manette · disposition Xbox</h3>${[['Stick / croix','Se déplacer'],['A / X','Sauter / frapper'],['Bas + X, en l’air','Frappe plongeante'],['B / RT','Esquiver'],['LB / LT','Garder et parer'],['Y / RB','Interagir / changer d’arme'],['Croix vers le haut','Boire une fiole de soin'],['Start / Select','Pause / carte']].map(([k,v])=>`<div class="control-row"><kbd>${k}</kbd><span>${v}</span></div>`).join('')}<p class="help-tip">Les zones au sol annoncent la portée des attaques. Elles sont masquées par défaut en mode Maître ; l’option « Zones d’attaque » dans la pause permet de changer ce réglage. Les gestes des ennemis restent visibles. Lève la garde juste avant l’impact pour une parade parfaite : l’ennemi est étourdi. Maintenir la garde absorbe les coups, mais consomme de l’endurance.</p><p class="help-tip">Les colosses portent des sceaux lumineux. Brise-les ou réussis une parade pour ouvrir leur point faible. Les bras marqués deviennent des marches : grimpe et frappe la lumière avant qu’elle se referme. Chaque tiers de vie change la phase.</p><p class="help-tip">Les gardiens mobiles offrent une ouverture après deux séquences d’attaque, trois en Maître. Accumuler des parades parfaites peut aussi briser leur garde. Le papillon dévoile son cœur quand il se pose. Le serpent émerge là où tu te trouvais : bouge, puis contre-attaque. Face au chevalier, esquive ses assauts ou pare au dernier instant.</p><p class="help-tip">Une fiole rend 50 points de vie : F au clavier ou haut sur la croix de la manette. Les sanctuaires la rechargent. Ouvre les talismans avec I pour combiner deux pouvoirs.</p><p class="help-tip">Les murs fissurés cachent des trésors : frappe pour les briser. Depuis un sanctuaire, ouvre la carte pour voyager et retrouver les secrets laissés derrière toi.</p></div></div><div class="modal-footer"><button class="button secondary" id="toggle-touch">${touchEnabled?'Masquer':'Afficher'} les commandes tactiles</button><button class="button primary" id="help-done">C’est parti <span>→</span></button></div>`);$('help-done').onclick=closeModal;$('toggle-touch').onclick=()=>{touchEnabled=!touchEnabled;document.body.classList.toggle('touch-on',touchEnabled);showHelp();};}
   function skillList(){const list=CM.SKILLS||[];return Array.isArray(list)?list:Object.entries(list).map(([id,value])=>({id,...value}));}
   function showCharms(){
     if(!game||game.dead||game.won)return;
     const owned=game.ownedCharms||[],equipped=game.equippedCharms||[];
-    openModal('charms',`<div class="eyebrow">LES TRÉSORS DES ROYAUMES</div><h2>Deux talismans. Ta façon de jouer.</h2><p>Explore les détours pour retrouver ces six objets. Combine librement leurs pouvoirs.</p><div class="charm-slots">${[0,1].map(i=>{const c=CM.CHARMS.find(x=>x.id===equipped[i]);return `<div class="charm-slot ${c?'filled':''}"><span>${c?escapeHTML(c.symbol):'◇'}</span><div><small>EMPLACEMENT ${i+1}</small><strong>${c?escapeHTML(c.name):'Aucun talisman'}</strong></div></div>`;}).join('')}</div><div class="charms-grid">${CM.CHARMS.map(c=>{const found=owned.includes(c.id),on=equipped.includes(c.id);return `<article class="charm-card ${on?'equipped':''} ${found?'':'unfound'}"><span class="charm-symbol" style="--charm-color:${c.color}">${escapeHTML(c.symbol)}</span><small>${on?'ÉQUIPÉ':found?'DÉCOUVERT':'À DÉCOUVRIR'}</small><h3>${escapeHTML(c.name)}</h3><p>${escapeHTML(c.description)}</p><button data-charm="${c.id}" ${!found||(!on&&equipped.length>=2)?'disabled':''}>${on?'Retirer':!found?'Caché dans le monde':equipped.length>=2?'Deux emplacements occupés':'Équiper'}</button></article>`;}).join('')}</div><div class="modal-footer"><span>${owned.length} / ${CM.CHARMS.length} découverts · ${equipped.length} / 2 équipés${game.trial?' · Défis sans talismans de campagne':''}</span><button class="button primary" id="charms-done">Reprendre <span>→</span></button></div>`);
+    openModal('charms',`<div class="eyebrow">LES TRÉSORS DES ROYAUMES</div><h2>Deux talismans. Ta façon de jouer.</h2><p>Explore les détours pour retrouver ces six objets. Combine librement leurs pouvoirs.</p><div class="charm-slots">${[0,1].map(i=>{const c=CM.CHARMS.find(x=>x.id===equipped[i]);return `<div class="charm-slot ${c?'filled':''}"><span>${c?escapeHTML(c.symbol):'◇'}</span><div><small>EMPLACEMENT ${i+1}</small><strong>${c?escapeHTML(t(c.name)):'Aucun talisman'}</strong></div></div>`;}).join('')}</div><div class="charms-grid">${CM.CHARMS.map(c=>{const found=owned.includes(c.id),on=equipped.includes(c.id);return `<article class="charm-card ${on?'equipped':''} ${found?'':'unfound'}"><span class="charm-symbol" style="--charm-color:${c.color}">${escapeHTML(c.symbol)}</span><small>${on?'ÉQUIPÉ':found?'DÉCOUVERT':'À DÉCOUVRIR'}</small><h3>${escapeHTML(t(c.name))}</h3><p>${escapeHTML(t(c.description))}</p><button data-charm="${c.id}" ${!found||(!on&&equipped.length>=2)?'disabled':''}>${on?'Retirer':!found?'Caché dans le monde':equipped.length>=2?'Deux emplacements occupés':'Équiper'}</button></article>`;}).join('')}</div><div class="modal-footer"><span>${owned.length} / ${CM.CHARMS.length} découverts · ${equipped.length} / 2 équipés${game.trial?' · Défis sans talismans de campagne':''}</span><button class="button primary" id="charms-done">Reprendre <span>→</span></button></div>`);
     $('charms-done').onclick=closeModal;
     $('modal-content').querySelectorAll('[data-charm]').forEach(el=>el.onclick=()=>{if(game.equipCharm(el.dataset.charm)){sound.play('pickup');saveGame();showCharms();updateHUD();}});
   }
-  function showSkills(){if(!game||game.dead||game.won)return;const p=game.player;openModal('skills',`<div class="eyebrow">FAIRE GRANDIR SA LUMIÈRE</div><h2>Les talents de l’Aurore.</h2><p><strong style="color:var(--gold)">${game.skillPoints||0} point${game.skillPoints!==1?'s':''} de talent disponible${game.skillPoints!==1?'s':''}</strong> · Collecte les éclats et terrasse les gardiens.</p><div class="skills-grid">${skillList().map((s,i)=>{const owned=!!p.skills?.[s.id];const req=s.requires?(Array.isArray(s.requires)?s.requires:[s.requires]):[];const allowed=req.every(r=>p.skills?.[r]);const reqNames=req.map(id=>skillList().find(x=>x.id===id)?.name||id).join(', ');return `<article class="skill-card ${owned?'owned':''}"><span class="skill-symbol">${['✧','⚔','◇','❖','✺','↟','✦','◈'][i%8]}</span><h3>${escapeHTML(s.name)}</h3><p>${escapeHTML(s.description)}${req.length?`<br><span style="color:var(--gold)">Après ${escapeHTML(reqNames)}</span>`:''}</p><button data-skill="${s.id}" ${owned||!allowed||game.skillPoints<(s.cost||1)?'disabled':''}>${owned?'✓ Acquis':`${s.cost||1} point${s.cost>1?'s':''} · Apprendre`}</button></article>`;}).join('')}</div><div class="modal-footer"><span>Les talents s’appliquent immédiatement et sont sauvegardés.</span><button class="button primary" id="skills-done">Reprendre <span>→</span></button></div>`);$('skills-done').onclick=closeModal;$('modal-content').querySelectorAll('[data-skill]').forEach(el=>el.onclick=()=>{game.buySkill(el.dataset.skill);sound.play('pickup');saveGame();showSkills();updateHUD();});}
+  function showSkills(){if(!game||game.dead||game.won)return;const p=game.player;openModal('skills',`<div class="eyebrow">FAIRE GRANDIR SA LUMIÈRE</div><h2>Les talents de l’Aurore.</h2><p><strong style="color:var(--gold)">${game.skillPoints||0} point${game.skillPoints!==1?'s':''} de talent disponible${game.skillPoints!==1?'s':''}</strong> · Collecte les éclats et terrasse les gardiens.</p><div class="skills-grid">${skillList().map((s,i)=>{const owned=!!p.skills?.[s.id];const req=s.requires?(Array.isArray(s.requires)?s.requires:[s.requires]):[];const allowed=req.every(r=>p.skills?.[r]);const reqNames=req.map(id=>t(skillList().find(x=>x.id===id)?.name||id)).join(', ');return `<article class="skill-card ${owned?'owned':''}"><span class="skill-symbol">${['✧','⚔','◇','❖','✺','↟','✦','◈'][i%8]}</span><h3>${escapeHTML(t(s.name))}</h3><p>${escapeHTML(t(s.description))}${req.length?`<br><span style="color:var(--gold)">Après ${escapeHTML(reqNames)}</span>`:''}</p><button data-skill="${s.id}" ${owned||!allowed||game.skillPoints<(s.cost||1)?'disabled':''}>${owned?'✓ Acquis':`${s.cost||1} point${s.cost>1?'s':''} · Apprendre`}</button></article>`;}).join('')}</div><div class="modal-footer"><span>Les talents s’appliquent immédiatement et sont sauvegardés.</span><button class="button primary" id="skills-done">Reprendre <span>→</span></button></div>`);$('skills-done').onclick=closeModal;$('modal-content').querySelectorAll('[data-skill]').forEach(el=>el.onclick=()=>{game.buySkill(el.dataset.skill);sound.play('pickup');saveGame();showSkills();updateHUD();});}
   function showMap(){
     if(!game||game.dead||game.won)return;
     const visited=game.roomsVisited||[],canTravel=!game.trial&&game.atSanctuary?.()&&!game.arenaLocked;
     openModal('map',`<div class="eyebrow">LES TERRES ASSOUPIES</div><h2>Chaque détour est une découverte.</h2><p>${canTravel?'Le sanctuaire te relie aux terres déjà découvertes. Choisis ta destination.':'Approche un sanctuaire pour voyager vers les zones déjà découvertes.'}</p><div class="map-rooms">${(CM.ROOMS||[]).map((r,i)=>{
       const seen=visited.includes(i)||visited.includes(r.id)||i===game.roomIndex,treasures=(r.pickups||[]).filter(p=>p.type==='relic'||p.type==='charm'),found=treasures.filter(p=>game.collected.includes(p.id)).length;
-      return `<article class="map-room ${i===game.roomIndex?'current':''} ${seen?'':'locked'}"><span class="map-icon">${seen?(r.bossGate?'♜':'✧'):'◇'}</span><strong>${seen?escapeHTML(r.name):'Terre inexplorée'}</strong><small>${String(i+1).padStart(2,'0')} / ${seen?escapeHTML(r.subtitle||'Passage découvert'):'Un nouveau chemin t’attend'}</small>${seen&&treasures.length?`<div class="map-treasure">✦ Trésors ${found} / ${treasures.length}${found<treasures.length?' · Un secret demeure':''}</div>`:''}${seen&&i!==game.roomIndex?`<button class="map-travel" data-travel="${i}" ${canTravel?'':'disabled'}>Voyager au sanctuaire →</button>`:''}</article>`;
+      return `<article data-here="${t('VOUS ÊTES ICI')}" class="map-room ${i===game.roomIndex?'current':''} ${seen?'':'locked'}"><span class="map-icon">${seen?(r.bossGate?'♜':'✧'):'◇'}</span><strong>${seen?escapeHTML(t(r.name)):'Terre inexplorée'}</strong><small>${String(i+1).padStart(2,'0')} / ${seen?escapeHTML(t(r.subtitle||'Passage découvert')):escapeHTML(t('Un nouveau chemin t’attend'))}</small>${seen&&treasures.length?`<div class="map-treasure">✦ Trésors ${found} / ${treasures.length}${found<treasures.length?' · Un secret demeure':''}</div>`:''}${seen&&i!==game.roomIndex?`<button class="map-travel" data-travel="${i}" ${canTravel?'':'disabled'}>Voyager au sanctuaire →</button>`:''}</article>`;
     }).join('')}</div><div class="modal-footer"><span>✧ Les sanctuaires soignent et enregistrent le retour.<br><br>${game.player.doubleJump?'↟ Double saut acquis : explore les hauteurs et les murs fissurés.':'↟ Trouve les Ailes d’aurore pour revisiter les hauteurs.'}</span><button class="button primary" id="map-done">En route <span>→</span></button></div>`);
     $('map-done').onclick=closeModal;
     $('modal-content').querySelectorAll('[data-travel]').forEach(button=>button.onclick=()=>{if(game.travelTo(Number(button.dataset.travel))){saveGame();closeModal();updateHUD();}});
@@ -1727,39 +2308,63 @@ const global=typeof window!=='undefined'?window:globalThis;
   function updateHUD(){
     if(!game)return;const p=game.player;
     $('save-indicator').classList.toggle('hidden',!!game.trial);
-    $('hero-name').textContent=config.name+(config.assist?' · Explorateur':config.difficulty==='master'?' · Maître':'')+(game.trial?' · Défi':'');
+    const preset=heroes.find(h=>h.id!=='custom'&&(h.id===config.heroId||(!config.heroId&&h.name===config.name&&h.color===config.color)));
+    $('hero-name').textContent=(preset?t(preset.name):config.name)+(config.assist?' · '+t('Explorateur'):config.difficulty==='master'?' · '+t('Maître'):'')+(game.trial?' · '+t('Défi'):'');
     $('hp-text').textContent=`${Math.max(0,Math.ceil(p.hp))} / ${Math.ceil(p.maxHp)}`;
     $('health-fill').style.width=`${Math.max(0,p.hp/p.maxHp)*100}%`;
     $('stamina-fill').style.width=`${Math.max(0,p.stamina/p.maxStamina)*100}%`;
     $('shard-count').textContent=game.shards||0;
     $('flask-count').textContent=`${p.flasks} / ${p.maxFlasks}`;
     $('heal-button').disabled=!p.flasks||p.hp>=p.maxHp||!!modalMode||game.dead||game.won;
-    $('heal-button').title=`F · Boire une fiole de soin (${p.skills.restoration?75:50} PV) · Recharge au sanctuaire`;
+    $('heal-button').title=I.choose(`F · Boire une fiole de soin (${p.skills.restoration?75:50} PV) · Recharge au sanctuaire`,`F · Drink a healing flask (${p.skills.restoration?75:50} HP) · Refill at a shrine`);
     $('charm-count').textContent=`${game.equippedCharms?.length||0}/2`;
     $('skill-badge').classList.toggle('hidden',!game.skillPoints);$('skill-badge').textContent=game.skillPoints;
-    $('room-number').textContent=game.trial?'DÉFI DES GARDIENS · '+timeLabel(game.time):`${game.roomIndex<6?'I · LES TERRES ASSOUPIES':'II · LES ROYAUMES OUBLIÉS'} / ${String(game.roomIndex+1).padStart(2,'0')}`;
-    $('room-name').textContent=game.room.name;$('room-subtitle').textContent=game.trial?'Ta sauvegarde d’aventure est préservée.':game.room.subtitle||'';
+    $('room-number').textContent=game.trial?t('DÉFI DES GARDIENS')+' · '+timeLabel(game.time):`${t(game.roomIndex<6?'I · LES TERRES ASSOUPIES':'II · LES ROYAUMES OUBLIÉS')} / ${String(game.roomIndex+1).padStart(2,'0')}`;
+    $('room-name').textContent=t(game.room.name);$('room-subtitle').textContent=t(game.trial?'Ta sauvegarde d’aventure est préservée.':game.room.subtitle||'');
     $('weapon-slots').querySelectorAll('button').forEach(el=>el.classList.toggle('active',el.dataset.weapon===p.weapon));
     const boss=game.enemies.find(e=>e.type==='boss'&&e.hp>0);
     document.body.classList.toggle('boss-active',!!boss);
     $('boss-hud').classList.toggle('hidden',!boss);
     if(boss){
       const open=!!boss.weakpoint?.active,seals=boss.seals||[],meta=CM.BOSSES.find(b=>b.id===boss.bossType);
-      $('boss-name').textContent=boss.name||'Le Gardien';$('boss-fill').style.width=`${Math.max(0,boss.hp/boss.maxHp)*100}%`;
+      $('boss-name').textContent=t(boss.name||'Le Gardien');$('boss-fill').style.width=`${Math.max(0,boss.hp/boss.maxHp)*100}%`;
       $('boss-hud').classList.toggle('exposed',open);
       $('boss-phase').textContent=`PHASE ${['I','II','III'][(boss.phase||1)-1]} / III`;
-      $('boss-state').textContent=open?`✧ ${(meta?.weakpointLabel||'Point faible vulnérable').toUpperCase()}`:seals.length?`◇ SCEAUX ${seals.filter(s=>s.hp<=0).length} / ${seals.length}`:`◇ ${(meta?.openingLabel||'Guette une ouverture').toUpperCase()}`;
-      $('boss-window').textContent=open?`${Math.max(0,boss.vulnerabilityTimer).toFixed(1)} s`:(seals.length?'ARMURE FERMÉE':boss.maxPoise?`PARADES ${boss.poise} / ${boss.maxPoise}`:'OBSERVE ET ESQUIVE');
-      $('boss-hint').textContent=boss.actionHint||'Brise les sceaux ou pare une attaque, puis grimpe vers le point faible.';
+      $('boss-state').textContent=open?`✧ ${t(meta?.weakpointLabel||'Point faible vulnérable').toUpperCase()}`:seals.length?`◇ ${t('SCEAUX')} ${seals.filter(s=>s.hp<=0).length} / ${seals.length}`:`◇ ${t(meta?.openingLabel||'Guette une ouverture').toUpperCase()}`;
+      $('boss-window').textContent=open?`${Math.max(0,boss.vulnerabilityTimer).toFixed(1)} s`:(seals.length?t('ARMURE FERMÉE'):boss.maxPoise?`${t('PARADES')} ${boss.poise} / ${boss.maxPoise}`:t('OBSERVE ET ESQUIVE'));
+      $('boss-hint').textContent=t(boss.actionHint||'Brise les sceaux ou pare une attaque, puis grimpe vers le point faible.');
     }
     const message=game.message;$('toast').classList.toggle('hidden',!message?.text||message.timer<=0);
-    if(message?.text){$('toast-title').textContent=message.text;$('toast-sub').textContent=message.subtext||'';}
+    if(message?.text){$('toast-title').textContent=t(message.text);$('toast-sub').textContent=t(message.subtext||'');}
   }
+
+  function refreshLanguage(){
+    const focused=document.activeElement,focusId=focused?.id,selection=focused?.selectionStart;
+    const panel=document.querySelector('.modal-panel'),scroll=panel?.scrollTop||0;
+    const difficulty=$('trial-difficulty')?.value,oldFocus=previousFocus,mode=modalMode;
+    translatingUI=true;
+    try{
+      clearInput();translateStatic();updateSoundButton();
+      if(screen==='hero')renderHeroes();
+      const redraw={pause:showPause,help:showHelp,skills:showSkills,charms:showCharms,map:showMap,trials:showTrials,dead:showDeath,win:()=>game?.trial?showTrialWin(false):showWin()};
+      if(mode&&redraw[mode])redraw[mode]();
+      if(mode==='trials'&&difficulty&&$('trial-difficulty'))$('trial-difficulty').value=difficulty;
+      previousFocus=oldFocus;updateHUD();
+      if(panel)panel.scrollTop=scroll;
+      const next=focusId?$(focusId):null;
+      if(next?.isConnected){next.focus({preventScroll:true});if(typeof selection==='number'&&next.setSelectionRange)next.setSelectionRange(selection,selection);}
+    }finally{translatingUI=false;}
+  }
+  for(const id of ['language-select','modal-language-select']){
+    $(id).onchange=e=>{clearInput();I.setLocale(e.target.value);};
+    $(id).addEventListener('focus',clearInput);
+  }
+  I.subscribe(refreshLanguage);
 
   $('trial-button').onclick=()=>{sound.unlock();showTrials();};
   $('new-game').onclick=()=>{sound.unlock();selectHero();};$('continue-game').onclick=()=>start(true);$('begin-game').onclick=()=>start();$('hero-back').onclick=title;
   $('brand').onclick=e=>{e.preventDefault();if(game)showPause();else title();};$('sound-button').onclick=()=>sound.toggle();$('help-button').onclick=showHelp;$('title-help').onclick=showHelp;
-  $('fullscreen-button').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('game-shell').requestFullscreen();}catch{$('fullscreen-button').title='Le plein écran n’est pas disponible dans ce navigateur';}};
+  $('fullscreen-button').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('game-shell').requestFullscreen();}catch{$('fullscreen-button').dataset.i18nTitle='Le plein écran n’est pas disponible dans ce navigateur';$('fullscreen-button').title=t($('fullscreen-button').dataset.i18nTitle);}};
   $('pause-button').onclick=showPause;$('skills-button').onclick=showSkills;$('map-button').onclick=showMap;$('charms-button').onclick=showCharms;$('modal-close').onclick=closeModal;
   $('heal-button').onclick=()=>{if(game&&!modalMode&&!game.dead&&!game.won&&game.heal()){saveGame();updateHUD();}};
   $('weapon-slots').querySelectorAll('button').forEach(el=>el.onclick=()=>{game?.setWeapon(el.dataset.weapon);updateHUD();});
@@ -1769,6 +2374,7 @@ const global=typeof window!=='undefined'?window:globalThis;
     if(modalMode && e.code==='Tab'){
       const focusable=Array.from($('modal').querySelectorAll('button:not([disabled]),select,a[href]')).filter(el=>!el.classList.contains('hidden'));const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}return;
     }
+    if(/^(INPUT|SELECT|TEXTAREA)$/.test(e.target?.tagName||''))return;
     if(e.code==='Escape'){e.preventDefault();if(modalMode&&modalMode!=='dead'&&modalMode!=='win')closeModal();else if(!modalMode&&game)showPause();else if(screen==='hero')title();return;}
     if(screen!=='game')return;if(controlled.includes(e.code))e.preventDefault();if(e.repeat)return;
     if(e.code==='KeyP'){if(modalMode==='pause')closeModal();else if(!modalMode)showPause();return;}
@@ -1778,8 +2384,8 @@ const global=typeof window!=='undefined'?window:globalThis;
   });window.addEventListener('keyup',e=>keys.delete(e.code));
   const blur=()=>{clearInput();if(game&&!modalMode&&!game.dead&&!game.won)showPause();};window.addEventListener('blur',blur);document.addEventListener('visibilitychange',()=>{if(document.hidden)blur();});window.addEventListener('pagehide',saveGame);
   window.addEventListener('error',e=>{console.error('Carlus Magnus:',e.message);});
-  try{renderer=new CM.Renderer($('world'));}catch(e){$('fatal-error').classList.remove('hidden');$('fatal-error').textContent='Le monde n’a pas pu être chargé. Recharge la page pour réessayer.';throw e;}
-  updateSoundButton();$('continue-game').classList.toggle('hidden',!readSave());
+  try{renderer=new CM.Renderer($('world'));}catch(e){$('fatal-error').classList.remove('hidden');localizedText('fatal-error','Le monde n’a pas pu être chargé. Recharge la page pour réessayer.');throw e;}
+  translateStatic();updateSoundButton();$('continue-game').classList.toggle('hidden',!readSave());
   function frame(now){const dt=Math.min(.05,(now-lastTime)/1000||0);lastTime=now;elapsed+=dt;
     if(screen==='game'&&game){
       const controls=input();
@@ -1792,7 +2398,7 @@ const global=typeof window!=='undefined'?window:globalThis;
   }
   requestAnimationFrame(frame);
   // Read-only instrumentation for reproducible QA; game state is not exposed.
-  window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name}),version:'1.2.1'});
+  window.CarlusMagnus = Object.freeze({status:()=>({screen,modal:modalMode,room:game?.roomIndex,dead:game?.dead,won:game?.won,hero:config?.name,language:I.locale}),version:'1.3.0'});
 }
 
 </script>

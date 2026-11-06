@@ -3,6 +3,7 @@
 const global=typeof window!=='undefined'?window:globalThis;
   'use strict';
   const CM = global.CM = global.CM || {};
+  const t = value => CM.I18N?.t(value) ?? value;
   const TAU = Math.PI * 2;
   const palettes = {
     forest: {top:'#06151e', bottom:'#193d43', mist:'#409e91', back:'#102f38', mid:'#103038', bark:'#102932', stone:'#263f46', edge:'#59827a', grass:'#64b398', glow:'#80f8d1', accent:'#d4ac66'},
@@ -457,7 +458,7 @@ const global=typeof window!=='undefined'?window:globalThis;
           this.line([[bx-sx*8,by],[bx,by],[bx,by-sy*8]],color,1.5);
         }
         c.globalAlpha=1;c.font='700 10px system-ui, sans-serif';c.textAlign='center';c.fillStyle=color;c.shadowColor='#091528';c.shadowBlur=6;
-        c.fillText(style==='worm'?'GORGE EXPOSÉE':style==='duelist'?'OUVERTURE':'CŒUR EXPOSÉ',cx,z.y-13);c.restore();
+        c.fillText(t(style==='worm'?'GORGE EXPOSÉE':style==='duelist'?'OUVERTURE':'CŒUR EXPOSÉ'),cx,z.y-13);c.restore();
       }
     }
     moth(e) {
@@ -656,7 +657,7 @@ const global=typeof window!=='undefined'?window:globalThis;
         c.arc(cx,cy,Math.max(w,h)*.72,-Math.PI/2,-Math.PI/2+TAU*clamp((e.vulnerabilityTimer||0)/6.5,0,1));c.stroke();c.restore();
         for(let i=0;i<5;i++){const a=this.t*.9+i*TAU/5;this.ellipse(cx+Math.cos(a)*42,cy+Math.sin(a)*45,1.4,1.4,'#dcffe7');}
         c.save();c.font='700 11px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#d9ffe5';c.shadowColor='#05131f';c.shadowBlur=6;
-        c.fillText(king?'COURONNE OUVERTE':'CŒUR OUVERT',cx,y-28);c.restore();
+        c.fillText(t(king?'COURONNE OUVERTE':'CŒUR OUVERT'),cx,y-28);c.restore();
       }else{
         // Closed shutters are deliberately matte, never a false glowing target.
         this.path([[x+2,y+10],[cx-2,y],[cx-2,y+h],[x+2,y+h-9]],king?'#625552':'#486265','#7d928a',1);
@@ -812,7 +813,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       c.font='700 11px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#ffe0b7';
       const texts={slam:'ONDE · SAUTEZ',stomp:'ONDE · SAUTEZ',eruption:'VAGUES · SAUTEZ',volley:'ORBES · PAREZ',rain:'CHUTE · BOUGEZ',doubleSweep:'DOUBLE BALAYAGE',feathers:'PLUMES · PAREZ',tempest:'TEMPÊTE · ESQUIVEZ',dive:'PLONGÉE · ÉCARTEZ-VOUS',gust:'RAFALE · SAUTEZ',burrow:'ÉMERGENCE · BOUGEZ',twinburrow:'DOUBLE ÉMERGENCE',bite:'MORSURE · PAREZ',dashSlash:'RUÉE · PAREZ',combo:'DEUX RUÉES',crescent:'LAME D’ÉCLIPSE'};
       const text=texts[kind]||'BALAYAGE · ESQUIVEZ';
-      c.fillText(text,x,markerY-23);c.restore();
+      c.fillText(t(text),x,markerY-23);c.restore();
     }
     secretWall(wall) {
       const c=this.ctx,p=this.palette,x=wall.x,y=wall.y,w=wall.w,h=wall.h;
@@ -878,7 +879,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       const c=this.ctx,ratio=clamp(f.life/(f.maxLife||f.life||1),0,1),col=f.color||this.palette.glow;
       c.save();c.globalAlpha=ratio;
       if(f.type==='text'){
-        c.font='600 17px system-ui, sans-serif';c.textAlign='center';c.shadowBlur=8;c.shadowColor='#06121d';c.fillStyle=col;c.fillText(f.text||'',f.x,f.y);
+        c.font='600 17px system-ui, sans-serif';c.textAlign='center';c.shadowBlur=8;c.shadowColor='#06121d';c.fillStyle=col;c.fillText(t(f.text||''),f.x,f.y);
       }else if(f.type==='ring'){
         c.strokeStyle=col;c.lineWidth=2+ratio*3;c.beginPath();c.arc(f.x,f.y,12+(1-ratio)*55,0,TAU);c.stroke();
       }else if(f.type==='slash'){
@@ -1006,7 +1007,7 @@ const global=typeof window!=='undefined'?window:globalThis;
       points.forEach(pt=>{
         this.checkpoint(pt,!!engine.checkpointLit);
         if(engine.player&&!engine.arenaLocked&&Math.abs(engine.player.x-pt.x)<100){
-          c.save();c.font='500 12px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#c1ded0';c.fillText('E · Se reposer',pt.x,pt.y-87);c.restore();
+          c.save();c.font='500 12px system-ui, sans-serif';c.textAlign='center';c.fillStyle='#c1ded0';c.fillText(t('E · Se reposer'),pt.x,pt.y-87);c.restore();
         }
       });
       (engine.pickups||[]).forEach(p=>{if(p.x>min&&p.x<max)this.pickup(p);});
