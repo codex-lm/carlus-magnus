@@ -1,6 +1,8 @@
-# Carlus Magnus — Les éclats d’Aurore
+# Carlus Magnus — Shards of Dawn
 
-Version 1.2.1, Les Royaumes oubliés. An original, small browser platformer made for Charles, with French in-game text.
+Version 1.3.0, The Forgotten Kingdoms. An original, small browser platformer made for Charles, fully playable in English or French.
+
+Use the **Français / English** selector in the header or open modal to switch languages without restarting your adventure. The choice is remembered separately from progress. Add `?lang=en` or `?lang=fr` to the game URL to select a language directly. Both languages are included in the standalone offline copy.
 
 [Play on LOB7](https://lob7.com/games/bg_s_c676ba69-d9fe-474a-8ea4-512af4c7095e). Each edition links its exact source commit.
 
@@ -14,12 +16,13 @@ Explorer, Adventurer and Master difficulties. Master hides advance attack zones 
 
 Serve this directory with `python -m http.server 4173`, then open `http://localhost:4173`. No installation, build step, external network calls or dependencies are needed. The JavaScript and CSS here are the editable sources, not minified bundles. `carlus-magnus.html` is a standalone offline copy.
 
+- `i18n.js`, `i18n-engine.js`, `i18n-ui.js`: local language selection and complete French/English text.
 - `engine.js`: simulation, levels, combat, progress and saves.
 - `render.js`: original Canvas 2D graphics.
 - `app.js`: menus, keyboard/gamepad/touch controls, storage and Web Audio.
 - `index.html` and `style.css`: interface.
 
-The `development` branch includes the test suite and standalone builder. Validation covers 75 tests, 56 physics traversal routes, and all five bosses in Adventurer and Master using normal inputs. Manual browser tests and slowed rendered replays complement the simulations; a full manual campaign is not claimed.
+The `development` branch includes the test suite and standalone builder. Validation covers 98 tests, including language changes, save preservation and HiDPI rendering, 56 physics traversal routes, and all five bosses in Adventurer and Master using normal inputs. Manual browser tests and slowed rendered replays complement the simulations; a full manual campaign is not claimed.
 
 ## Controls
 

@@ -1,6 +1,6 @@
 {
-  "title": "Carlus Magnus — Les éclats d’Aurore",
-  "description": "A fast-paced 2D melee platformer made for Charles. Explore twelve connected areas, climb giant guardians and duel five bosses through three phases. Choose an archetype or build your own hero, wield sword, axe or spear, and discover twelve talents and six talismans. Three difficulties include Master, with hidden attack zones by default. French in-game text.",
+  "title": "Carlus Magnus — Shards of Dawn",
+  "description": "A fast-paced 2D melee platformer made for Charles, fully playable in English or French. Explore twelve connected areas, climb giant guardians and duel five bosses through three phases. Choose an archetype or build your own hero, wield sword, axe or spear, and discover twelve skills and six talismans. Three difficulties include Master, with hidden attack zones by default. Switch language at any time. Sharp Canvas graphics up to native 4K.",
   "entrypoint": "index.html",
   "license": "MIT",
   "genre": [
@@ -19,7 +19,7 @@
     "Attack: J or X; downward attack: Down + attack in the air",
     "Guard / parry: K or C; dodge: Shift or L",
     "Heal: F; sanctuary: E; weapons: 1/2/3",
-    "Talents: Tab; talismans: I; map: M; pause: Escape or P",
+    "Skills: Tab; talismans: I; map: M; pause: Escape or P",
     "Gamepad supported; optional touch controls"
   ],
   "credits": [
