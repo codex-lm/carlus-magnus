@@ -1,7 +1,7 @@
 // Unit-test real application callbacks with a minimal DOM and in-memory storage.
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { boot, legacy, SAVE_KEY, TRIAL_KEY } = require('./helpers/app-harness.cjs');
+const { boot, legacy, SAVE_KEY, TRIAL_KEY, PREF_KEY } = require('./helpers/app-harness.cjs');
 
 test('trial pause, pagehide, death, retry and exit never overwrite an existing campaign', () => {
   const app = boot();
@@ -58,8 +58,8 @@ test('campaign death snapshots persist recent loot for reload at the sanctuary',
   assert.equal(saved.shards, legacy.ongoing.shards + 4);
 });
 
-test('all five trial buttons enter the requested fight without changing the campaign', () => {
-  for (const type of ['warden', 'king', 'moth', 'worm', 'duelist']) {
+test('all six trial buttons enter the requested fight without changing the campaign', () => {
+  for (const type of ['warden', 'king', 'moth', 'worm', 'duelist', 'titan']) {
     const app = boot(); app.click('trial-button'); app.chooseTrial(type);
     assert.equal(app.context.testEngine.trial, type);
     assert.ok(app.context.testEngine.enemies.some(e => e.bossType === type));
@@ -129,4 +129,30 @@ test('the pause attack-zone toggle persists in campaign but does not overwrite i
   app.click('pause-button'); app.click('pause-zones');
   assert.equal(app.context.testEngine.showAttackZones, true);
   assert.equal(app.storage.get(SAVE_KEY), preserved);
+});
+
+test('reduced camera shake respects the system default and persists independently without erasing sound preferences', () => {
+  const app = boot('ongoing', { reducedMotion: true, storage: [[PREF_KEY, JSON.stringify({ sound: false, customPreference: 'preserved' })]] });
+  app.click('trial-button'); app.chooseTrial('titan'); app.click('pause-button');
+  assert.equal(app.element('pause-motion').getAttribute('aria-pressed'), 'true');
+  assert.ok(app.context.testRenderers.some(renderer => renderer.reduceMotion === true));
+  app.click('pause-motion'); app.unchanged();
+  assert.deepEqual(JSON.parse(app.storage.get(PREF_KEY)), { sound: false, customPreference: 'preserved', reduceMotion: false });
+  assert.equal(app.element('pause-motion').getAttribute('aria-pressed'), 'false');
+  app.click('sound-button');
+  assert.deepEqual(JSON.parse(app.storage.get(PREF_KEY)), { sound: true, customPreference: 'preserved', reduceMotion: false });
+  const reloaded = boot('ongoing', { reducedMotion: true, storage: [[PREF_KEY, app.storage.get(PREF_KEY)]] });
+  reloaded.click('trial-button'); reloaded.chooseTrial('titan'); reloaded.click('pause-button');
+  assert.equal(reloaded.element('pause-motion').getAttribute('aria-pressed'), 'false', 'explicit preference overrides the operating system default');
+  reloaded.unchanged();
+});
+
+test('invalid or unavailable preference storage does not prevent the camera-shake toggle', () => {
+  for (const options of [{ storage: [[PREF_KEY, 'broken json']] }, { storage: [[PREF_KEY, '[]']] }, { deniedStorage: true }]) {
+    const app = boot('ongoing', options); app.click('trial-button'); app.chooseTrial('titan'); app.click('pause-button');
+    assert.equal(app.element('pause-motion').getAttribute('aria-pressed'), 'false');
+    app.click('pause-motion');
+    assert.equal(app.element('pause-motion').getAttribute('aria-pressed'), 'true');
+    assert.ok(app.context.testRenderers.some(renderer => renderer.reduceMotion === true));
+  }
 });

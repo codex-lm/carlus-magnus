@@ -44,13 +44,13 @@ function damageWith(options = {}, down = false) {
 
 test('the expanded campaign preserves original room indices and declares all new content', () => {
   const { CM } = create();
-  assert.equal(CM.ROOMS.length, 12);
-  assert.deepEqual(plain(CM.ROOMS.slice(0, 6).map(r => r.id)), ['glade', 'roots', 'warden', 'aqueduct', 'forge', 'crown']);
-  assert.deepEqual(plain(CM.BOSSES.map(b => b.id).sort()), ['duelist', 'king', 'moth', 'warden', 'worm']);
+  assert.equal(CM.ROOMS.length, 15);
+  assert.deepEqual(plain(CM.ROOMS.slice(0, 12).map(r => r.id)), ['glade', 'roots', 'warden', 'aqueduct', 'forge', 'crown', 'crystal', 'storm', 'depths', 'burrow', 'astral', 'eclipse']);
+  assert.deepEqual(plain(CM.BOSSES.map(b => b.id).sort()), ['duelist', 'king', 'moth', 'titan', 'warden', 'worm']);
   assert.equal(CM.SKILLS.length, 12);
   assert.equal(new Set(CM.SKILLS.map(s => s.id)).size, 12);
-  assert.equal(CM.CHARMS.length, 6);
-  assert.equal(new Set(CM.CHARMS.map(s => s.id)).size, 6);
+  assert.equal(CM.CHARMS.length, 8);
+  assert.equal(new Set(CM.CHARMS.map(s => s.id)).size, 8);
   for (const b of CM.BOSSES) assert.ok(CM.ROOMS[b.roomIndex].enemies.some(e => e.bossType === b.id));
 });
 
@@ -73,7 +73,7 @@ for (const [label, saves] of [['v1', legacyV1], ['v1.1', legacyV11]]) {
         assert.equal(game.atSanctuary(), true, 'migration lands safely at the new shrine');
         assert.ok(save.roomsVisited.every(index => game.roomsVisited.includes(index)));
       }
-      assert.equal(game.snapshot().revision, 3);
+      assert.equal(game.snapshot().revision, 4);
       assert.ok(Array.isArray(game.ownedCharms));
       assert.ok(Array.isArray(game.equippedCharms));
       assert.ok(Number.isFinite(game.player.flasks));
@@ -84,9 +84,9 @@ for (const [label, saves] of [['v1', legacyV1], ['v1.1', legacyV11]]) {
   }
 }
 
-test('new final victory remains complete when a revision-three save is reloaded', () => {
+test('the Tidal Throne victory remains complete when a revision-four save is reloaded', () => {
   const { CM, game } = create();
-  const end = CM.BOSSES.find(b => b.id === 'duelist');
+  const end = CM.BOSSES.find(b => b.id === 'titan');
   game.bossesDefeated = CM.BOSSES.map(b => `boss-${b.id}`);
   game.player.doubleJump = true;
   game.loadRoom(end.roomIndex, 800, 598); game.won = true;

@@ -26,6 +26,28 @@
           if (boss.state === 'windup' && sweep && boss.timer < .11) { input.block = true; input.right = p.facing !== 1; input.left = false; }
           else if (boss.state === 'attack' && sweep) input.block = true;
         }
+      } else if (type === 'titan') {
+        if (p.hp < p.maxHp - 50) input.heal = true;
+        if (boss.weakpoint.active) {
+          if (!state.opened) { state.opened = game.time; state.stage = 0; }
+          const target = p.y > 360 && p.x < 1120 ? 1040 : 1235;
+          input.left = p.x > target + 3; input.right = p.x < target - 3;
+          if (p.y < 390 && p.y + p.h > 325 && Math.abs(p.x - 1235) < 50) {
+            if (!state.stage) { state.stage = 1; state.climbTimes.push(game.time - state.opened); }
+            input.attack = true;
+            if (p.facing !== 1) { input.right = true; input.left = false; }
+          }
+        } else {
+          state.opened = 0;
+          let target = 1000;
+          if (boss.attackKind === 'pearlRain' && ['windup', 'attack'].includes(boss.state)) {
+            const columns = boss.telegraphs || [];
+            const candidates = [930, 1010, 1090, 800];
+            target = candidates.find(x => columns.every(t => x + p.w < t.x - 10 || x > t.x + t.w + 10)) ?? 760;
+          }
+          input.left = p.x > target + 3; input.right = p.x < target - 3;
+          if (game.projectiles.some(a => a.groundWave && Math.abs(a.x - p.x) < 160 && (a.x - p.x) * a.vx < 0)) input.jump = true;
+        }
       } else {
         if (p.hp < 65) input.heal = true;
         if (boss.weakpoint.active) {

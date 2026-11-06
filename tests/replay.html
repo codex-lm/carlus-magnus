@@ -6,13 +6,17 @@ body{margin:0;background:#07131d;color:#dcebe7;font:14px system-ui}header,footer
 </style>
 <header><h1>Laboratoire de combat · relecture visuelle des tests</h1>
 <p>Le bot utilise uniquement les commandes normales. Moteur et dessins réels, aucune modification de vie, dégâts ou position pendant le combat.</p>
-<p class="note">Outil de développement sans sauvegarde. Vitesse 1, force 4, vitalité 7, aucun talent ni talisman. Ce n’est pas une partie manuelle.</p>
+<p class="note">Six gardiens, dont Atlas et ses courants. Outil de développement sans sauvegarde. Vitesse 1, force 4, vitalité 7, aucun talent ni talisman. Ce n’est pas une partie manuelle.</p>
 <nav><label>Gardien <select id="boss"></select></label><label>Difficulté <select id="difficulty"><option value="adventurer">Aventurier</option><option value="master">Maître</option><option value="explorer">Explorateur</option></select></label><button id="restart">Recommencer</button><button id="pause">Pause</button><button id="step">Un pas</button><label>Lecture <select id="speed"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="4">4×</option></select></label><label><input type="checkbox" id="zones" checked> Zones annoncées</label><label><input type="checkbox" id="boxes"> Collisions actives</label></nav>
 </header><div class="frame"><canvas id="world" width="1280" height="720"></canvas></div><footer><div id="status"></div><div id="log"></div></footer>
-<script src="../dist/engine.js"></script><script src="../dist/render.js"></script><script src="bot-controls.js"></script>
+<script src="../dist/i18n.js"></script><script src="../dist/i18n-engine.js"></script><script src="../dist/engine.js"></script><script src="../dist/render.js"></script><script src="bot-controls.js"></script>
 <script>
 const $=id=>document.getElementById(id),canvas=$('world'),ctx=canvas.getContext('2d'),renderer=new CM.Renderer(canvas);
 $('boss').innerHTML=CM.BOSSES.map(b=>`<option value="${b.id}">${b.name}</option>`).join('');
+const params=new URLSearchParams(location.search);
+if(CM.BOSSES.some(b=>b.id===params.get('boss')))$('boss').value=params.get('boss');
+if(['adventurer','master','explorer'].includes(params.get('difficulty')))$('difficulty').value=params.get('difficulty');
+if(['0.25','0.5','1','4'].includes(params.get('speed')))$('speed').value=params.get('speed');
 let game,boss,bot,paused=false,last=0,accumulator=0,log=[],hits=0;
 function start(){game=new CM.Engine({difficulty:$('difficulty').value,stats:{speed:1,power:4,vitality:7}});game.startTrial($('boss').value);boss=game.enemies.find(e=>e.type==='boss');bot=createCombatBrain();paused=false;$('pause').textContent='Pause';$('zones').checked=game.showAttackZones;accumulator=0;hits=0;log=[];}
 function advance(){

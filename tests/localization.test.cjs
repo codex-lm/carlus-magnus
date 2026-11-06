@@ -138,7 +138,7 @@ test('real boss pressure, parry and recovery hints retain their dynamic counts i
   assert.equal(boss.attackCount, 1);
 });
 
-test('English title, accessibility labels and all five trial cards render through actual UI callbacks', () => {
+test('English title, accessibility labels and all six trial cards render through actual UI callbacks', () => {
   const app = boot('ongoing', { locale: 'en' });
   const doc = app.context.document;
   assert.equal(doc.documentElement.lang, 'en');
@@ -147,7 +147,7 @@ test('English title, accessibility labels and all five trial cards render throug
   assert.equal(app.element('world').getAttribute('aria-label'), 'Carlus Magnus world, a 2D platforming game');
   assert.equal(app.element('language-select').getAttribute('aria-label'), 'Game language');
   app.click('trial-button');
-  assert.match(app.element('modal-content').innerHTML, /Five guardians\. Five ways to win\./);
+  assert.match(app.element('modal-content').innerHTML, /Six guardians\. Six ways to win\./);
   for (const boss of app.context.CM.BOSSES) {
     assert.ok(app.element('modal-content').innerHTML.includes(app.context.CM.I18N.t(boss.name)));
   }
@@ -276,7 +276,9 @@ test('canvas labels, boss warnings, pressure effects and shrine prompts use the 
 test('the offline build includes current language modules before gameplay and requires no external scripts or styles', () => {
   const directory = path.join(__dirname, '../dist');
   const html = fs.readFileSync(path.join(directory, 'index.html'), 'utf8');
-  const files = [...html.matchAll(/<script src="([^"]+)"><\/script>/g)].map(match => match[1]);
+  const sources = [...html.matchAll(/<script src="([^"]+)"><\/script>/g)].map(match => match[1]);
+  assert.ok(sources.every(source => source.endsWith('?v=1.4.0')), 'one version query keeps cached modules aligned after an update');
+  const files = sources.map(source => source.split('?')[0]);
   assert.deepEqual(files, ['i18n.js', 'i18n-engine.js', 'i18n-ui.js', 'engine.js', 'render.js', 'app.js']);
   const standalone = fs.readFileSync(path.join(directory, 'carlus-magnus.html'), 'utf8');
   assert.doesNotMatch(standalone, /<script\b[^>]*\bsrc\s*=|<link\b[^>]*rel="stylesheet"/i);

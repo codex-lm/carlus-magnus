@@ -12,20 +12,20 @@ function routeJump(roomIndex, fromIndex, toIndex, wings) {
     ? [null, { x: to.x - 40, until: 65 }, { x: to.x + to.w + 10, until: 65 }]
     : [null];
   for (const launchX of launches) for (const targetX of targets) for (const delay of [0, 8, 16, 24]) {
-    for (const secondAt of (wings ? [-1, 30, 45, 60, 75] : [-1])) for (const escape of escapes) {
+    for (const secondAt of (wings ? [-1, 30, 45, 60, 75] : [-1])) for (const escape of escapes) for (const down of (room.updrafts ? [false, true] : [false])) {
       const game = new CM.Engine({ stats: { speed: 1, power: 4, vitality: 7 } });
       game.loadRoom(roomIndex, launchX, from.y - 52);
       game.enemies = []; game.pickups = []; game.checkpointLit = true;
       game.player.doubleJump = wings; game.player.grounded = true;
       const initialDirection = Math.sign((escape ? escape.x : targetX) - launchX);
       game.player.vx = delay ? 0 : initialDirection * 232;
-      for (let f = 0; f < 240; f++) {
+      for (let f = 0; f < (room.updrafts ? 480 : 240); f++) {
         const p = game.player, dx = (escape && f < escape.until ? escape.x : targetX) - p.x;
         const moving = f >= delay && Math.abs(dx) > 8;
         const jump = f !== secondAt - 1;
-        game.update(1 / 120, { left: moving && dx < 0, right: moving && dx > 0, jump });
+        game.update(1 / 120, { left: moving && dx < 0, right: moving && dx > 0, jump, down });
         if (p.grounded && Math.abs(p.y + p.h - to.y) < 1 && p.x + p.w > to.x && p.x < to.x + to.w && f > 5) {
-          return { launchX, targetX, delay, secondAt, escape, frames: f + 1 };
+          return { launchX, targetX, delay, secondAt, escape, down, frames: f + 1 };
         }
         if (game.roomIndex !== roomIndex || game.dead || game.player.invulnerable > 0) break;
       }
@@ -42,6 +42,8 @@ const routes = [
   { room: 6, wings: true, steps: [[0, 3], [3, 4], [4, 5], [5, 1], [1, 6], [6, 7], [7, 8], [8, 2], [2, 9]] },
   { room: 8, wings: true, steps: [[0, 3], [3, 4], [4, 5], [5, 1], [1, 6], [6, 7], [7, 8], [8, 2], [2, 9]] },
   { room: 10, wings: true, steps: [[0, 3], [3, 4], [4, 5], [5, 1], [1, 6], [6, 7], [7, 8], [8, 2], [2, 9], [9, 10]] },
+  { room: 12, wings: true, steps: [[0, 3], [3, 4], [4, 1], [1, 5], [5, 6], [6, 2], [2, 9], [9, 10], [0, 7], [7, 8]] },
+  { room: 13, wings: true, steps: [[0, 3], [3, 4], [4, 1], [1, 5], [5, 6], [6, 2], [2, 9], [9, 10], [1, 7], [7, 8]] },
 ];
 let count = 0;
 for (const route of routes) for (const [from, to] of route.steps) {

@@ -7,6 +7,7 @@ const legacy = require('../fixtures/legacy-v1.json');
 const SAVE_KEY = 'carlus-magnus:aurore:v1';
 const TRIAL_KEY = 'carlus-magnus:trials:v1';
 const LANGUAGE_KEY = 'carlus-magnus:language:v1';
+const PREF_KEY = 'carlus-magnus:prefs:v1';
 
 function boot(saveName = 'ongoing', options = {}) {
   const elements = new Map(), nodes = new Set(), listeners = new Map(), storage = new Map(options.storage || []);
@@ -67,7 +68,7 @@ function boot(saveName = 'ongoing', options = {}) {
   const context = vm.createContext({
     console, Math, Date, JSON, performance, URL, URLSearchParams, document, location, navigator: { getGamepads: () => [] },
     history: { replaceState(_state, _title, href) { location.href = href; location.search = new URL(href).search; } },
-    matchMedia: () => ({ matches: false }),
+    matchMedia: query => ({ matches: query === '(prefers-reduced-motion: reduce)' && !!options.reducedMotion }),
     localStorage: {
       getItem: key => { if (options.deniedStorage) throw new Error('Storage denied'); return storage.get(key) ?? null; },
       setItem: (key, value) => { if (options.deniedStorage) throw new Error('Storage denied'); storage.set(key, String(value)); },
@@ -81,7 +82,7 @@ function boot(saveName = 'ongoing', options = {}) {
     if (fs.existsSync(target)) vm.runInContext(fs.readFileSync(target, 'utf8'), context);
   }
   vm.runInContext(fs.readFileSync(path.join(__dirname, '../../dist/engine.js'), 'utf8'), context);
-  vm.runInContext('CM.Engine = class extends CM.Engine { constructor(...args) { super(...args); globalThis.testEngine = this; } }; CM.Renderer = class { draw() {} drawTitle() {} };', context);
+  vm.runInContext('globalThis.testRenderers = []; CM.Engine = class extends CM.Engine { constructor(...args) { super(...args); globalThis.testEngine = this; } }; CM.Renderer = class { constructor() { testRenderers.push(this); } draw() {} drawTitle() {} };', context);
   vm.runInContext(fs.readFileSync(path.join(__dirname, '../../dist/app.js'), 'utf8'), context);
   const tick = () => { clock += 16; frameCallback(clock); };
   const click = id => { assert.equal(typeof element(id).onclick, 'function', `${id} is wired`); element(id).onclick({ preventDefault() {} }); };
@@ -97,4 +98,4 @@ function boot(saveName = 'ongoing', options = {}) {
   return { context, storage, original, tick, click, chooseTrial, changeLanguage, element, listeners, unchanged: () => assert.equal(storage.get(SAVE_KEY), original) };
 }
 
-module.exports = { boot, legacy, SAVE_KEY, TRIAL_KEY, LANGUAGE_KEY };
+module.exports = { boot, legacy, SAVE_KEY, TRIAL_KEY, LANGUAGE_KEY, PREF_KEY };

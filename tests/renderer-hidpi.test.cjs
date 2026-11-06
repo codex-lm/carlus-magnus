@@ -41,6 +41,22 @@ function setup(cssWidth = 1280, cssHeight = 720, dpr = 1, fit = 'contain') {
 
 function size(canvas) { return [canvas.width, canvas.height]; }
 
+test('reduced motion immediately removes camera shake while Master keeps physical currents visible', () => {
+  const h = setup(), game = new h.context.CM.Engine({ difficulty: 'master' });
+  game.startTrial('titan'); game.camera.x = 700;
+  let currents = 0;
+  const drawCurrent = h.renderer.updraft.bind(h.renderer);
+  h.renderer.updraft = (...args) => { currents++; return drawCurrent(...args); };
+  h.renderer.shake = 9; h.renderer.lastHP = game.player.hp + 10; h.renderer.reduceMotion = true;
+  h.renderer.draw(game, 1 / 60);
+  assert.equal(h.renderer.shake, 0);
+  assert.equal(game.showAttackZones, false);
+  assert.equal(currents, 2, 'both physical columns remain readable when attack-zone assistance is off');
+  const snapshot = JSON.stringify(game.snapshot());
+  h.renderer.reduceMotion = false; h.renderer.draw(game, 1 / 60);
+  assert.equal(JSON.stringify(game.snapshot()), snapshot, 'visual preferences never change the simulation');
+});
+
 for (const [width, height, dpr] of [[3840, 2160, 1], [1920, 1080, 2], [2560, 1440, 1.5]]) {
   test(`${width}×${height} CSS at DPR ${dpr} renders at native 4K with unchanged logical coordinates`, () => {
     const h = setup(width, height, dpr);

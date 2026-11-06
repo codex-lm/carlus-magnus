@@ -3,7 +3,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const CM = require('../dist/engine.js');
 const { createCombatBrain } = require('./bot-controls.js');
-for (const type of ['warden', 'king', 'moth', 'worm', 'duelist']) for (const difficulty of ['adventurer', 'master']) {
+for (const type of ['warden', 'king', 'moth', 'worm', 'duelist', 'titan']) for (const difficulty of ['adventurer', 'master']) {
   test(`${type}, ${difficulty}: normal inputs complete all phases with the slowest hero`, () => {
     const game = new CM.Engine({ difficulty, stats: { speed: 1, power: 4, vitality: 7 } });
     game.startTrial(type);
@@ -29,6 +29,10 @@ for (const type of ['warden', 'king', 'moth', 'worm', 'duelist']) for (const dif
       assert.ok(parries >= 3);
       assert.ok(brain.state.climbTimes.length >= 3);
       assert.ok(brain.state.climbTimes.every(seconds => seconds < 5));
+    }
+    if (type === 'titan') {
+      assert.ok(brain.state.climbTimes.length >= 5, 'each tidal opening requires reaching the high carapace');
+      assert.ok(brain.state.climbTimes.every(t => t < (difficulty === 'master' ? 6.8 : 8)), 'climb fits the real opening window');
     }
     assert.equal(Object.keys(game.player.skills).length, 0);
     assert.equal(game.equippedCharms.length, 0);

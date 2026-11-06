@@ -277,7 +277,10 @@ test('bosses have telegraphed attacks, reset after death, and persist after vict
   finishBossForProgressionCheck(game, king);
   assert.equal(game.won, false, 'chapter one now leads into the expanded campaign');
   assert.equal(game.bossesDefeated.length, 2);
-  const finalRoom = CM.BOSSES.find(b => b.id === 'duelist').roomIndex;
+  game.loadRoom(CM.BOSSES.find(b => b.id === 'duelist').roomIndex, 400, 598);
+  finishBossForProgressionCheck(game, game.enemies.find(e => e.type === 'boss'));
+  assert.equal(game.won, false, 'chapter two continues into the Celestial Tides');
+  const finalRoom = CM.BOSSES.find(b => b.id === 'titan').roomIndex;
   game.loadRoom(finalRoom, 400, 598);
   finishBossForProgressionCheck(game, game.enemies.find(e => e.type === 'boss'));
   assert.equal(game.won, true);
