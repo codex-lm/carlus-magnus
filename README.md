@@ -34,6 +34,6 @@ Arrows / A-D / Q-D move; Space jumps; J or X attacks; Down descends inside a cur
 
 ## Credits and license
 
-Cédric Bernadac: creative direction and feedback. Nilo (Codex): implementation, original art, synthesized audio and testing. Created for Charles. No third-party game code or assets copied.
+Anonymous contributor: creative direction and feedback. Nilo (Codex): implementation, original art, synthesized audio and testing. Created for Charles. No third-party game code or assets copied.
 
 Code: MIT. Original visual and audio artwork: CC BY-SA 4.0. See LICENSE and ASSETS-LICENSE.txt. Publisher declarations are recorded in LOB7-ATTRIBUTION.json.
