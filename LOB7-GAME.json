@@ -1,6 +1,6 @@
 {
   "title": "Carlus Magnus — Shards of Dawn",
-  "description": "A fast-paced 2D melee platformer made for Charles, fully playable in English or French. Explore twelve connected areas, climb giant guardians and duel five bosses through three phases. Choose an archetype or build your own hero, wield sword, axe or spear, and discover twelve skills and six talismans. Three difficulties include Master, with hidden attack zones by default. Switch language at any time. Sharp Canvas graphics up to native 4K.",
+  "description": "A fast-paced 2D melee platformer made for Charles, fully playable in English or French. Explore fifteen connected areas, ride rising currents and face six three-phase bosses, including Atlas, a colossal tidebearer with a climbable shell. Choose an archetype or build your hero, wield sword, axe or spear, and discover twelve skills and eight talismans. Three difficulties include Master, with hidden attack zones by default. Sharp Canvas graphics up to native 4K, with optional reduced camera shake.",
   "entrypoint": "index.html",
   "license": "MIT",
   "genre": [
@@ -16,6 +16,7 @@
   "controls": [
     "Move: arrows, A/D or Q/D",
     "Jump / double jump: Space or Up",
+    "Hold Down to descend inside rising currents",
     "Attack: J or X; downward attack: Down + attack in the air",
     "Guard / parry: K or C; dodge: Shift or L",
     "Heal: F; sanctuary: E; weapons: 1/2/3",

@@ -80,8 +80,19 @@ const root=typeof window!=='undefined'?window:globalThis;
     king:{w:340,h:430,hp:600,weakpoint:{x:1290,y:238,w:60,h:60},platforms:[[1050,550,150,'main'],[1470,550,150,'main'],[1150,450,160,'avant-bras'],[1360,450,160,'avant-bras'],[1240,350,180,'épaule'],[1290,260,180,'couronne']],seals:[[1158,590],[1444,590]]},
     moth:{w:180,h:120,hp:360,weakpoint:{x:1215,y:310,w:70,h:80},platforms:[],seals:[]},
     worm:{w:190,h:170,hp:420,weakpoint:{x:1245,y:550,w:80,h:90},platforms:[],seals:[]},
-    duelist:{w:54,h:92,hp:330,weakpoint:{x:1320,y:558,w:54,h:92},platforms:[],seals:[]}
+    duelist:{w:54,h:92,hp:330,weakpoint:{x:1320,y:558,w:54,h:92},platforms:[],seals:[]},
+    titan:{w:430,h:350,hp:500,weakpoint:{x:1230,y:325,w:70,h:70},platforms:[[960,540,200,'pince'],[1450,540,190,'pince'],[1110,440,210,'carapace'],[1330,440,210,'carapace'],[1210,370,180,'crête']],seals:[]}
   };
+  CHARMS.push(
+    {id:'tide',name:'Perle de ressac',description:'Chaque fiole soigne 15 points de vie supplémentaires.',symbol:'◉',color:'#a4eee5'},
+    {id:'anchor',name:'Ancre d’écume',description:'+20 % de récupération d’endurance lorsque vous êtes au sol.',symbol:'⚓',color:'#e8d4a3'}
+  );
+  BOSSES.push({id:'titan',name:'Atlas, le Porte-marée',subtitle:'Un océan sur ses épaules',tip:'Deux enchaînements ou parades ouvrent son cœur, trois en Maître. Montez par les courants puis frappez sa carapace.',roomIndex:14,weakpointLabel:'Cœur des marées',openingLabel:'Enchaînements ou parades'});
+  ROOMS.push(
+    {id:'foamcliffs',name:'Les Falaises d’écume',subtitle:'Au-delà de l’éclipse, la mer touche les étoiles.',theme:'tides',width:2700,height:720,checkpoint:{x:140,y:650},platforms:[platform(0,650,900,80),platform(1120,650,780,80),platform(2120,650,580,80),platform(700,530,230),platform(900,465,250),platform(1700,520,240),platform(1910,450,240),{...platform(730,355,220),oneWay:true},{...platform(980,205,220),oneWay:true},platform(2280,470,210),platform(2450,335,180)],updrafts:[{x:540,y:300,w:190,h:350,force:330}],hazards:[{x:900,y:676,w:220,h:44},{x:1900,y:676,w:220,h:44}],enemies:[enemy('t1','crawler',390,614),enemy('t2','flyer',1510,430),enemy('t3','hopper',1750,616),enemy('t4','spitter',2360,602)],pickups:[pickup('t-sh1','shard',600,585,'Éclat d’aurore'),pickup('t-charm','charm',820,315,'Perle de ressac',{charm:'tide'}),pickup('t-relic','relic',1070,165,'Écume stellaire',{bonus:'power'}),pickup('t-sh2','shard',1000,425,'Éclat d’aurore'),pickup('t-sh3','shard',1790,480,'Éclat d’aurore'),pickup('t-sh4','shard',1990,410,'Éclat d’aurore'),pickup('t-sh5','shard',2500,295,'Éclat d’aurore')],secretWalls:[{id:'seal-foam',x:1053,y:145,w:58,h:60,rewardId:'t-relic',label:'Sceau des embruns'}],hint:'Les courants vous soulèvent. Déplacez-vous pour en sortir ; maintenez Bas pour redescendre.'},
+    {id:'tidearchives',name:'Les Archives englouties',subtitle:'Les histoires oubliées remontent avec la marée.',theme:'tides',width:2800,height:720,checkpoint:{x:140,y:650},platforms:[platform(0,650,780,80),platform(1020,650,730,80),platform(1990,650,810,80),platform(680,530,230),platform(890,435,240),platform(1640,520,230),platform(1840,425,250),{...platform(1370,340,230),oneWay:true},{...platform(1550,200,230),oneWay:true},{...platform(2250,520,190),oneWay:true},platform(2480,375,220)],updrafts:[{x:1180,y:265,w:190,h:385,force:350},{x:2260,y:350,w:150,h:300,force:320}],hazards:[{x:780,y:676,w:240,h:44},{x:1750,y:676,w:240,h:44}],enemies:[enemy('u1','knight',510,590),enemy('u2','spitter',1120,602),enemy('u3','flyer',1750,340),enemy('u4','hopper',2100,616),enemy('u5','knight',2530,590)],pickups:[pickup('u-sh1','shard',755,490,'Éclat d’aurore'),pickup('u-sh2','shard',970,395,'Éclat d’aurore'),pickup('u-sh3','shard',1430,300,'Éclat d’aurore'),pickup('u-charm','charm',1640,160,'Ancre d’écume',{charm:'anchor'}),pickup('u-sh4','shard',1920,385,'Éclat d’aurore'),pickup('u-relic','relic',2570,335,'Souvenir du large',{bonus:'vitality'})],secretWalls:[{id:'seal-archives',x:2553,y:315,w:58,h:60,rewardId:'u-relic',label:'Sceau des archives'}],hint:'Quittez le courant près du sommet pour atteindre les terrasses. Les détours cachent de nouveaux talismans.'},
+    {id:'tidalthrone',name:'Le Trône des marées',subtitle:'Charles, l’océan attend son dernier gardien.',theme:'tides',width:2100,height:720,checkpoint:{x:140,y:650},bossGate:{x:330},platforms:[platform(0,650,2100,80)],updrafts:[{x:920,y:290,w:200,h:360,force:330},{x:1490,y:290,w:200,h:360,force:330}],hazards:[],enemies:[enemy('boss-titan','boss',1050,300,{bossType:'titan',name:'ATLAS, LE PORTE-MARÉE'})],pickups:[],hint:'Gagnez les hauteurs dans les courants. Après deux enchaînements ou parades, frappez le cœur sur sa carapace ; trois en Maître.'}
+  );
   class Engine {
     constructor(config={}, saved=null) {
       const difficulty=['explorer','adventurer','master'].includes(config.difficulty)?config.difficulty:config.assist?'explorer':'adventurer';
@@ -105,7 +116,7 @@ const root=typeof window!=='undefined'?window:globalThis;
     }
     heal() {
       const p=this.player;if(this.dead||this.won||p.hp>=p.maxHp||p.flasks<=0||this.healCooldown>0)return false;
-      p.flasks--;const amount=p.skills.restoration?75:50;p.hp=Math.min(p.maxHp,p.hp+amount);this.healCooldown=.65;this.effect('ring',p.x+15,p.y+26,{color:'#9dffc9',life:.8,maxLife:.8});this.effect('text',p.x,p.y-15,{text:'+'+amount,color:'#9dffc9',life:.8,maxLife:.8});this.emit('heal');this.emit('save');return true;
+      p.flasks--;const amount=(p.skills.restoration?75:50)+(this.hasCharm('tide')?15:0);p.hp=Math.min(p.maxHp,p.hp+amount);this.healCooldown=.65;this.effect('ring',p.x+15,p.y+26,{color:'#9dffc9',life:.8,maxLife:.8});this.effect('text',p.x,p.y-15,{text:'+'+amount,color:'#9dffc9',life:.8,maxLife:.8});this.emit('heal');this.emit('save');return true;
     }
     say(text,subtext='',timer=4) {this.message={text,subtext,timer};}
     emit(type,extra={}) {this.events.push({type,...extra});}
@@ -115,7 +126,8 @@ const root=typeof window!=='undefined'?window:globalThis;
       const values=data.type==='boss'?{w:geometry.w,h:geometry.h,hp:geometry.hp,speed:0,damage:23}:data.type==='knight'?{w:42,h:60,hp:78,speed:68,damage:18}:data.type==='flyer'?{w:42,h:34,hp:39,speed:102,damage:12}:data.type==='spitter'?{w:42,h:48,hp:62,speed:0,damage:13}:data.type==='hopper'?{w:40,h:34,hp:54,speed:165,damage:14}:{w:42,h:36,hp:48,speed:90,damage:13};
       const result={...values,...copy(data),maxHp:values.hp,vx:0,vy:0,facing:-1,state:'idle',timer:1,attackProgress:0,attackKind:'sweep',sequence:0,stun:0,hitFlash:0,originX:data.x,originY:data.y,active:false,hitPlayer:false,windupDuration:.7,phase:1};
       if(data.type==='boss')Object.assign(result,{armored:true,vulnerabilityTimer:0,cycleDamage:0,cycles:0,armorFlash:0,weakpoint:{...geometry.weakpoint,active:false},platforms:geometry.platforms.map((a,i)=>({id:data.id+'-step-'+i,x:a[0],y:a[1],w:a[2],h:14,label:a[3],oneWay:true,active:false})),seals:geometry.seals.map((a,i)=>({id:data.id+'-seal-'+i,x:a[0],y:a[1],w:38,h:50,hp:2,maxHp:2,active:true})),actionHint:'Brisez les deux sceaux ou réussissez une parade parfaite.',telegraphs:[],pendingAttacks:[]});
-      if(data.type==='boss'&&!['warden','king'].includes(data.bossType))Object.assign(result,{mobile:true,buried:false,attackVolumes:[],poise:0,maxPoise:this.config.difficulty==='master'?3:2,attackCount:0,actionHint:BOSSES.find(b=>b.id===data.bossType).tip});
+      if(data.type==='boss'&&!['warden','king','titan'].includes(data.bossType))Object.assign(result,{mobile:true,buried:false,attackVolumes:[],poise:0,maxPoise:this.config.difficulty==='master'?3:2,attackCount:0,actionHint:BOSSES.find(b=>b.id===data.bossType).tip});
+      if(data.bossType==='titan')Object.assign(result,{tidal:true,attackVolumes:[],poise:0,maxPoise:this.config.difficulty==='master'?3:2,attackCount:0,actionHint:BOSSES.find(b=>b.id==='titan').tip});
       return result;
     }
     loadRoom(index,x,y) {
@@ -125,7 +137,7 @@ const root=typeof window!=='undefined'?window:globalThis;
       this.say(this.room.name,this.room.hint,5);this.emit('save');
     }
     snapshot() {
-      return {version:1,revision:3,config:copy(this.config),showAttackZones:this.showAttackZones,player:{stats:copy(this.player.stats),skills:copy(this.player.skills),weapon:this.player.weapon,doubleJump:this.player.doubleJump,bonusPower:this.player.bonusPower,bonusVitality:this.player.bonusVitality,hp:this.player.hp,stamina:this.player.stamina,flasks:this.player.flasks,x:this.player.x,y:this.player.y},roomIndex:this.roomIndex,shards:this.shards,skillPoints:this.skillPoints,kills:this.kills,deaths:this.deaths,time:this.time,won:this.won,dead:this.dead,checkpoint:copy(this.checkpoint),roomsVisited:[...this.roomsVisited],bossesDefeated:[...this.bossesDefeated],collected:[...this.collected],defeated:[...this.defeated],destroyedWalls:[...this.destroyedWalls],ownedCharms:[...this.ownedCharms],equippedCharms:[...this.equippedCharms]};
+      return {version:1,revision:4,config:copy(this.config),showAttackZones:this.showAttackZones,player:{stats:copy(this.player.stats),skills:copy(this.player.skills),weapon:this.player.weapon,doubleJump:this.player.doubleJump,bonusPower:this.player.bonusPower,bonusVitality:this.player.bonusVitality,hp:this.player.hp,stamina:this.player.stamina,flasks:this.player.flasks,x:this.player.x,y:this.player.y},roomIndex:this.roomIndex,shards:this.shards,skillPoints:this.skillPoints,kills:this.kills,deaths:this.deaths,time:this.time,won:this.won,dead:this.dead,checkpoint:copy(this.checkpoint),roomsVisited:[...this.roomsVisited],bossesDefeated:[...this.bossesDefeated],collected:[...this.collected],defeated:[...this.defeated],destroyedWalls:[...this.destroyedWalls],ownedCharms:[...this.ownedCharms],equippedCharms:[...this.equippedCharms]};
     }
     restore(s) {
       this.config=copy(s.config||this.config);if(!['explorer','adventurer','master'].includes(this.config.difficulty))this.config.difficulty=this.config.assist?'explorer':'adventurer';this.config.assist=this.config.difficulty==='explorer';const sp=s.player||{};this.player.stats=copy(sp.stats||this.config.stats);this.player.skills=copy(sp.skills||{});this.player.weapon=WEAPONS[sp.weapon]?sp.weapon:'sword';this.player.doubleJump=!!sp.doubleJump;this.player.bonusPower=Number(sp.bonusPower)||0;this.player.bonusVitality=Number(sp.bonusVitality)||0;
@@ -137,10 +149,12 @@ const root=typeof window!=='undefined'?window:globalThis;
       if(s.dead){this.loadRoom(this.checkpoint.roomIndex,this.checkpoint.x,this.checkpoint.y);this.player.hp=this.player.maxHp;}
       else {const i=clamp(Number(s.roomIndex)||0,0,ROOMS.length-1);this.loadRoom(i,clamp(Number(sp.x)||140,20,ROOMS[i].width-50),clamp(Number(sp.y)||598,0,640));}
       this.player.flasks=s.dead?this.player.maxFlasks:Number.isFinite(sp.flasks)?clamp(sp.flasks,0,this.player.maxFlasks):this.player.maxFlasks;
+      const newTides=(Number(s.revision)||0)<4&&s.won&&this.bossesDefeated.includes('boss-duelist')&&!this.bossesDefeated.includes('boss-titan');
       const newChapter=(Number(s.revision)||0)<3&&s.won&&!this.bossesDefeated.includes('boss-duelist');
-      if(newChapter){this.won=false;this.player.doubleJump=true;this.loadRoom(6,140,598);this.checkpoint={roomIndex:6,x:140,y:598};this.player.hp=this.player.maxHp;this.player.flasks=this.player.maxFlasks;}
+      if(newChapter||newTides){const nextRoom=newTides?12:6;this.won=false;this.player.doubleJump=true;this.loadRoom(nextRoom,140,598);this.checkpoint={roomIndex:nextRoom,x:140,y:598};this.player.hp=this.player.maxHp;this.player.flasks=this.player.maxFlasks;}
       this.player.invulnerable=1;this.say('L’aventure reprend',this.room.name,3);
       if(newChapter)this.say('Les Royaumes oubliés','Une nouvelle route s’ouvre après la Couronne d’Aurore.',6);
+      if(newTides)this.say('Les Marées célestes','Au-delà des royaumes, les courants ouvrent une nouvelle route.',6);
     }
     respawn() {
       this.dead=false;this.won=false;this.loadRoom(this.checkpoint.roomIndex,this.checkpoint.x,this.checkpoint.y);this.recalculate();this.player.hp=this.player.maxHp;this.player.stamina=this.player.maxStamina;this.player.flasks=this.player.maxFlasks;this.player.invulnerable=1.4;this.previousInput={};this.dashCooldown=0;this.attackCooldown=0;this.parryCooldown=0;this.riposteTime=0;this.afterdashTime=0;this.healCooldown=0;this.emit('save');this.say('La lumière vous relève','Vos éclats et vos talents sont conservés.',3);
@@ -175,10 +189,12 @@ const root=typeof window!=='undefined'?window:globalThis;
     }
     exposeBoss(e) {
       if(!e||e.hp<=0||e.type!=='boss'||e.vulnerabilityTimer>0)return false;
+      if(e.tidal)return this.openTidalBoss(e);
       if(e.mobile)return this.openMobileBoss(e);
       e.state='exposed';e.vulnerabilityTimer=this.config.assist?8:this.config.difficulty==='master'?5.2:6.5;e.timer=e.vulnerabilityTimer;e.cycleDamage=0;e.cycles++;e.armored=false;e.weakpoint.active=true;e.telegraphs=[];e.pendingAttacks=[];e.vx=0;for(const s of e.seals){s.hp=0;s.active=false;}for(const s of e.platforms)s.active=true;this.projectiles=this.projectiles.filter(p=>p.owner!==e.id);e.actionHint=e.bossType==='king'?'Grimpez sur les mains et les épaules. Frappez la couronne !':'Grimpez sur les bras. Frappez le cœur lumineux !';this.say('Le colosse est vulnérable !',e.actionHint,4);this.effect('ring',e.weakpoint.x+30,e.weakpoint.y+30,{life:1,maxLife:1,color:'#9bfff0'});this.emit('expose',{boss:e.id});return true;
     }
     parryBoss(e) {
+      if(e.tidal){if(e.weakpoint.active)return false;e.poise++;this.effect('text',e.x+e.w/2,e.y-25,{text:'PRESSION '+e.poise+'/'+e.maxPoise,color:'#b6fff0',life:.8,maxLife:.8});if(e.poise>=e.maxPoise)return this.openTidalBoss(e);e.state='recover';e.timer=.85;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];this.projectiles=this.projectiles.filter(a=>a.owner!==e.id);e.actionHint=this.tidalProgress(e);this.say('Sa garde se fissure',e.actionHint,2);return false;}
       if(!e.mobile)return this.exposeBoss(e);
       if(e.weakpoint.active)return false;
       e.poise++;this.effect('text',e.x,e.y-25,{text:'PRESSION '+e.poise+'/'+e.maxPoise,color:'#b6fff0',life:.8,maxLife:.8});
@@ -186,6 +202,7 @@ const root=typeof window!=='undefined'?window:globalThis;
       e.state='recover';e.timer=.85;e.vx=0;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];this.projectiles=this.projectiles.filter(a=>a.owner!==e.id);e.actionHint='Parade réussie : '+e.poise+'/'+e.maxPoise+'. Maintenez la pression !';this.say('Sa garde se fissure',e.actionHint,2);return false;
     }
     closeBoss(e) {
+      if(e.tidal){e.vulnerabilityTimer=0;e.weakpoint.active=false;e.armored=true;e.state='recover';e.timer=1.1;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];for(const s of e.platforms)s.active=false;e.actionHint=this.tidalProgress(e);return;}
       if(e.mobile){e.landing=null;e.vulnerabilityTimer=0;e.weakpoint.active=false;e.armored=true;e.state='recover';e.timer=.85;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];e.vx=0;e.buried=e.bossType==='worm';e.actionHint=BOSSES.find(b=>b.id===e.bossType).tip;return;}
       e.vulnerabilityTimer=0;e.armored=true;e.weakpoint.active=false;e.state='recover';e.timer=1.1;for(const s of e.platforms)s.active=false;for(const s of e.seals){s.hp=s.maxHp;s.active=true;}e.actionHint='Son armure se referme. Brisez les sceaux ou parez un coup.';e.telegraphs=[];e.pendingAttacks=[];
     }
@@ -195,7 +212,7 @@ const root=typeof window!=='undefined'?window:globalThis;
     hitBoss(e,box,damage) {
       if(e.buried)return;
       const p=this.player;
-      if(e.weakpoint.active&&overlap(box,e.weakpoint)&&!p.attackVictims.includes(e.id+'-weakpoint')){p.attackVictims.push(e.id+'-weakpoint');this.damageEnemy(e,damage*(e.mobile?1.5:2.8),0,{weakpoint:true});this.pogoBounce();return;}
+      if(e.weakpoint.active&&overlap(box,e.weakpoint)&&!p.attackVictims.includes(e.id+'-weakpoint')){p.attackVictims.push(e.id+'-weakpoint');this.damageEnemy(e,damage*(e.mobile?1.5:2.8),0,{weakpoint:true,weapon:true});this.pogoBounce();return;}
       let sealHit=false;
       for(const s of e.seals)if(s.active&&s.hp>0&&overlap(box,s)&&!p.attackVictims.includes(s.id)){p.attackVictims.push(s.id);s.hp--;sealHit=true;this.effect('spark',s.x+19,s.y+25,{color:'#a8fff0'});this.effect('text',s.x,s.y-10,{text:s.hp?'FISSURE':'SCEAU BRISÉ',color:'#a8fff0',life:.65,maxLife:.65});this.pogoBounce();this.emit('block');}
       if(sealHit&&e.seals.every(s=>s.hp===0)){this.exposeBoss(e);return;}
@@ -206,14 +223,15 @@ const root=typeof window!=='undefined'?window:globalThis;
     }
     damageEnemy(e,amount,stun=.12,hit={}) {
       if(e.hp<=0)return false;
-      if(e.type==='boss'){if(!e.weakpoint.active||!hit.weakpoint){e.armorFlash=.15;return false;}amount=Math.min(amount,e.maxHp*(e.mobile? .22:.34)-e.cycleDamage);if(amount<=0)return false;e.cycleDamage+=amount;}
+      if(e.type==='boss'){if(!e.weakpoint.active||!hit.weakpoint){e.armorFlash=.15;return false;}amount=Math.min(amount,e.maxHp*(e.mobile||e.tidal? .22:.34)-e.cycleDamage);if(amount<=0)return false;e.cycleDamage+=amount;}
       e.hp=Math.max(0,e.hp-amount);e.hitFlash=.15;e.vx=this.player.facing*(e.type==='boss'?0:120);if(e.type!=='boss'&&stun>0){e.state='stunned';e.timer=stun;}
+      if(hit.weapon)this.emit('hit',{weapon:this.player.weapon,boss:e.type==='boss',weakpoint:!!hit.weakpoint});
       const hitX=e.type==='boss'?e.weakpoint.x+e.weakpoint.w/2:e.x+e.w/2,hitY=e.type==='boss'?e.weakpoint.y:e.y;
       this.effect('spark',hitX,hitY+20,{color:e.type==='boss'?'#ffc083':'#8cffe0'});this.effect('text',hitX,hitY-8,{text:String(Math.round(amount)),life:.7,maxLife:.7,color:'#fff0b0'});
       if(e.hp<=0){this.kills++;this.effect('ring',e.x+e.w/2,e.y+e.h/2,{life:.7,maxLife:.7});
-        if(e.type==='boss'){this.bossesDefeated.push(e.id);this.arenaLocked=false;this.skillPoints+=3;this.player.hp=this.player.maxHp;this.player.stamina=this.player.maxStamina;this.projectiles=[];e.weakpoint.active=false;e.telegraphs=[];for(const s of e.platforms)s.active=false;this.emit('boss',{defeated:true});if(e.bossType==='duelist'||this.trial){this.won=true;this.say(this.trial?'Défi remporté !':'L’aurore se lève, Charles.',this.trial?'Le colosse s’incline.':'Le royaume a retrouvé sa lumière.',20);this.emit('win');}else this.say(e.bossType==='king'?'Les royaumes s’ouvrent':'Le gardien s’incline','3 points de talent · Poursuivez votre route vers la droite.',6);this.emit('save');}
+        if(e.type==='boss'){this.bossesDefeated.push(e.id);this.arenaLocked=false;this.skillPoints+=3;this.player.hp=this.player.maxHp;this.player.stamina=this.player.maxStamina;this.projectiles=[];e.weakpoint.active=false;e.telegraphs=[];for(const s of e.platforms)s.active=false;this.emit('boss',{defeated:true});if(e.bossType==='titan'||this.trial){this.won=true;this.say(this.trial?'Défi remporté !':'L’aurore se lève, Charles.',this.trial?'Le colosse s’incline.':'Le royaume a retrouvé sa lumière.',20);this.emit('win');}else this.say(e.bossType==='king'?'Les royaumes s’ouvrent':e.bossType==='duelist'?'Les marées vous appellent':'Le gardien s’incline','3 points de talent · Poursuivez votre route vers la droite.',6);this.emit('save');}
         else {this.defeated.push(e.id);this.shards++;if(this.shards%5===0){this.skillPoints++;this.say('Un nouveau talent vous attend','Tab : ouvrir les talents',3);}if(this.kills%3===0)this.player.hp=Math.min(this.player.maxHp,this.player.hp+9);if(this.hasCharm('moss'))this.player.hp=Math.min(this.player.maxHp,this.player.hp+5);this.emit('pickup');}
-      }else if(e.type==='boss'&&e.cycleDamage>=e.maxHp*(e.mobile? .22:.34)-.001)this.closeBoss(e);
+      }else if(e.type==='boss'&&e.cycleDamage>=e.maxHp*(e.mobile||e.tidal? .22:.34)-.001)this.closeBoss(e);
       return true;
     }
     hurt(amount,source,unblockable=false) {
@@ -242,16 +260,17 @@ const root=typeof window!=='undefined'?window:globalThis;
       const move=(input.right?1:0)-(input.left?1:0);if(move&&p.dashTime<=0)p.facing=move;
       if(p.dashTime>0){p.dashTime=Math.max(0,p.dashTime-dt);p.vx=p.facing*780;p.vy=0;}
       else {const speed=(210+p.stats.speed*22)*(this.hasCharm('wind')?1.1:1)*(p.block? .38:1)*(p.attackTime>0&&p.weapon==='axe'? .6:1);const target=move*speed;const accel=p.grounded?2400:1550;p.vx+=clamp(target-p.vx,-accel*dt,accel*dt);p.vy=Math.min(p.vy+1550*dt,880);}
+      p.inUpdraft=false;if(p.dashTime<=0)for(const current of this.room.updrafts||[])if(overlap(p,current)){p.inUpdraft=true;if(!input.down)p.vy=Math.min(p.vy,-(current.force||330));}
       this.moveBody(p,dt);if(p.grounded){p.jumps=0;if(!this.room.hazards.some(h=>p.x+p.w>h.x&&p.x<h.x+h.w))this.lastSafe={x:p.x,y:p.y};}
       if(p.y>790){this.hurt(22,null,true);if(!this.dead){p.x=this.lastSafe.x;p.y=this.lastSafe.y;p.vx=0;p.vy=0;p.invulnerable=1;}}
       for(const hazard of this.room.hazards)if(overlap(p,hazard)){this.hurt(22,null,true);if(!this.dead){p.x=this.lastSafe.x;p.y=this.lastSafe.y;p.vx=0;p.vy=0;p.invulnerable=1;}break;}
       if(p.attackTime>0){const w=WEAPONS[p.weapon],elapsed=p.attackDuration-p.attackTime;p.attackTime=Math.max(0,p.attackTime-dt);if(elapsed>=w.windup&&elapsed<w.windup+.14){const box=p.attackDown?{x:p.x-18,y:p.y+p.h-3,w:p.w+36,h:Math.max(48,w.range*.5)}:{x:p.facing===1?p.x+p.w-4:p.x-w.range+4,y:p.y-8,w:w.range,h:p.h+18};const combo=p.weapon==='sword'&&p.combo===3?1.5:1;const baseDamage=(11+p.stats.power*2.4+p.bonusPower*5)*w.damage*(p.skills.edge?1.25:1)*combo*(p.attackCharged?2:1)*(p.attackAfterdash?1.5:1)*(p.attackDown&&p.skills.pogo?1.5:1)*(this.hasCharm('fang')?1.12:1);
-          for(const e of this.enemies){if(e.hp<=0)continue;if(e.type==='boss'){this.hitBoss(e,box,baseDamage);continue;}if(!p.attackVictims.includes(e.id)&&overlap(box,e)){p.attackVictims.push(e.id);let damage=baseDamage;if(e.type==='knight'&&e.state!=='stunned'&&p.weapon!=='axe'&&e.facing===-p.facing&&!p.attackDown)damage*=.65;this.damageEnemy(e,damage,p.weapon==='axe'? .4:.13);this.pogoBounce();}}
+          for(const e of this.enemies){if(e.hp<=0)continue;if(e.type==='boss'){this.hitBoss(e,box,baseDamage);continue;}if(!p.attackVictims.includes(e.id)&&overlap(box,e)){p.attackVictims.push(e.id);let damage=baseDamage;if(e.type==='knight'&&e.state!=='stunned'&&p.weapon!=='axe'&&e.facing===-p.facing&&!p.attackDown)damage*=.65;this.damageEnemy(e,damage,p.weapon==='axe'? .4:.13,{weapon:true});this.pogoBounce();}}
           for(const wall of this.secretWalls)if(!wall.broken&&!p.attackVictims.includes(wall.id)&&overlap(box,wall)){p.attackVictims.push(wall.id);this.hitWall(wall);this.pogoBounce();}
           if(!p.slashShown){this.effect('slash',p.x+p.w/2,p.attackDown?p.y+p.h:p.y+25,{facing:p.facing,down:p.attackDown,color:w.color,weapon:p.weapon,range:w.range,life:.18,maxLife:.18});p.slashShown=true;}}
         if(p.attackTime===0){this.attackCooldown=.065;p.slashShown=false;p.attackDown=false;}
       }else p.slashShown=false;
-      if(this.staminaDelay<=0&&!p.block)p.stamina=Math.min(p.maxStamina,p.stamina+dt*(p.skills.flow?45:30));
+      if(this.staminaDelay<=0&&!p.block)p.stamina=Math.min(p.maxStamina,p.stamina+dt*(p.skills.flow?45:30)*(p.grounded&&this.hasCharm('anchor')?1.2:1));
       this.updateEnemies(dt);this.updateProjectiles(dt);this.updatePickups();this.updateEffects(dt);
       const cp=this.room.checkpoint;if(!this.checkpointLit&&cp&&Math.abs(p.x-cp.x)<75&&Math.abs(p.y+p.h-cp.y)<65)this.interact();
       if(this.room.bossGate&&this.enemies.some(e=>e.type==='boss'&&e.hp>0)){if(p.x>this.room.bossGate.x+50)this.arenaLocked=true;if(this.arenaLocked)p.x=clamp(p.x,this.room.bossGate.x,this.room.width-p.w-50);}
@@ -312,7 +331,41 @@ const root=typeof window!=='undefined'?window:globalThis;
       }
       this.effect('ring',cx,kind==='rain'?e.y+30:635,{color:'#ffb37e',life:.45,maxLife:.45});
     }
+    tidalProgress(e) {return 'Marées '+e.attackCount+'/'+e.maxPoise+' · Parades '+e.poise+'/'+e.maxPoise;}
+    openTidalBoss(e) {
+      if(e.hp<=0||e.weakpoint.active)return false;
+      e.state='exposed';e.exposureDuration=this.config.assist?9:this.config.difficulty==='master'?6.8:8;e.vulnerabilityTimer=e.exposureDuration;e.timer=e.exposureDuration;e.cycleDamage=0;e.cycles++;e.attackCount=0;e.poise=0;e.armored=false;e.weakpoint.active=true;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];for(const step of e.platforms)step.active=true;this.projectiles=this.projectiles.filter(a=>a.owner!==e.id);e.actionHint='Le cœur est ouvert ! Montez dans un courant puis frappez la carapace.';this.say('Le cœur des marées s’éveille',e.actionHint,4);this.effect('ring',e.weakpoint.x+35,e.weakpoint.y+35,{color:'#b6fff0',life:1,maxLife:1});this.emit('expose',{boss:e.id});return true;
+    }
+    prepareTidalAttack(e,kind) {
+      const master=this.config.difficulty==='master',px=this.player.x+this.player.w/2;
+      this.startWindup(e,kind,(kind==='pearlRain'?1.15:1.05)-(master? .18:0)-(e.phase-1)*.06);e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];
+      if(kind==='tidalWave'){e.telegraphs.push({x:this.room.bossGate.x,y:610,w:this.room.width-this.room.bossGate.x-20,h:40,kind,parryable:false});e.actionHint='La marée monte : sautez ou prenez un courant.';}
+      else if(kind==='pearlRain'){const offsets=e.phase===3?[-140,0,140]:e.phase===2?[-90,0,90]:[0];for(const offset of offsets)e.telegraphs.push({x:clamp(px+offset-34,this.room.bossGate.x+10,this.room.width-85),y:110,w:68,h:540,kind,parryable:true});e.actionHint='Des perles tombent : déplacez-vous ou parez au dernier instant.';}
+      else {for(const x of [820,1320]){e.telegraphs.push({x,y:535,w:390,h:115,kind,parryable:true,delay:0});if(e.phase===3)e.telegraphs.push({x,y:425,w:390,h:72,kind,parryable:true,delay:.5});}e.actionHint=e.phase===3?'Deux coups de pinces : changez de hauteur ou parez.':'Les pinces se referment : sautez ou parez.';}
+    }
+    executeTidalAttack(e) {
+      e.state='attack';e.attackVolumes=[];const count=e.phase;
+      if(e.attackKind==='tidalWave'){for(let n=0;n<count;n++)e.pendingAttacks.push({type:'tide',delay:n*.48,speed:300+e.phase*35});e.timer=1.9+(count-1)*.48;}
+      else if(e.attackKind==='pearlRain'){for(let i=0;i<e.telegraphs.length;i++){const t=e.telegraphs[i];e.pendingAttacks.push({type:'pearl',x:t.x+t.w/2-15,y:90,delay:i*.17,speed:420+e.phase*35});}e.timer=1.75+(e.telegraphs.length-1)*.17;}
+      else {e.attackVolumes=e.telegraphs.map(t=>({...t,delay:t.delay||0,life:.22,hit:false}));e.timer=e.phase===3?1.1:.65;}
+      this.effect('ring',e.x+e.w/2,e.attackKind==='pearlRain'?e.y:635,{color:'#9cf6ed',life:.55,maxLife:.55});
+    }
+    updateTidalBoss(e,dt) {
+      e.hitFlash=Math.max(0,e.hitFlash-dt);e.armorFlash=Math.max(0,e.armorFlash-dt);const phase=e.hp<=e.maxHp/3?3:e.hp<=e.maxHp*2/3?2:1;
+      if(phase>e.phase&&!e.weakpoint.active){e.phase=phase;e.timer=1.2;this.projectiles=this.projectiles.filter(a=>a.owner!==e.id);this.say(phase===2?'Phase II — Le ressac':'Phase III — La grande marée',phase===2?'Les perles se multiplient et les vagues se succèdent.':'Les pinces frappent à deux hauteurs. Gardez un courant à portée.',3.5);this.effect('ring',e.x+e.w/2,e.y+70,{color:'#aefaff',life:1.1,maxLife:1.1});this.emit('phase',{phase,boss:e.id});}
+      if(!this.arenaLocked){e.state='idle';return;}e.active=true;
+      if(e.weakpoint.active){e.vulnerabilityTimer=Math.max(0,e.vulnerabilityTimer-dt);e.timer=e.vulnerabilityTimer;if(e.timer<=0)this.closeBoss(e);return;}
+      e.timer-=dt;
+      if(e.state==='windup'){e.attackProgress=clamp(1-e.timer/e.windupDuration,0,1);if(e.timer<=0)this.executeTidalAttack(e);return;}
+      if(e.state==='attack'){
+        for(const pending of e.pendingAttacks){pending.delay-=dt;if(pending.delay>0||pending.fired)continue;pending.fired=true;if(pending.type==='tide'){const cx=e.x+e.w/2;for(const direction of [-1,1])this.projectiles.push({x:cx+(direction<0?-48:0),y:610,w:48,h:40,vx:direction*pending.speed,vy:0,life:5,groundWave:true,owner:e.id,damage:22+e.phase*2,color:'#8ce7e9',kind:'tide'});}else this.projectiles.push({x:pending.x,y:pending.y,w:30,h:38,vx:0,vy:pending.speed,life:1.4,groundWave:false,owner:e.id,damage:21+e.phase*2,color:'#e6fff6',kind:'pearl'});}
+        for(const volume of e.attackVolumes){volume.delay-=dt;if(volume.delay>0)continue;volume.life-=dt;if(volume.life<=0||volume.hit||!overlap(volume,this.player))continue;volume.hit=true;this.hurt(23+e.phase*2,e,false);if(e.state!=='attack')return;}
+        if(e.timer<=0){e.attackCount++;e.telegraphs=[];e.pendingAttacks=[];e.attackVolumes=[];if(e.attackCount>=e.maxPoise){this.openTidalBoss(e);return;}e.state='recover';e.timer=e.phase===3? .7:.95;e.actionHint=this.tidalProgress(e);}return;
+      }
+      if(e.timer<=0){const sequence=e.phase===3?['clawSweep','pearlRain','tidalWave']:e.phase===2?['pearlRain','clawSweep','tidalWave']:['tidalWave','pearlRain','clawSweep'];this.prepareTidalAttack(e,sequence[e.sequence++%sequence.length]);}
+    }
     updateBoss(e,dt) {
+      if(e.tidal){this.updateTidalBoss(e,dt);return;}
       if(e.mobile){this.updateMobileBoss(e,dt);return;}
       e.hitFlash=Math.max(0,e.hitFlash-dt);e.armorFlash=Math.max(0,e.armorFlash-dt);const phase=e.hp<=e.maxHp/3?3:e.hp<=e.maxHp*2/3?2:1;
       if(phase>e.phase){e.phase=phase;this.closeBoss(e);e.timer=1.35;this.projectiles=this.projectiles.filter(p=>p.owner!==e.id);this.say(phase===2?'Phase II — L’armure se fissure':'Phase III — Le dernier éclat',phase===2?'De nouvelles attaques se préparent. Surveillez les marques au sol.':'Le colosse déchaîne sa dernière force. Gardez le rythme.',3.5);this.effect('ring',e.x+e.w/2,e.y+e.h*.4,{color:phase===2?'#b5ebff':'#ffb680',life:1.2,maxLife:1.2});this.emit('phase',{phase,boss:e.id});}
